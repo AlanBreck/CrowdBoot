@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"intes",
+				"interests_loop"
+			],
+			[
+				"inter",
+				"interests_loop"
+			],
+			[
+				"interest",
+				"interests"
+			],
+			[
+				"interests",
+				"interests-loop"
+			],
+			[
 				"wp_login",
 				"wp_loginout"
 			],
@@ -498,27 +514,51 @@
 			[
 				"c",
 				"cellspacing=  (attribute)"
-			],
-			[
-				"th",
-				"thead  (element)"
-			],
-			[
-				"solid",
-				"solid  (value)"
-			],
-			[
-				"td",
-				"td: <td>"
-			],
-			[
-				"thead",
-				"thead: <thead>"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "library/custom-user-meta.php",
+			"settings":
+			{
+				"buffer_size": 2146,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "page-dashboard.php",
+			"settings":
+			{
+				"buffer_size": 3950,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "header.php",
+			"settings":
+			{
+				"buffer_size": 2272,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "library/scss/_base.scss",
+			"settings":
+			{
+				"buffer_size": 14283,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 2961,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -660,6 +700,10 @@
 	},
 	"file_history":
 	[
+		"/Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/index.php",
+		"/Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/README.md",
+		"/Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/README",
+		"/Users/jacob_lamont/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/header.php",
 		"/Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/css/style.css",
 		"/Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/custom-user-meta.php",
@@ -783,11 +827,7 @@
 		"/var/folders/r7/qf2jcn4d2r73d0g_dy6__zg40000gn/T/sublime-sftp-browse-1358527100/Rackspace/var/www/vhosts/politichicks.tv/wp-content/themes/vimes_pc/pc_liveIntent_emailTemplate.php",
 		"/var/folders/r7/qf2jcn4d2r73d0g_dy6__zg40000gn/T/sublime-sftp-browse-1358522439/Rackspace/var/www/vhosts/clashdaily.com/wp-content/themes/morning/clashDaily_liveIntent_emailTemplate.php",
 		"/var/folders/r7/qf2jcn4d2r73d0g_dy6__zg40000gn/T/sublime-sftp-browse-1358521628/Rackspace/var/www/vhosts/victoriajacksonshow.com/wp-content/themes/videozoom-child-vjs/vjs_template.php",
-		"/var/folders/r7/qf2jcn4d2r73d0g_dy6__zg40000gn/T/sublime-sftp-browse-1358523058/Rackspace/var/www/vhosts/freeconstitution.com/index.php",
-		"/var/folders/r7/qf2jcn4d2r73d0g_dy6__zg40000gn/T/sublime-sftp-browse-1358522359/Rackspace/var/www/vhosts/victoriajacksonshow.com/wp-content/themes/videozoom-child-vjs/vjs_template_old.php",
-		"/var/folders/r7/qf2jcn4d2r73d0g_dy6__zg40000gn/T/sublime-sftp-browse-1358461405/Rackspace/var/www/vhosts/allthumbsgaming.com/wp-content/themes/allthumbs/functions.php",
-		"/var/folders/r7/qf2jcn4d2r73d0g_dy6__zg40000gn/T/sublime-sftp-browse-1358462482/Rackspace/var/www/vhosts/allthumbsgaming.com/wp-content/themes/allthumbs/index.php",
-		"/var/folders/r7/qf2jcn4d2r73d0g_dy6__zg40000gn/T/sublime-sftp-browse-1358462005/Rackspace/var/www/vhosts/allthumbsgaming.com/wp-content/themes/allthumbs/index.php"
+		"/var/folders/r7/qf2jcn4d2r73d0g_dy6__zg40000gn/T/sublime-sftp-browse-1358523058/Rackspace/var/www/vhosts/freeconstitution.com/index.php"
 	],
 	"find":
 	{
@@ -806,6 +846,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"p ",
+			"p",
+			"occupation",
+			"Occupation",
+			"occupation",
 			"nav ul",
 			"nav",
 			"span",
@@ -928,12 +973,7 @@
 			"{LIST_ID}",
 			"{PLACEMENT_ID}",
 			"{EMAIL}",
-			"width=\"200\"",
-			"width=\"220\"",
-			"220",
-			"email_featured_query",
-			"breaking_news",
-			"breaking-news"
+			"width=\"200\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1047,6 +1087,173 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "library/custom-user-meta.php",
+					"settings":
+					{
+						"buffer_size": 2146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2115,
+								2115
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 175.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "page-dashboard.php",
+					"settings":
+					{
+						"buffer_size": 3950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								607,
+								607
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "header.php",
+					"settings":
+					{
+						"buffer_size": 2272,
+						"regions":
+						{
+							"TagLint":
+							{
+								"flags": 52,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										1260,
+										1274
+									]
+								],
+								"scope": "variable.parameter"
+							}
+						},
+						"selection":
+						[
+							[
+								1275,
+								1275
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 192.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "library/scss/_base.scss",
+					"settings":
+					{
+						"buffer_size": 14283,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								605,
+								605
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "index.php",
+					"settings":
+					{
+						"buffer_size": 2961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1103,6 +1310,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"inde",
+				"index.php"
+			],
+			[
+				"re",
+				"README"
+			],
 			[
 				"st",
 				"style.css"
@@ -1334,10 +1549,6 @@
 			[
 				"inx",
 				"index.php"
-			],
-			[
-				"inde",
-				"index.html"
 			],
 			[
 				"arv",
@@ -1610,10 +1821,6 @@
 			[
 				"bonu",
 				"application/views/pages/bonus_photos_view.php"
-			],
-			[
-				"userpho",
-				"application/controllers/userPhotos.php"
 			]
 		],
 		"width": 0.0
@@ -1630,6 +1837,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 209.0,
+	"side_bar_width": 309.0,
 	"status_bar_visible": true
 }
