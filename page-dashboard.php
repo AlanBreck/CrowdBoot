@@ -7,7 +7,7 @@ Template Name: My Dashboard
 
 				<div id="inner-content" class="wrap clearfix">
 
-				    <div id="main" class="eightcol first clearfix" role="main">
+				    <div id="main" class="twelvecol first clearfix" role="main">
 
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -44,7 +44,7 @@ Template Name: My Dashboard
 							    			<p class="bold">Interests</p>
 							    			<p class="interests">
 						    				<?php
-						    					$interests = the_author_meta( 'interests', $current_user->ID );
+						    					$interests = get_the_author_meta( 'interests', $current_user->ID );
 						    					echo $interests;
 						    				?>
 							    			</p>
@@ -52,8 +52,9 @@ Template Name: My Dashboard
 							    	</div>
 
 							    	<div class="interests-loop">
-							    		<?php $interests_loop = new WP_Query( array( 'post_type' => 'projects', 'tag__in' => array( $interests ) ) ); ?>
-							    		<?php if( $interests_loop->have_posts() ) : while( $interests_loop->have_posts() ) : the_post() ?>
+							    		<?php $interests_array = explode( ', ', $interests ); ?>
+										<?php $interests_loop = new WP_Query( 'post_type=project' ); ?>
+							    		<?php if( $interests_loop->have_posts() ) : while( $interests_loop->have_posts() ) : $interests_loop->the_post() ?>
 
 							    			<h3><?php the_title(); ?></h3>
 
