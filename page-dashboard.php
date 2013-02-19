@@ -29,9 +29,7 @@ Template Name: My Dashboard
 
 							    	<p>You're awesome cuz you created an account.</p>
 
-							    	<a href="<?php echo admin_url( 'profile.php' ); ?>">Edit Profile</a>
-
-							    	<div id="hcard-<?php echo $current_user->user_firstname . '-' . $current_user->user_lastname; ?>" class="vcard">
+							    	<div id="hcard-<?php echo $current_user->user_firstname . '-' . $current_user->user_lastname; ?>" class="vcard clearfix">
 							    		<img src="<?php get_gravatar_url( $user_email, 120 ); ?>" alt="<?php echo $full_name; ?>" class="photo" width="120" height="120" />
 							    		<div class="account-details">
 							    			<a href="<?php echo $user_url; ?>" class="fn url"><?php echo $full_name; ?></a>
@@ -49,20 +47,23 @@ Template Name: My Dashboard
 						    				?>
 							    			</p>
 							    		</div>
+							    		<a href="<?php echo admin_url( 'profile.php' ); ?>">Edit Profile</a>
 							    	</div>
 
 							    	<div class="interests-loop">
+							    		<h2>Entrepreneurial Endeavors that May Interest You</h2>
 							    		<?php $interests_array = explode( ', ', $interests ); ?>
-										<?php $interests_loop = new WP_Query( 'post_type=project' ); ?>
+										<?php $interests_loop = new WP_Query( array( 'post_type' => 'project', 'tag' => $interests ) ); ?>
 							    		<?php if( $interests_loop->have_posts() ) : while( $interests_loop->have_posts() ) : $interests_loop->the_post() ?>
 
-							    			<h3><?php the_title(); ?></h3>
+							    			<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 
 							    		<?php endwhile; else : ?>
 
 							    			Sorry, there's just <strong>nothing</strong> here that'll interest you.
 
 							    		<?php endif; ?>
+							    		<?php wp_reset_postdata(); ?>
 							    	</div>
 
 							    <?php else : ?>

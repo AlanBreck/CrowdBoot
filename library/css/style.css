@@ -16,7 +16,7 @@ of the styles inside media queries.
 /*
  * Corrects `block` display not defined in IE6/7/8/9 & FF3.
  */
-/* line 11, ../scss/_normalize.scss */
+/* line 21, ../scss/_normalize.scss */
 article,
 aside,
 details,
@@ -34,7 +34,7 @@ summary {
 /*
  * Corrects `inline-block` display not defined in IE6/7/8/9 & FF3.
  */
-/* line 29, ../scss/_normalize.scss */
+/* line 31, ../scss/_normalize.scss */
 audio,
 canvas,
 video {
@@ -85,7 +85,7 @@ html {
  * Addresses `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-/* line 78, ../scss/_normalize.scss */
+/* line 82, ../scss/_normalize.scss */
 html,
 button,
 input,
@@ -117,7 +117,7 @@ a:focus {
  * Improves readability when focused and also mouse hovered in all browsers.
  * people.opera.com/patrickl/experiments/keyboard/test
  */
-/* line 111, ../scss/_normalize.scss */
+/* line 112, ../scss/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -177,7 +177,7 @@ abbr[title] {
 /*
  * Addresses style set to `bolder` in FF3+, S4/5, Chrome.
  */
-/* line 167, ../scss/_normalize.scss */
+/* line 168, ../scss/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -208,7 +208,7 @@ mark {
 /*
  * Addresses margins set differently in IE6/7.
  */
-/* line 197, ../scss/_normalize.scss */
+/* line 198, ../scss/_normalize.scss */
 p,
 pre {
   margin: 1em 0;
@@ -218,7 +218,7 @@ pre {
  * Corrects font family set oddly in IE6, S4/5, Chrome.
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
  */
-/* line 207, ../scss/_normalize.scss */
+/* line 210, ../scss/_normalize.scss */
 code,
 kbd,
 pre,
@@ -249,7 +249,7 @@ q {
 /*
  * Addresses `quotes` property not supported in S4.
  */
-/* line 238, ../scss/_normalize.scss */
+/* line 239, ../scss/_normalize.scss */
 q:before,
 q:after {
   content: '';
@@ -265,7 +265,7 @@ small {
  * Prevents `sub` and `sup` affecting `line-height` in all browsers.
  * gist.github.com/413930
  */
-/* line 253, ../scss/_normalize.scss */
+/* line 254, ../scss/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -290,7 +290,7 @@ sub {
 /*
  * Addresses margins set differently in IE6/7.
  */
-/* line 277, ../scss/_normalize.scss */
+/* line 280, ../scss/_normalize.scss */
 dl,
 menu,
 ol,
@@ -306,7 +306,7 @@ dd {
 /*
  * Addresses paddings set differently in IE6/7.
  */
-/* line 292, ../scss/_normalize.scss */
+/* line 294, ../scss/_normalize.scss */
 menu,
 ol,
 ul {
@@ -316,7 +316,7 @@ ul {
 /*
  * Corrects list images handled incorrectly in IE7.
  */
-/* line 302, ../scss/_normalize.scss */
+/* line 303, ../scss/_normalize.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -400,7 +400,7 @@ legend {
  * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome.
  * 3. Improves appearance and consistency in all browsers.
  */
-/* line 384, ../scss/_normalize.scss */
+/* line 387, ../scss/_normalize.scss */
 button,
 input,
 select,
@@ -419,7 +419,7 @@ textarea {
  * Addresses FF3/4 setting `line-height` on `input` using `!important` in the
  * UA stylesheet.
  */
-/* line 399, ../scss/_normalize.scss */
+/* line 400, ../scss/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -434,7 +434,7 @@ input {
  * 4. Removes inner spacing in IE7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE6.
  */
-/* line 414, ../scss/_normalize.scss */
+/* line 417, ../scss/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -450,7 +450,7 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements.
  */
-/* line 427, ../scss/_normalize.scss */
+/* line 428, ../scss/_normalize.scss */
 button[disabled],
 input[disabled] {
   cursor: default;
@@ -462,7 +462,7 @@ input[disabled] {
  * 3. Removes excess padding in IE7.
  *    Known issue: excess padding remains in IE6.
  */
-/* line 439, ../scss/_normalize.scss */
+/* line 440, ../scss/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -493,7 +493,7 @@ input[type="search"] {
 /*
  * Removes inner padding and search cancel button in S5, Chrome on OS X.
  */
-/* line 464, ../scss/_normalize.scss */
+/* line 465, ../scss/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -502,7 +502,7 @@ input[type="search"]::-webkit-search-decoration {
 /*
  * Removes inner padding and border in FF3+.
  */
-/* line 473, ../scss/_normalize.scss */
+/* line 474, ../scss/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -573,7 +573,7 @@ dd {
   margin: 0;
 }
 
-/* line 532, ../scss/_normalize.scss */
+/* line 534, ../scss/_normalize.scss */
 .sidebar ul,
 .sidebar ol,
 .commentlist {
@@ -1114,7 +1114,7 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 406, ../scss/_base.scss */
+/* line 407, ../scss/_base.scss */
 .page-navigation,
 .wp-prev-next {
   margin: 1.1em 0 2.2em;
@@ -1143,7 +1143,7 @@ PAGE NAVI STYLES
   text-decoration: none;
   position: relative;
 }
-/* line 422, ../scss/_base.scss */
+/* line 423, ../scss/_base.scss */
 .bones_page_navi li a:hover, .bones_page_navi li a:focus {
   color: #f01d4f;
   text-decoration: underline;
@@ -1158,7 +1158,7 @@ PAGE NAVI STYLES
 .bones_page_navi li.bpn-current a {
   /* hovering on current page link */
 }
-/* line 447, ../scss/_base.scss */
+/* line 448, ../scss/_base.scss */
 .bones_page_navi li.bpn-prev-link,
 .bones_page_navi li.bpn-next-link {
   font-weight: 700;
@@ -1168,7 +1168,7 @@ PAGE NAVI STYLES
 .bones_page_navi li.bpn-next-link a {
   padding: 0;
 }
-/* line 457, ../scss/_base.scss */
+/* line 460, ../scss/_base.scss */
 .bones_page_navi li.bpn-prev-link a:hover,
 .bones_page_navi li.bpn-next-link a:hover,
 .bones_page_navi li.bpn-first-page-link a:hover,
@@ -1304,7 +1304,7 @@ COMMENT STYLES
   font-weight: 700;
   font-size: 0.9em;
 }
-/* line 684, ../scss/_base.scss */
+/* line 685, ../scss/_base.scss */
 .commentlist .comment-reply-link:hover, .commentlist .comment-reply-link:focus {
   opacity: 1;
 }
@@ -1328,12 +1328,12 @@ COMMENT FORM STYLES
   clear: both;
   margin-bottom: 0.7335em;
 }
-/* line 709, ../scss/_base.scss */
+/* line 710, ../scss/_base.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 715, ../scss/_base.scss */
+/* line 718, ../scss/_base.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -1364,7 +1364,7 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 740, ../scss/_base.scss */
+/* line 742, ../scss/_base.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
@@ -1425,16 +1425,23 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
-/* line 2, ../scss/_vcard.scss */
+/* line 1, ../scss/_vcard.scss */
+.vcard {
+  width: 50%;
+  float: left;
+  padding-right: 20px;
+}
+/* line 5, ../scss/_vcard.scss */
 .vcard * {
   float: left;
   display: block;
 }
-/* line 6, ../scss/_vcard.scss */
+/* line 9, ../scss/_vcard.scss */
 .vcard .account-details * {
+  width: 337px;
   clear: both;
 }
-/* line 9, ../scss/_vcard.scss */
+/* line 13, ../scss/_vcard.scss */
 .vcard img.photo {
   margin-right: 10px;
 }
@@ -1720,7 +1727,7 @@ you can add resource intensive styles.
   .nav li a:hover, .nav li a:focus {
     background-color: #dedede;
   }
-  /* line 79, ../scss/_768up.scss */
+  /* line 80, ../scss/_768up.scss */
   .nav li ul.sub-menu,
   .nav li ul.children {
     width: 200px;
@@ -1950,7 +1957,7 @@ be set to display none.
     content: " (" attr(title) ")";
   }
 
-  /* line 38, ../scss/_print.scss */
+  /* line 40, ../scss/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
@@ -1988,13 +1995,13 @@ be set to display none.
     widows: 3;
   }
 
-  /* line 70, ../scss/_print.scss */
+  /* line 71, ../scss/_print.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 
-  /* line 76, ../scss/_print.scss */
+  /* line 80, ../scss/_print.scss */
   .sidebar,
   .page-navigation,
   .wp-prev-next,
