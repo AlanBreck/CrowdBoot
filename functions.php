@@ -49,6 +49,11 @@ require_once('library/translation/translation.php'); // this comes turned off by
     - adding extra meta fields for users
 */
 require_once('library/custom-user-meta.php');
+/*
+6. library/metabox/custom-project-meta-boxes.php
+    - adding extra meta boxes for projects
+*/
+require_once('library/metabox/custom-project-meta-boxes.php');
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 
