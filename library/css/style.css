@@ -1426,23 +1426,23 @@ view.
 */
 /* end .footer-links */
 /* line 1, ../scss/_vcard.scss */
-.vcard {
+.page-template-page-dashboard-php .vcard {
   width: 50%;
   float: left;
   padding-right: 20px;
 }
 /* line 5, ../scss/_vcard.scss */
-.vcard * {
+.page-template-page-dashboard-php .vcard * {
   float: left;
   display: block;
 }
 /* line 9, ../scss/_vcard.scss */
-.vcard .account-details * {
+.page-template-page-dashboard-php .vcard .account-details * {
   width: 337px;
   clear: both;
 }
 /* line 13, ../scss/_vcard.scss */
-.vcard img.photo {
+.page-template-page-dashboard-php .vcard img.photo {
   margin-right: 10px;
 }
 
