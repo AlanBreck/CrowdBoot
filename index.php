@@ -32,7 +32,7 @@
 							    <?php
 							    	global $post;
 							    	if ( get_post_meta( $post->ID, '_cmb_minimum_investment_amount', true ) ) {
-							    		$minimum_investment_amount = '&#36;' . get_post_meta( $post->ID, '_cmb_minimum_investment_amount', true );
+							    		$minimum_investment_amount = get_post_meta( $post->ID, '_cmb_minimum_investment_amount', true );
 							    	} else {
 							    		$minimum_investment_amount = 'To Be Determined';
 							    	}
