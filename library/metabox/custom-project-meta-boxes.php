@@ -40,6 +40,12 @@ function cb_metaboxes( $meta_boxes ) {
 				'desc' => 'Enter a YouTube or Vimeo video URL.',
 				'id'   => $prefix . 'promotional_video',
 				'type' => 'oembed'
+			),
+			array(
+				'name' => 'Promotional Images',
+				'desc' => 'Upload images or type in URL.',
+				'id'   => $prefix . 'promotional_images',
+				'type' => 'file_list'
 			)
 		)
 	);
