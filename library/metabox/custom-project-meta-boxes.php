@@ -1,6 +1,26 @@
 <?php
 function cb_metaboxes( $meta_boxes ) {
+
 	$prefix = '_cmb_'; // Prefix for all fields
+
+	$meta_boxes[] = array(
+		'id' => 'category',
+		'title' => 'Category',
+		'pages' => array('project'), // post type
+		'context' => 'normal',
+		'priority' => 'high',
+		'show_names' => false, // Show field names on the left
+		'fields' => array(
+			array(
+				'name' => 'Category',
+				'desc' => 'Select the category in which your business would best fit.',
+				'id' => $prefix . 'category',
+				'taxonomy' => 'category',
+				'type' => 'taxonomy_radio',
+			)
+		)
+	);
+
 	$meta_boxes[] = array(
 		'id' => 'funding_goals',
 		'title' => 'Funding Goals',
@@ -10,18 +30,19 @@ function cb_metaboxes( $meta_boxes ) {
 		'show_names' => true, // Show field names on the left
 		'fields' => array(
 			array(
-				'name' => 'Minimum Investment Amount',
-				'id'   => $prefix . 'minimum_investment_amount',
+				'name' => 'Funding Goal Range',
+				'id'   => $prefix . 'funding_goal_range',
 				'type' => 'text_money',
 			),
 			array(
-				'name' => 'Funding Goal Range',
-				'id'   => $prefix . 'funding_goal_range',
+				'name' => 'Minimum Investment Amount',
+				'id'   => $prefix . 'minimum_investment_amount',
 				'type' => 'select',
 				'options' => array(
-					array('name' => '$100 - $1,000', 'value' => '$100 - $1,000'),
-					array('name' => '$1,000 - $10,000', 'value' => '$1,000 - $10,000'),
-					array('name' => '$10,000 - $100,000', 'value' => '$10,000 - $100,000')
+					array('name' => '$1 - $5', 'value' => '$1 - $5'),
+					array('name' => '$5 - $20', 'value' => '$5 - $20'),
+					array('name' => '$20 - $100', 'value' => '$20 - $100'),
+					array('name' => '$100 - $1,000', 'value' => '$100 - $1,000')
 				)
 			)
 		),
