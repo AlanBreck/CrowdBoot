@@ -30,7 +30,7 @@
 									<?php
 										global $post;
 										if ( get_post_meta( $post->ID, '_cmb_minimum_investment_amount', true ) ) {
-											$minimum_investment_amount = '&#36;' . get_post_meta( $post->ID, '_cmb_minimum_investment_amount', true );
+											$minimum_investment_amount = get_post_meta( $post->ID, '_cmb_minimum_investment_amount', true );
 										} else {
 											$minimum_investment_amount = 'To Be Determined';
 										}
@@ -40,8 +40,8 @@
 									<?php echo apply_filters( 'the_content', get_post_meta( $post->ID, '_cmb_promotional_video', true ) ); ?>
 									<?php if ( get_post_meta( $post->ID, '_cmb_promotional_images', true ) ) {
 										$promotional_images = get_post_meta( $post->ID, '_cmb_promotional_images', true );
+										echo '<img src="' . $promotional_images . '" />';
 									} ?>
-									<img src="<?php echo $promotional_images; ?>" />
 								</section> <!-- end article section -->
 
 								<footer class="article-footer">
