@@ -19,7 +19,7 @@ Template Name: Project Creation Template
 
 		$success = wp_insert_post( $project_post );
 
-		header( "location: " . ( TRUE == $success ? get_permalink( $success ) : 'index.php' ) );
+		header( "location: " . ( TRUE == $success ? get_permalink( $success ) : 'you-are-dumb' ) );
 	}
 ?>
 <?php get_header(); ?>
