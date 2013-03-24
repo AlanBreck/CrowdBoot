@@ -42,12 +42,21 @@ Template Name: Project Creation Template
 
 						    <section class="entry-content">
 
-								<form method="post">
-									<input type="text" name="post_title" placeholder="Project Name" />
-									<textarea type="text" name="post_content" placeholder="Description"></textarea>
-									<textarea type="text" name="post_excerpt" placeholder="Short Description"></textarea>
-									<input type="submit" value="Submit" />
-								</form>
+								<?php if ( is_user_logged_in() ) : ?>
+
+									<form method="post">
+										<input type="text" name="post_title" placeholder="Project Name" />
+										<textarea type="text" name="post_content" placeholder="Description"></textarea>
+										<textarea type="text" name="post_excerpt" placeholder="Short Description"></textarea>
+										<input type="submit" value="Submit" />
+									</form>
+
+								<?php else : ?>
+
+									<h2>Whoah!</h2>
+									<p>Hold on there partner. You'll have to log in first. <?php wp_loginout(); ?></p>
+
+								<?php endif; ?>
 
 						    </section> <!-- end article section -->
 
