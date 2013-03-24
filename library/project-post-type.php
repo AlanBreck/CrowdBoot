@@ -2,6 +2,7 @@
 
 // let's create the function for the custom type
 function project_post_type() {
+	$current_user = wp_get_current_user();
 	// creating (registering) the custom type
 	register_post_type( 'project', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 	 	// let's now add all the options for this post type
@@ -28,7 +29,7 @@ function project_post_type() {
 			'query_var' => true,
 			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */
 			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/custom-post-icon.png', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'project', 'with_front' => false ), /* you can specify its url slug */
+			'rewrite'	=> array( 'slug' => $current_user->user_login, 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'project', /* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => false,
