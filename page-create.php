@@ -17,9 +17,12 @@ Template Name: Project Creation Template
 			'post_status'	 => 'publish'
 		);
 
-		$success = wp_insert_post( $project_post );
+		$new_post = wp_insert_post( $project_post );
 
-		header( "location: " . ( TRUE == $success ? get_permalink( $success ) : 'you-are-dumb' ) );
+		add_post_meta( $new_post, '_cmb_min_funding_goal', $_POST['min_funding_goal'] );
+		add_post_meta( $new_post, '_cmb_max_funding_goal', $_POST['max_funding_goal'] );
+
+		header( "location: " . ( TRUE == $new_post ? get_permalink( $new_post ) : 'you-are-dumb' ) );
 	}
 ?>
 <?php get_header(); ?>
@@ -48,6 +51,8 @@ Template Name: Project Creation Template
 										<input type="text" name="post_title" placeholder="Project Name" />
 										<textarea type="text" name="post_content" placeholder="Description"></textarea>
 										<textarea type="text" name="post_excerpt" placeholder="Short Description"></textarea>
+										<input type="text" name="min_funding_goal" placeholder="Minimum Funding Goal" />
+										<input type="text" name="max_funding_goal" placeholder="Maximum Funding Goal" />
 										<input type="submit" value="Submit" />
 									</form>
 

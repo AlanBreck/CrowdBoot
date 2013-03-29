@@ -30,8 +30,13 @@ function cb_metaboxes( $meta_boxes ) {
 		'show_names' => true, // Show field names on the left
 		'fields' => array(
 			array(
-				'name' => 'Funding Goal Range',
-				'id'   => $prefix . 'funding_goal_range',
+				'name' => 'Minimum Funding Goal',
+				'id'   => $prefix . 'min_funding_goal',
+				'type' => 'text_money',
+			),
+			array(
+				'name' => 'Maximum Funding Goal',
+				'id'   => $prefix . 'max_funding_goal',
 				'type' => 'text_money',
 			),
 			array(

@@ -20,8 +20,8 @@
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php
 										global $post;
-										if ( get_post_meta( $post->ID, '_cmb_funding_goal_range', true ) ) {
-											$funding_goal_range = get_post_meta( $post->ID, '_cmb_funding_goal_range', true );
+										if ( get_post_meta( $post->ID, '_cmb_min_funding_goal', true ) && get_post_meta( $post->ID, '_cmb_min_funding_goal', true ) ) {
+											$funding_goal_range = '$' . get_post_meta( $post->ID, '_cmb_min_funding_goal', true ) . ' - $' . get_post_meta( $post->ID, '_cmb_max_funding_goal', true );
 										} else {
 											$funding_goal_range = 'To Be Determined';
 										}
