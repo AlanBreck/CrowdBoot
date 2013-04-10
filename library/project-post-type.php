@@ -2,7 +2,6 @@
 
 // let's create the function for the custom type
 function project_post_type() {
-	$current_user = wp_get_current_user();
 	// creating (registering) the custom type
 	register_post_type( 'project', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 	 	// let's now add all the options for this post type
@@ -29,7 +28,7 @@ function project_post_type() {
 			'query_var' => true,
 			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */
 			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/custom-post-icon.png', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => $current_user->user_login, 'with_front' => false ), /* you can specify its url slug */
+			'rewrite'	=> false,
 			'has_archive' => 'project', /* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => false,
@@ -47,6 +46,41 @@ function project_post_type() {
 
 	// adding the function to the Wordpress init
 	add_action( 'init', 'project_post_type');
+
+	// customize the project permalinks
+	add_filter('post_type_link', 'crowdboot_post_type_link', 1, 3);
+	function crowdboot_post_type_link( $link, $post = 0 ){
+	    if ( $post->post_type == 'project' ){
+
+	    	$author = get_the_author_meta( 'nickname', $post->post_author );
+	    	$id     = $post->ID;
+	    	$slug   = $post->post_name;
+
+	        return home_url( 'project/' . $author . '/' . $id . '/' . $slug  );
+
+	    } else {
+
+	        return $link;
+
+	    }
+	}
+
+	add_filter('rewrite_rules_array','wp_insertMyRewriteRules');
+	add_filter('init','flushRules');
+
+	// Remember to flush_rules() when adding rules
+	function flushRules(){
+	    global $wp_rewrite;
+	    $wp_rewrite->flush_rules();
+	}
+
+	// Adding a new rule
+	function wp_insertMyRewriteRules($rules)
+	{
+	    $newrules = array();
+	    $newrules['project/[^\/]*\/([0-9]+)\/?/'] = 'index.php?post_type=project&p=$matches[1]';
+	    return $newrules + $rules;
+	}
 
 	/*
 	for more information on taxonomies, go here:
