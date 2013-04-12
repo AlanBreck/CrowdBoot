@@ -1,33 +1,25 @@
 <?php
 /*
-Template Name: Project Creation Template
+Template Name: User Creation Template
 */
 ?>
 <?php
 	if ( $_POST ) {
-		$post_category = get_cat_ID( $_POST['post_category'] );
-		$project_post = array(
-			'comment_status' => 'closed',
-			'ping_status'    => 'closed',
-			'post_author'    => $current_user->ID,
-			'post_content'   => $_POST['post_content'],
-			'post_excerpt'   => $_POST['post_excerpt'],
-			'post_name'      => $_POST['post_title'] . '-' . rand( 100, 999 ),
-			'post_title'     => wp_strip_all_tags( $_POST['post_title'] ),
-			'post_type'      => 'project',
-			'post_status'	 => 'publish',
-			'tags_input'	 => $_POST['tags_input']
+		$new_user = array(
+			'user_email'    => $_POST['user_email'],
+			'user_login'    => $_POST['user_email'],
+			'user_pass'     => $_POST['user_pass'],
+			'first_name'    => $_POST['first_name'],
+			'last_name'     => $_POST['last_name'],
+			'user_url'      => $_POST['user_url'],
+			'user_nicename' => $_POST['first_name'] . $_POST['last_name'],
+			'rich_editing'  => false,
+			'role'          => 'user'
 		);
 
-		$new_post = wp_insert_post( $project_post );
+		$new_user = wp_insert_user( $new_user );
 
-		wp_set_post_terms( $new_post, array( $post_category ), 'category' );
-
-		add_post_meta( $new_post, '_cmb_min_funding_goal', $_POST['min_funding_goal'] );
-		add_post_meta( $new_post, '_cmb_max_funding_goal', $_POST['max_funding_goal'] );
-		add_post_meta( $new_post, '_cmb_minimum_investment_amount', $_POST['minimum_investment_amount'] );
-
-		header( "location: " . ( TRUE == $new_post ? get_permalink( $new_post ) : 'you-are-dumb' ) );
+		/*header( "location: " . ( TRUE == $new_user ? get_permalink( $new_user ) : 'you-are-dumb' ) );*/
 	}
 ?>
 <?php get_header(); ?>
@@ -50,30 +42,20 @@ Template Name: Project Creation Template
 
 						    <section class="entry-content">
 
-								<?php if ( is_user_logged_in() && current_user_can( 'publish_projects' ) ) : ?>
+								<?php if ( ! is_user_logged_in() ) : ?>
 
 									<form method="post">
 										<div>
-											<input type="text" name="post_title" placeholder="Project Name" />
+											<input type="text" name="first_name" placeholder="First Name" />
+											<input type="text" name="last_name" placeholder="Last Name" />
 										</div>
 										<div>
-											<textarea type="text" name="post_content" placeholder="Description"></textarea>
+											<input type="text" name="user_email" placeholder="Email" />
+											<input type="text" name="user_pass" placeholder="Password" />
+											<input type="text" name="user_pass2" placeholder="Confirm Password" />
 										</div>
 										<div>
-											<textarea type="text" name="post_excerpt" placeholder="Short Description"></textarea>
-										</div>
-										<div>
-											<input type="text" name="min_funding_goal" placeholder="Minimum Funding Goal" />
-											<input type="text" name="max_funding_goal" placeholder="Maximum Funding Goal" />
-										</div>
-										<div>
-											<label for="minimum_investment_amount">Minimum Investment Amount</label>
-											<select name="minimum_investment_amount" id="minimum_investment_amount">
-												<option value="$1 - $5">$1 - $5</option>
-												<option value="$5 - $20">$5 - $20</option>
-												<option value="$20 - $100">$20 - $100</option>
-												<option value="$100 - $1,000">$100 - $1,000</option>
-											</select>
+											<input type="text" name="user_url" placeholder="Website" />
 										</div>
 										<div>
 											<input type="radio" name="post_category" id="option1" value="Culinary Arts" />
@@ -104,18 +86,14 @@ Template Name: Project Creation Template
 											<label for="option9">Software</label>
 										</div>
 										<div>
-											<p>Please insert comma-separated list.</p>
-											<input type="text" name="tags_input" placeholder="Tags" />
-										</div>
-										<div>
 											<input type="submit" value="Submit" />
 										</div>
 									</form>
 
 								<?php else : ?>
 
-									<h2>Whoah!</h2>
-									<p>Hold on there partner. You'll have to log in first. <?php wp_loginout(); ?></p>
+									<h2>Hey!</h2>
+									<p>You already have an account. Silly little person.</p>
 
 								<?php endif; ?>
 

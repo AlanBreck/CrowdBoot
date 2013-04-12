@@ -50,7 +50,12 @@ require_once('library/translation/translation.php'); // this comes turned off by
 */
 require_once('library/custom-user-meta.php');
 /*
-6. library/metabox/custom-project-meta-boxes.php
+6. library/custom-user-role.php
+    - adding role 'user'
+*/
+require_once('library/custom-user-role.php');
+/*
+7. library/metabox/custom-project-meta-boxes.php
     - adding extra meta boxes for projects
 */
 require_once('library/metabox/custom-project-meta-boxes.php');
@@ -176,5 +181,18 @@ function get_gravatar_url( $email, $size ) {
     $hash = md5( strtolower( trim ( $email ) ) );
     echo 'http://gravatar.com/avatar/' . $hash . '?s=' . $size;
 }
+
+/************* Archives Pages *****************/
+
+// Add Custom Post Types to Archive.php pages
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'project'
+        ));
+      return $query;
+    }
+}
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 
 ?>
