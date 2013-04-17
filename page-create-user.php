@@ -19,7 +19,7 @@ Template Name: User Creation Template
 
 		$new_user = wp_insert_user( $new_user );
 
-		/*header( "location: " . ( TRUE == $new_user ? get_permalink( $new_user ) : 'you-are-dumb' ) );*/
+		header( "location: " . ( TRUE == $new_user ? '/log-in' : '/you-are-dumb' ) );
 	}
 ?>
 <?php get_header(); ?>

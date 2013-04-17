@@ -115,7 +115,19 @@ Template Name: Project Creation Template
 								<?php else : ?>
 
 									<h2>Whoah!</h2>
-									<p>Hold on there partner. You'll have to log in first. <?php wp_loginout(); ?></p>
+									<p>Hold on there partner. You'll have to log in first.</p>
+
+									<?php
+										$args = array(
+										    'redirect' => '/create-a-project',
+										    'label_username' => __( 'Email' ),
+										    'label_password' => __( 'Password' ),
+										    'label_remember' => __( 'Remember Me' ),
+										    'label_log_in' => __( 'Log In' ),
+										    'remember' => true
+										);
+										wp_login_form( $args );
+									?>
 
 								<?php endif; ?>
 
