@@ -12,6 +12,18 @@ function add_user_role() {
 	));
 }
 
+// Give project editing capability to administrator role.
+add_action( 'after_switch_theme', 'add_user_cap' );
+
+function add_user_cap() {
+	$role = get_role( 'administrator' );
+
+	$role->add_cap( 'edit_projects' );
+	$role->add_cap( 'edit_others_projects' );
+	$role->add_cap( 'publish_projects' );
+	$role->add_cap( 'read_private_project' );
+}
+
 // Grant meta capabilities on a per-post basis.
 add_filter( 'map_meta_cap', 'my_map_meta_cap', 10, 4 );
 
