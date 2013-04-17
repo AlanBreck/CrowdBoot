@@ -129,6 +129,9 @@ Template Name: Project Creation Template
 										wp_login_form( $args );
 									?>
 
+									<h3>Don't have an account?</h3>
+									<a href="/new-user">Register</a>
+
 								<?php endif; ?>
 
 						    </section> <!-- end article section -->
