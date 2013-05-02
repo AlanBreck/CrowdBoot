@@ -85,6 +85,9 @@ You can change the names and dimensions to whatever
 you like. Enjoy!
 */
 
+/************* Hide Toolbar on Frontend ********************/
+add_filter('show_admin_bar', '__return_false');
+
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas

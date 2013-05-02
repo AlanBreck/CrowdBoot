@@ -23,8 +23,8 @@ Template Name: Project Creation Template
 
 		wp_set_post_terms( $new_post, array( $post_category ), 'category' );
 
-		add_post_meta( $new_post, '_cmb_min_funding_goal', $_POST['min_funding_goal'] );
-		add_post_meta( $new_post, '_cmb_max_funding_goal', $_POST['max_funding_goal'] );
+		add_post_meta( $new_post, '_cmb_min_funding_goal', preg_replace('/[^a-zA-Z0-9_ %\[\]\.\(\)%&-]/s', '', $_POST['min_funding_goal'] ) );
+		add_post_meta( $new_post, '_cmb_max_funding_goal', preg_replace('/[^a-zA-Z0-9_ %\[\]\.\(\)%&-]/s', '', $_POST['max_funding_goal'] ) );
 		add_post_meta( $new_post, '_cmb_minimum_investment_amount', $_POST['minimum_investment_amount'] );
 
 		header( "location: " . ( TRUE == $new_post ? get_permalink( $new_post ) : 'you-are-dumb' ) );
@@ -57,18 +57,19 @@ Template Name: Project Creation Template
 											<input type="text" name="post_title" placeholder="Project Name" />
 										</div>
 										<div>
-											<textarea type="text" name="post_content" placeholder="Description"></textarea>
-										</div>
-										<div>
 											<textarea type="text" name="post_excerpt" placeholder="Short Description"></textarea>
 										</div>
 										<div>
-											<input type="text" name="min_funding_goal" placeholder="Minimum Funding Goal" />
-											<input type="text" name="max_funding_goal" placeholder="Maximum Funding Goal" />
+											<textarea type="text" name="post_content" placeholder="Full Description"></textarea>
+										</div>
+										<div>
+											<input type="text" name="min_funding_goal" maxlength="6" placeholder="Minimum Funding Goal" />
+											<input type="text" name="max_funding_goal" maxlength="6" placeholder="Maximum Funding Goal" />
 										</div>
 										<div>
 											<label for="minimum_investment_amount">Minimum Investment Amount</label>
 											<select name="minimum_investment_amount" id="minimum_investment_amount">
+												<option>--</option>
 												<option value="$1 - $5">$1 - $5</option>
 												<option value="$5 - $20">$5 - $20</option>
 												<option value="$20 - $100">$20 - $100</option>
@@ -76,32 +77,28 @@ Template Name: Project Creation Template
 											</select>
 										</div>
 										<div>
-											<input type="radio" name="post_category" id="option1" value="Culinary Arts" />
-											<label for="option1">Culinary Arts</label>
-											<br/>
-											<input type="radio" name="post_category" id="option2" value="Education" />
-											<label for="option2">Education</label>
-											<br/>
-											<input type="radio" name="post_category" id="option3" value="Finance" />
-											<label for="option3">Finance</label>
-											<br/>
-											<input type="radio" name="post_category" id="option4" value="Hospitality" />
-											<label for="option4">Hospitality</label>
-											<br/>
-											<input type="radio" name="post_category" id="option5" value="Law" />
-											<label for="option5">Law</label>
-											<br/>
-											<input type="radio" name="post_category" id="option6" value="Media" />
-											<label for="option6">Media</label>
-											<br/>
-											<input type="radio" name="post_category" id="option7" value="News" />
-											<label for="option7">News</label>
-											<br/>
-											<input type="radio" name="post_category" id="option8" value="Real Estate" />
-											<label for="option8">Real Estate</label>
-											<br/>
-											<input type="radio" name="post_category" id="option9" value="Software" />
-											<label for="option9">Software</label>
+											<label for="post_category">Project Category</label>
+											<select name="post_category" id="post_category">
+												<option>--</option>
+												<option value="Culinary Arts">Culinary Arts</option>
+												<option value="Education">Education</option>
+												<option value="Finance">Finance</option>
+												<option value="Hospitality">Hospitality</option>
+												<option value="Media">Media</option>
+												<option value="Real Estate">Real Estate</option>
+												<option value="Software">Software</option>
+												<option value="Product">Product</option>
+												<option value="Tech">Tech</option>
+												<option value="Hygiene">Hygiene</option>
+												<option value="Furniture">Furniture</option>
+												<option value="Decor">Decor</option>
+												<option value="Service">Service</option>
+												<option value="Manual Labor">Manual Labor</option>
+												<option value="Software">Software</option>
+												<option value="Charitable">Charitable</option>
+												<option value="Boy Scout Projects">Boy Scout Projects</option>
+												<option value="Science Fair Projects">Science Fair Projects</option>
+											</select>
 										</div>
 										<div>
 											<p>Please insert comma-separated list.</p>
@@ -129,8 +126,12 @@ Template Name: Project Creation Template
 										wp_login_form( $args );
 									?>
 
+<<<<<<< HEAD
 									<h3>Don't have an account?</h3>
 									<a href="/new-user">Register</a>
+=======
+									<p>Don't have an account yet? The Monkey can help – <a href="http://dev.crowdboot.com/new-user/">Register</a></p>
+>>>>>>> Changes as Per Max's Suggestions
 
 								<?php endif; ?>
 
