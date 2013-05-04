@@ -116,7 +116,7 @@ Template Name: Project Creation Template
 
 									<?php
 										$args = array(
-										    'redirect' => '/create-a-project',
+										    'redirect' => site_url( '/create-a-project/' ),
 										    'label_username' => __( 'Email' ),
 										    'label_password' => __( 'Password' ),
 										    'label_remember' => __( 'Remember Me' ),
@@ -126,12 +126,9 @@ Template Name: Project Creation Template
 										wp_login_form( $args );
 									?>
 
-<<<<<<< HEAD
 									<h3>Don't have an account?</h3>
 									<a href="/new-user">Register</a>
-=======
 									<p>Don't have an account yet? The Monkey can help – <a href="http://dev.crowdboot.com/new-user/">Register</a></p>
->>>>>>> Changes as Per Max's Suggestions
 
 								<?php endif; ?>
 
