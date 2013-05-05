@@ -38,7 +38,9 @@ function project_post_type() {
 				'publish_posts'      => 'publish_projects',
 				'read_post'          => 'read_project',
 				'read_private_posts' => 'read_private_projects',
+				'delete_others_posts'=> 'delete_others_projects',
 				'delete_post'        => 'delete_project',
+				'delete_posts'		 => 'delete_projects'
 			),
 			'hierarchical'        => false,
 			/* the next one is important, it tells what's enabled in the post editor */

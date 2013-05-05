@@ -1,5 +1,10 @@
 <?php
 /*
+Page Template: Home Page
+*/
+?>
+<?php
+/*
 Template Name: User Creation Template
 */
 ?>
@@ -42,38 +47,13 @@ Template Name: User Creation Template
 
 						    <section class="entry-content">
 
-						    	<h2>Log In</h2>
-
-						    	<?php
-						    		if ( ! is_user_logged_in() ) { // Display WordPress login form:
-						    		    $args = array(
-						    		        'redirect' => 'site_url()',
-						    		        'label_username' => __( 'Email' ),
-						    		        'label_password' => __( 'Password' ),
-						    		        'label_remember' => __( 'Remember Me' ),
-						    		        'label_log_in' => __( 'Log In' ),
-						    		        'remember' => true
-						    		    );
-						    		    wp_login_form( $args );
-						    		} else { // If logged in:
-						    		    echo "Awesome! You've already logged in!";
-						    		}
-						    	?>
-
-						    	<h2>Register</h2>
-
 								<?php if ( ! is_user_logged_in() ) : ?>
 
-									<form method="post">
-										<div>
-											<input type="text" maxlength="20" name="user_email" placeholder="Email" />
-											<input type="password" maxlength="20" name="user_pass" placeholder="Password" />
-											<input type="password" maxlength="20" name="user_pass2" placeholder="Confirm Password" />
-										</div>
-										<div>
-											<input type="submit" value="Submit" />
-										</div>
-									</form>
+									<?php the_content(); ?>
+
+								<?php else : ?>
+
+									<a href="<?php echo site_url( 'projects/' ); ?>">Browse Projects</a> <span>or</span> <a href="<?php echo site_url( 'create-a-project/' ); ?>">Create a Project</a>
 
 								<?php endif; ?>
 
@@ -103,8 +83,6 @@ Template Name: User Creation Template
 					    <?php endif; ?>
 
 				    </div> <!-- end #main -->
-
-				    <?php get_sidebar(); ?>
 
 				</div> <!-- end #inner-content -->
 

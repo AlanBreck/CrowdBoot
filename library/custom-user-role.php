@@ -9,6 +9,8 @@ function add_user_role() {
 		'edit_others_projects'  => false,
 		'publish_projects'      => true,
 		'read_private_projects' => true,
+		'delete_projects'		=> true,
+		'delete_others_projects'=> true
 	));
 }
 

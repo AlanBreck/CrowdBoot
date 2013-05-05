@@ -44,7 +44,7 @@
 						<?php global $current_user; ?>
 						<p class="loginout">Hey, <a href="<?php home_url( '/' ) ?>/my-dashboard/"><?php echo $current_user->user_firstname; ?></a> (<?php wp_loginout(); ?>)</p>
 					<?php else : ?>
-						<p class="loginout"><a href="/log-in">Log In</a></p>
+						<p class="loginout"><a href="/log-in">Log In/Register</a></p>
 					<?php endif; ?>
 
 					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
