@@ -27,8 +27,6 @@ Template Name: My Dashboard
 
 							    	<?php $full_name = $current_user->user_firstname . '&nbsp;' . get_the_author_meta( 'middlename', $current_user->ID ) . '&nbsp;'  . $current_user->user_lastname; ?>
 
-							    	<p>You're awesome cuz you created an account.</p>
-
 							    	<div id="hcard-<?php echo $current_user->user_firstname . '-' . $current_user->user_lastname; ?>" class="vcard clearfix">
 							    		<img src="<?php get_gravatar_url( $user_email, 120 ); ?>" alt="<?php echo $full_name; ?>" class="photo" width="120" height="120" />
 							    		<div class="account-details">

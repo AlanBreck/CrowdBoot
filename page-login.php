@@ -34,20 +34,19 @@ Template Name: User Creation Template
 
 					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-						    <header class="article-header">
-
-							    <h1 class="page-title"><?php the_title(); ?></h1>
-
-						    </header> <!-- end article header -->
-
 						    <section class="entry-content">
 
 						    	<h2>Log In</h2>
 
 						    	<?php
+						    		if ( $_GET['back'] != '' ) {
+						    			$redirect_url = $_GET['back'];
+						    		} else {
+						    			$redirect_url = site_url( 'get-started' );
+						    		}
 						    		if ( ! is_user_logged_in() ) { // Display WordPress login form:
 						    		    $args = array(
-						    		        'redirect' => 'site_url()',
+						    		        'redirect' => $redirect_url,
 						    		        'label_username' => __( 'Email' ),
 						    		        'label_password' => __( 'Password' ),
 						    		        'label_remember' => __( 'Remember Me' ),

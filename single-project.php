@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php global $post; get_header(); ?>
 
 			<div id="content">
 
@@ -19,27 +19,25 @@
 
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php
-										global $post;
-										if ( get_post_meta( $post->ID, '_cmb_min_funding_goal', true ) && get_post_meta( $post->ID, '_cmb_min_funding_goal', true ) ) {
-											$funding_goal_range = '$' . get_post_meta( $post->ID, '_cmb_min_funding_goal', true ) . ' - $' . get_post_meta( $post->ID, '_cmb_max_funding_goal', true );
+										if ( get_post_meta( get_the_ID(), '_cmb_min_funding_goal', true ) && get_post_meta( get_the_ID(), '_cmb_min_funding_goal', true ) ) {
+											$funding_goal_range = '$' . get_post_meta( get_the_ID(), '_cmb_min_funding_goal', true ) . ' - $' . get_post_meta( get_the_ID(), '_cmb_max_funding_goal', true );
 										} else {
 											$funding_goal_range = 'To Be Determined';
 										}
 									?>
 									<p>Funding Goal Range: <strong><?php echo $funding_goal_range; ?></strong></p>
 									<?php
-										global $post;
-										if ( get_post_meta( $post->ID, '_cmb_minimum_investment_amount', true ) ) {
-											$minimum_investment_amount = get_post_meta( $post->ID, '_cmb_minimum_investment_amount', true );
+										if ( get_post_meta( get_the_ID(), '_cmb_minimum_investment_amount', true ) ) {
+											$minimum_investment_amount = get_post_meta( get_the_ID(), '_cmb_minimum_investment_amount', true );
 										} else {
 											$minimum_investment_amount = 'To Be Determined';
 										}
 									?>
 									<p>Minimum Investment Amount: <strong><?php echo $minimum_investment_amount; ?></strong></p>
 									<?php the_content(); ?>
-									<?php echo apply_filters( 'the_content', get_post_meta( $post->ID, '_cmb_promotional_video', true ) ); ?>
-									<?php if ( get_post_meta( $post->ID, '_cmb_promotional_images', true ) ) {
-										$promotional_images = get_post_meta( $post->ID, '_cmb_promotional_images', true );
+									<?php echo apply_filters( 'the_content', get_post_meta( get_the_ID(), '_cmb_promotional_video', true ) ); ?>
+									<?php if ( get_post_meta( get_the_ID(), '_cmb_promotional_images', true ) ) {
+										$promotional_images = get_post_meta( get_the_ID(), '_cmb_promotional_images', true );
 										echo '<img src="' . $promotional_images . '" />';
 									} ?>
 								</section> <!-- end article section -->

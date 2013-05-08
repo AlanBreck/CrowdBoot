@@ -198,4 +198,22 @@ function namespace_add_custom_types( $query ) {
 }
 add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 
+// Convert Fancy Quotes to Plain Quotes
+function convert_smart_quotes($string)
+{
+    $search = array("&#8216;",
+                    "&#8217;",
+                    "&#8220;",
+                    "&#8221;",
+                    "&#8211;");
+
+    $replace = array("'",
+                     "'",
+                     '"',
+                     '"',
+                     '-');
+
+    return str_replace($search, $replace, $string);
+}
+
 ?>

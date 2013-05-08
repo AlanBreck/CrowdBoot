@@ -52,6 +52,8 @@ Template Name: Project Creation Template
 
 								<?php if ( is_user_logged_in() && current_user_can( 'publish_projects' ) ) : ?>
 
+									<h2>Your Project</h2>
+
 									<form method="post">
 										<div>
 											<input type="text" name="post_title" placeholder="Project Name" />
