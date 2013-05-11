@@ -10,7 +10,7 @@ function add_user_role() {
 		'publish_projects'      => true,
 		'read_private_projects' => true,
 		'delete_projects'		=> true,
-		'delete_others_projects'=> true
+		'delete_others_projects'=> false
 	));
 }
 
@@ -24,6 +24,8 @@ function add_user_cap() {
 	$role->add_cap( 'edit_others_projects' );
 	$role->add_cap( 'publish_projects' );
 	$role->add_cap( 'read_private_project' );
+	$role->add_cap( 'delete_projects' );
+	$role->add_cap( 'delete_others_projects' );
 }
 
 // Grant meta capabilities on a per-post basis.

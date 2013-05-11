@@ -15,7 +15,7 @@ Template Name: Project Creation Template
 			'post_name'      => $_POST['post_title'] . '-' . rand( 100, 999 ),
 			'post_title'     => wp_strip_all_tags( $_POST['post_title'] ),
 			'post_type'      => 'project',
-			'post_status'	 => 'publish',
+			'post_status'	 => 'pending',
 			'tags_input'	 => $_POST['tags_input']
 		);
 
@@ -26,6 +26,12 @@ Template Name: Project Creation Template
 		add_post_meta( $new_post, '_cmb_min_funding_goal', preg_replace('/[^a-zA-Z0-9_ %\[\]\.\(\)%&-]/s', '', $_POST['min_funding_goal'] ) );
 		add_post_meta( $new_post, '_cmb_max_funding_goal', preg_replace('/[^a-zA-Z0-9_ %\[\]\.\(\)%&-]/s', '', $_POST['max_funding_goal'] ) );
 		add_post_meta( $new_post, '_cmb_minimum_investment_amount', $_POST['minimum_investment_amount'] );
+		add_post_meta( $new_post, '_cmb_tax_deductible', $_POST['tax_deductible'] );
+		add_post_meta( $new_post, '_cmb_irs_ein', $_POST['irs_ein'] );
+		add_post_meta( $new_post, '_cmb_name', $_POST['name'] );
+		add_post_meta( $new_post, '_cmb_city', $_POST['city'] );
+		add_post_meta( $new_post, '_cmb_state', $_POST['state'] );
+		add_post_meta( $new_post, '_cmb_country', $_POST['country'] );
 
 		header( "location: " . ( TRUE == $new_post ? get_permalink( $new_post ) : 'you-are-dumb' ) );
 	}
@@ -77,6 +83,69 @@ Template Name: Project Creation Template
 												<option value="$20 - $100">$20 - $100</option>
 												<option value="$100 - $1,000">$100 - $1,000</option>
 											</select>
+										</div>
+										<div>
+											Are donations to your organization, and this project, tax deductible? <br/>
+											<input type="radio" name="tax_deductible" value="true" /> Yes<br/>
+											<input type="radio" name="tax_deductible" value="false" /> No<br/>
+											<input type="text" name="irs_ein" placeholder="EIN" />
+											<input type="text" name="name" placeholder="Name" />
+											<input type="text" name="city" placeholder="City" />
+											<select name="state">
+												<option value="" selected="selected">Select a State</option>
+												<option value="AL">Alabama</option>
+												<option value="AK">Alaska</option>
+												<option value="AZ">Arizona</option>
+												<option value="AR">Arkansas</option>
+												<option value="CA">California</option>
+												<option value="CO">Colorado</option>
+												<option value="CT">Connecticut</option>
+												<option value="DE">Delaware</option>
+												<option value="DC">District Of Columbia</option>
+												<option value="FL">Florida</option>
+												<option value="GA">Georgia</option>
+												<option value="HI">Hawaii</option>
+												<option value="ID">Idaho</option>
+												<option value="IL">Illinois</option>
+												<option value="IN">Indiana</option>
+												<option value="IA">Iowa</option>
+												<option value="KS">Kansas</option>
+												<option value="KY">Kentucky</option>
+												<option value="LA">Louisiana</option>
+												<option value="ME">Maine</option>
+												<option value="MD">Maryland</option>
+												<option value="MA">Massachusetts</option>
+												<option value="MI">Michigan</option>
+												<option value="MN">Minnesota</option>
+												<option value="MS">Mississippi</option>
+												<option value="MO">Missouri</option>
+												<option value="MT">Montana</option>
+												<option value="NE">Nebraska</option>
+												<option value="NV">Nevada</option>
+												<option value="NH">New Hampshire</option>
+												<option value="NJ">New Jersey</option>
+												<option value="NM">New Mexico</option>
+												<option value="NY">New York</option>
+												<option value="NC">North Carolina</option>
+												<option value="ND">North Dakota</option>
+												<option value="OH">Ohio</option>
+												<option value="OK">Oklahoma</option>
+												<option value="OR">Oregon</option>
+												<option value="PA">Pennsylvania</option>
+												<option value="RI">Rhode Island</option>
+												<option value="SC">South Carolina</option>
+												<option value="SD">South Dakota</option>
+												<option value="TN">Tennessee</option>
+												<option value="TX">Texas</option>
+												<option value="UT">Utah</option>
+												<option value="VT">Vermont</option>
+												<option value="VA">Virginia</option>
+												<option value="WA">Washington</option>
+												<option value="WV">West Virginia</option>
+												<option value="WI">Wisconsin</option>
+												<option value="WY">Wyoming</option>
+											</select>
+											<input type="text" name="country" placeholder="Country" />
 										</div>
 										<div>
 											<label for="post_category">Project Category</label>
