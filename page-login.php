@@ -65,9 +65,16 @@ Template Name: User Creation Template
 
 									<form method="post">
 										<div>
-											<input type="text" maxlength="20" name="user_email" placeholder="Email" />
-											<input type="password" maxlength="20" name="user_pass" placeholder="Password" />
-											<input type="password" maxlength="20" name="user_pass2" placeholder="Confirm Password" />
+											<input type="email" maxlength="20" name="user_email" placeholder="Email" required />
+											<input type="password" maxlength="20" name="user_pass" id="user_pass" placeholder="Password" required />
+											<input type="password" maxlength="20" name="user_pass2" id="user_pass2" placeholder="Confirm Password" required />
+											<script type="text/javascript">
+												$("#user_pass2").on("change blur", function () {
+												    if ( $(this).val() !== $("#user_pass").val() ) {
+												        alert( "Fix your passwords, moron!");
+												    }
+												});
+											</script>
 										</div>
 										<div>
 											<input type="submit" value="Submit" />

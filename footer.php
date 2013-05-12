@@ -17,6 +17,7 @@
 		<!-- all js scripts are loaded in library/bones.php -->
 		<?php wp_footer(); ?>
 
+		<!-- FitVids.js -->
 		<script>
 			jQuery(document).ready(function(){
 				jQuery(".entry-content").fitVids();

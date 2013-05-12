@@ -133,6 +133,9 @@ function bones_scripts_and_styles() {
     // register formalize styles
     wp_register_style( 'formalize-stylesheet', get_stylesheet_directory_uri() . '/library/css/formalize.css', array(), '', 'all' );
 
+    // register formvalidation.css
+	wp_register_style( 'formvalidation', get_stylesheet_directory_uri() . '/library/css/formvalidation.css', array(), '', 'all' );
+
     // ie-only style sheet
     wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
@@ -145,21 +148,29 @@ function bones_scripts_and_styles() {
     wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
     wp_register_script( 'formalize', get_stylesheet_directory_uri() . '/library/js/jquery.formalize.min.js', array( 'jquery' ), '', true );
     wp_register_script( 'fitvids', get_stylesheet_directory_uri() . '/library/js/jquery.fitvids.js', array( 'jquery' ), '', true );
+    wp_register_script( 'formvalidation', get_stylesheet_directory_uri() . '/library/js/formvalidation.js', array( 'jquery' ), '', true );
 
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' );
     wp_enqueue_style( 'bones-stylesheet' );
     wp_enqueue_style('bones-ie-only');
+    wp_enqueue_style( 'formvalidation' );
     wp_enqueue_style( 'formalize-stylesheet' );
     /*
     I recommend using a plugin to call jQuery
     using the google cdn. That way it stays cached
     and your site will load faster.
     */
-    wp_enqueue_script( 'jquery' );
+    if (!is_admin()) add_action("wp_enqueue_scripts", "cb_jquery_enqueue", 11);
+    function cb_jquery_enqueue() {
+       wp_deregister_script('jquery');
+       wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js", false, null);
+       wp_enqueue_script('jquery');
+    }
     wp_enqueue_script( 'bones-js' );
     wp_enqueue_script( 'formalize' );
     wp_enqueue_script( 'fitvids' );
+    wp_enqueue_script( 'formvalidation' );
 
   }
 }

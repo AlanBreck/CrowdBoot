@@ -44,10 +44,10 @@ function cb_metaboxes( $meta_boxes ) {
 				'id'   => $prefix . 'minimum_investment_amount',
 				'type' => 'select',
 				'options' => array(
-					array('name' => '$1 - $5', 'value' => '$1 - $5'),
-					array('name' => '$5 - $20', 'value' => '$5 - $20'),
-					array('name' => '$20 - $100', 'value' => '$20 - $100'),
-					array('name' => '$100 - $1,000', 'value' => '$100 - $1,000')
+					array('name' => '$1 - $5', 'value' => '$10'),
+					array('name' => '$5 - $20', 'value' => '$20'),
+					array('name' => '$20 - $100', 'value' => '$40'),
+					array('name' => '$100 - $1,000', 'value' => '$80')
 				)
 			)
 		),
@@ -63,7 +63,7 @@ function cb_metaboxes( $meta_boxes ) {
 		'fields' => array(
 			array(
 				'name' => 'Are donations to your organization, and this project, tax deductible?',
-				'id' => $prefix . 'tax_deductible',
+				'id' => $prefix . 'irs_tax_deductible',
 				'type' => 'radio_inline',
 				'options' => array(
 					array('name' => 'Yes', 'value' => 'true'),
@@ -77,22 +77,22 @@ function cb_metaboxes( $meta_boxes ) {
 			),
 			array(
 				'name' => 'Name',
-				'id' => $prefix . 'name',
+				'id' => $prefix . 'irs_name',
 				'type' => 'text'
 			),
 			array(
 				'name' => 'City',
-				'id' => $prefix . 'city',
+				'id' => $prefix . 'irs_city',
 				'type' => 'text'
 			),
 			array(
 				'name' => 'State',
-				'id' => $prefix . 'state',
+				'id' => $prefix . 'irs_state',
 				'type' => 'text'
 			),
 			array(
 				'name' => 'Country',
-				'id' => $prefix . 'country',
+				'id' => $prefix . 'irs_country',
 				'type' => 'select',
 				'options' => array(
 					array('name' => 'Select a State', 'value' => ''),
