@@ -31,7 +31,9 @@ LAYOUT & GRID STYLES
 HEADER SYTLES
 *********************/
 
-.header {}
+.header {
+	padding: 15px 0;
+}
 
 	.loginout {
 		margin: 1em 0 0;
@@ -40,18 +42,25 @@ HEADER SYTLES
 
 	#logo {
 		float: left;
-		margin: 20px 20px 20px 0;
 		display: inline-block;
+		margin-right: 20px;
 	}
+
+	#logo img { display: block; }
 
 /*********************
 NAVIGATION STYLES
 *********************/
 
+nav {
+	margin: -15px 0;
+	float: left;
+	line-height: 55px;
+}
+
 .nav {
 	border: 0;
-	float: left;
-	margin: 0 0 25px;
+	margin: 0;
 
 	li {
 		float: left;
@@ -59,6 +68,7 @@ NAVIGATION STYLES
 
 		a {
 			border-bottom: 0;
+			padding: 10px 20px;
 
 			/*
 			you can use hover styles here even though this size
@@ -78,6 +88,7 @@ NAVIGATION STYLES
 		*/
 		ul.sub-menu,
 		ul.children {
+			line-height: 1.5;
 			width: 200px;
 			border: 1px solid #ccc;
 			border-top: 0;

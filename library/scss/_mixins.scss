@@ -57,7 +57,7 @@ $alert-green:       #e6efc2;
 $alert-blue:        #d5edf8;
 
 $black:             #000;
-$white:             #fff;
+$white:             #ececec;
 
 $bones-pink:        #f01d4f;
 $bones-blue:        #1990db;
@@ -76,7 +76,9 @@ http://sachagreif.com/sass-color-variables/
 TYPOGRAPHY
 *********************/
 
-$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Lustria|Brawler|Lato:100,300,400,700,900|Marcellus|Fjord+One|Strait|Archivo+Narrow|Nunito|Oswald|Signika|Francois+One|Asul);
+
+$sans-serif:        "Lato", Helvetica, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 
 
