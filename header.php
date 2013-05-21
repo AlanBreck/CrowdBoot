@@ -59,6 +59,7 @@
 
 						<nav role="navigation" class="clearfix">
 							<?php bones_main_nav(); ?>
+							<?php get_search_form(); ?>
 						</nav>
 
 					<?php endif; ?>
