@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lustria|Brawler|Lato:100,300,400,700,900|Marcellus|Fjord+One|Strait|Archivo+Narrow|Nunito|Oswald|Signika|Francois+One|Asul);
+@import url(http://fonts.googleapis.com/css?family=Lustria|Brawler|Lato:100,300,400,700,900|Marcellus|Fjord+One|Strait|Archivo+Narrow|Nunito|Oswald|Signika:300,400,600,700|Francois+One|Asul);
 /******************************************************************
 Site Name:
 Author:
@@ -666,53 +666,53 @@ TYPOGRAPHY
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
-/* line 109, ../scss/_mixins.scss */
+/* line 110, ../scss/_mixins.scss */
 span.amp {
   font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif !important;
   font-style: italic;
 }
 
-/* line 115, ../scss/_mixins.scss */
+/* line 116, ../scss/_mixins.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 116, ../scss/_mixins.scss */
+/* line 117, ../scss/_mixins.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 117, ../scss/_mixins.scss */
+/* line 118, ../scss/_mixins.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 121, ../scss/_mixins.scss */
+/* line 122, ../scss/_mixins.scss */
 .alert-help, .alert-info, .alert-error, .alert-success {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
 }
 
-/* line 127, ../scss/_mixins.scss */
+/* line 128, ../scss/_mixins.scss */
 .alert-help {
   border-color: #e8dc59;
   background: #ebe16f;
 }
 
-/* line 133, ../scss/_mixins.scss */
+/* line 134, ../scss/_mixins.scss */
 .alert-info {
   border-color: #bfe4f4;
   background: #d5edf8;
 }
 
-/* line 139, ../scss/_mixins.scss */
+/* line 140, ../scss/_mixins.scss */
 .alert-error {
   border-color: #f8cdce;
   background: #fbe3e4;
 }
 
-/* line 145, ../scss/_mixins.scss */
+/* line 146, ../scss/_mixins.scss */
 .alert-success {
   border-color: #deeaae;
   background: #e6efc2;
@@ -742,9 +742,9 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BUTTONS
 *********************/
-/* line 207, ../scss/_mixins.scss */
+/* line 208, ../scss/_mixins.scss */
 .button, .button:visited {
-  font-family: "Lato", Helvetica, sans-serif;
+  font-family: "Signika", Helvetica, sans-serif;
   border: 1px solid #12699f;
   border-top-color: #157bbb;
   border-left-color: #157bbb;
@@ -766,7 +766,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1990db, #1681c4);
   background-image: linear-gradient(to bottom, #1990db, #1681c4);
 }
-/* line 226, ../scss/_mixins.scss */
+/* line 227, ../scss/_mixins.scss */
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: #ececec;
   border: 1px solid #12699f;
@@ -779,7 +779,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1681c4, #1472ad);
   background-image: linear-gradient(to bottom, #1681c4, #1472ad);
 }
-/* line 234, ../scss/_mixins.scss */
+/* line 235, ../scss/_mixins.scss */
 .button:active, .button:visited:active {
   background-color: #1990db;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
@@ -789,7 +789,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #1681c4, #1990db);
 }
 
-/* line 239, ../scss/_mixins.scss */
+/* line 240, ../scss/_mixins.scss */
 .blue-button, .blue-button:visited {
   border-color: #1472ad;
   text-shadow: 0 1px 1px #1472ad;
@@ -801,7 +801,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #1990db, #1681c4);
   box-shadow: inset 0 0 3px #59b3ec;
 }
-/* line 245, ../scss/_mixins.scss */
+/* line 246, ../scss/_mixins.scss */
 .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
   border-color: #116396;
   background-color: #1472ad;
@@ -811,7 +811,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1784c9, #1472ad);
   background-image: linear-gradient(to bottom, #1784c9, #1472ad);
 }
-/* line 249, ../scss/_mixins.scss */
+/* line 250, ../scss/_mixins.scss */
 .blue-button:active, .blue-button:visited:active {
   background-color: #1990db;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
@@ -819,6 +819,742 @@ BUTTONS
   background-image: -moz-linear-gradient(top, #1681c4, #1990db);
   background-image: -o-linear-gradient(top, #1681c4, #1990db);
   background-image: linear-gradient(to bottom, #1681c4, #1990db);
+}
+
+/* line 3, ../scss/_buttons.scss */
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* minimal
+*******************************************************************************/
+/* line 35, ../scss/_buttons.scss */
+button.minimal {
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #e6e6e6));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background-image: -o-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background-image: linear-gradient(top, #f7f7f7, #e6e6e6);
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  box-shadow: inset 0 0 1px 1px #f6f6f6;
+  color: #555;
+  font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 8px 0 9px;
+  text-align: center;
+  text-shadow: 0 1px 0 white;
+  width: 150px;
+}
+/* line 21, ../scss/_buttons.scss */
+button.minimal:hover {
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #eeeeee);
+  background-image: -moz-linear-gradient(top, #f7f7f7, #eeeeee);
+  background-image: -ms-linear-gradient(top, #f7f7f7, #eeeeee);
+  background-image: -o-linear-gradient(top, #f7f7f7, #eeeeee);
+  background-image: linear-gradient(top, #f7f7f7, #eeeeee);
+  -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+  box-shadow: inset 0 0 1px 1px #eaeaea;
+  color: #222;
+  cursor: pointer;
+}
+/* line 28, ../scss/_buttons.scss */
+button.minimal:active {
+  background-color: #e6e6e6;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6e6e6), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(top, #e6e6e6, #dddddd);
+  background-image: -moz-linear-gradient(top, #e6e6e6, #dddddd);
+  background-image: -ms-linear-gradient(top, #e6e6e6, #dddddd);
+  background-image: -o-linear-gradient(top, #e6e6e6, #dddddd);
+  background-image: linear-gradient(top, #e6e6e6, #dddddd);
+  -webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
+  box-shadow: inset 0 0 1px 1px #e3e3e3;
+  color: #000;
+}
+
+/* clean gray
+*******************************************************************************/
+/* line 68, ../scss/_buttons.scss */
+button.clean-gray {
+  background-color: #eeeeee;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: linear-gradient(top, #eeeeee, #cccccc);
+  border: 1px solid #cccccc;
+  border-bottom: 1px solid #bbbbbb;
+  border-radius: 3px;
+  color: #333;
+  font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 8px 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #eeeeee;
+  width: 150px;
+}
+/* line 53, ../scss/_buttons.scss */
+button.clean-gray:hover {
+  background-color: #dddddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
+  background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: linear-gradient(top, #dddddd, #bbbbbb);
+  border: 1px solid #bbbbbb;
+  border-bottom: 1px solid #999999;
+  cursor: pointer;
+  text-shadow: 0 1px 0 #dddddd;
+}
+/* line 61, ../scss/_buttons.scss */
+button.clean-gray:active {
+  border: 1px solid #aaaaaa;
+  border-bottom: 1px solid #888888;
+  -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+  box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+}
+
+/* cupid green (inspired by okcupid.com)
+*******************************************************************************/
+/* line 100, ../scss/_buttons.scss */
+button.cupid-green {
+  background-color: #7fbf4d;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7fbf4d), color-stop(100%, #63a62f));
+  background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);
+  background-image: -moz-linear-gradient(top, #7fbf4d, #63a62f);
+  background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);
+  background-image: -o-linear-gradient(top, #7fbf4d, #63a62f);
+  background-image: linear-gradient(top, #7fbf4d, #63a62f);
+  border: 1px solid #63a62f;
+  border-bottom: 1px solid #5b992b;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 0 0 #96ca6d;
+  box-shadow: inset 0 1px 0 0 #96ca6d;
+  color: #fff;
+  font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 7px 0 8px 0;
+  text-align: center;
+  text-shadow: 0 -1px 0 #4c9021;
+  width: 150px;
+}
+/* line 87, ../scss/_buttons.scss */
+button.cupid-green:hover {
+  background-color: #76b347;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #76b347), color-stop(100%, #5e9e2e));
+  background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
+  background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);
+  background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);
+  background-image: -o-linear-gradient(top, #76b347, #5e9e2e);
+  background-image: linear-gradient(top, #76b347, #5e9e2e);
+  -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
+  box-shadow: inset 0 1px 0 0 #8dbf67;
+  cursor: pointer;
+}
+/* line 93, ../scss/_buttons.scss */
+button.cupid-green:active {
+  border: 1px solid #5b992b;
+  border-bottom: 1px solid #538c27;
+  -webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+  box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+}
+
+/* cupid orange
+*******************************************************************************/
+/* line 132, ../scss/_buttons.scss */
+button.cupid-orange {
+  background-color: #ff8159;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff8159), color-stop(100%, #ff4d15));
+  background-image: -webkit-linear-gradient(top, #ff8159, #ff4d15);
+  background-image: -moz-linear-gradient(top, #ff8159, #ff4d15);
+  background-image: -ms-linear-gradient(top, #ff8159, #ff4d15);
+  background-image: -o-linear-gradient(top, #ff8159, #ff4d15);
+  background-image: linear-gradient(top, #ff8159, #ff4d15);
+  border: 1px solid #ff4004;
+  border-bottom: 1px solid #e13600;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 0 0 #ff7448;
+  box-shadow: inset 0 1px 0 0 #ff7448;
+  color: #fff;
+  font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 7px 0 8px 0;
+  text-align: center;
+  text-shadow: 0 -1px 0 #ff5a26;
+  width: 150px;
+}
+/* line 119, ../scss/_buttons.scss */
+button.cupid-orange:hover {
+  background-color: #ff6737;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff6737), color-stop(100%, #ff4004));
+  background-image: -webkit-linear-gradient(top, #ff6737, #ff4004);
+  background-image: -moz-linear-gradient(top, #ff6737, #ff4004);
+  background-image: -ms-linear-gradient(top, #ff6737, #ff4004);
+  background-image: -o-linear-gradient(top, #ff6737, #ff4004);
+  background-image: linear-gradient(top, #ff6737, #ff4004);
+  -webkit-box-shadow: inset 0 1px 0 0 #ff4004;
+  box-shadow: inset 0 1px 0 0 #ff4004;
+  cursor: pointer;
+}
+/* line 125, ../scss/_buttons.scss */
+button.cupid-orange:active {
+  border: 1px solid #ff5a26;
+  border-bottom: 1px solid #ff7448;
+  -webkit-box-shadow: inset 0 0 8px 4px #ff4004, 0 1px 0 0 #eeeeee;
+  box-shadow: inset 0 0 8px 4px #ff4004, 0 1px 0 0 #eeeeee;
+}
+
+/* cupid blue (inspired by okcupid.com)
+*******************************************************************************/
+/* line 170, ../scss/_buttons.scss */
+button.cupid-blue {
+  background-color: #d7e5f5;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d7e5f5), color-stop(100%, #cbe0f5));
+  background-image: -webkit-linear-gradient(top, #d7e5f5, #cbe0f5);
+  background-image: -moz-linear-gradient(top, #d7e5f5, #cbe0f5);
+  background-image: -ms-linear-gradient(top, #d7e5f5, #cbe0f5);
+  background-image: -o-linear-gradient(top, #d7e5f5, #cbe0f5);
+  background-image: linear-gradient(top, #d7e5f5, #cbe0f5);
+  border-top: 1px solid #abbbcc;
+  border-left: 1px solid #a7b6c7;
+  border-bottom: 1px solid #a1afbf;
+  border-right: 1px solid #a7b6c7;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 0 0 white;
+  box-shadow: inset 0 1px 0 0 white;
+  color: #1a3e66;
+  font: normal 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 6px 0 7px 0;
+  text-align: center;
+  text-shadow: 0 1px 1px white;
+  width: 150px;
+}
+/* line 153, ../scss/_buttons.scss */
+button.cupid-blue:hover {
+  background-color: #ccd9e8;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ccd9e8), color-stop(100%, #c1d4e8));
+  background-image: -webkit-linear-gradient(top, #ccd9e8, #c1d4e8);
+  background-image: -moz-linear-gradient(top, #ccd9e8, #c1d4e8);
+  background-image: -ms-linear-gradient(top, #ccd9e8, #c1d4e8);
+  background-image: -o-linear-gradient(top, #ccd9e8, #c1d4e8);
+  background-image: linear-gradient(top, #ccd9e8, #c1d4e8);
+  border-top: 1px solid #a1afbf;
+  border-left: 1px solid #9caaba;
+  border-bottom: 1px solid #96a3b3;
+  border-right: 1px solid #9caaba;
+  -webkit-box-shadow: inset 0 1px 0 0 #f2f2f2;
+  box-shadow: inset 0 1px 0 0 #f2f2f2;
+  color: #163659;
+  cursor: pointer;
+}
+/* line 164, ../scss/_buttons.scss */
+button.cupid-blue:active {
+  border: 1px solid #8c98a7;
+  -webkit-box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee;
+  box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee;
+}
+
+/* blue pill (inspired by iTunes)
+*******************************************************************************/
+/* line 208, ../scss/_buttons.scss */
+button.blue-pill {
+  background-color: #a5b8da;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5b8da), color-stop(100%, #7089b3));
+  background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
+  background-image: -moz-linear-gradient(top, #a5b8da, #7089b3);
+  background-image: -ms-linear-gradient(top, #a5b8da, #7089b3);
+  background-image: -o-linear-gradient(top, #a5b8da, #7089b3);
+  background-image: linear-gradient(top, #a5b8da, #7089b3);
+  border-top: 1px solid #758fba;
+  border-right: 1px solid #6c84ab;
+  border-bottom: 1px solid #5c6f91;
+  border-left: 1px solid #6c84ab;
+  border-radius: 18px;
+  -webkit-box-shadow: inset 0 1px 0 0 #aec3e5;
+  box-shadow: inset 0 1px 0 0 #aec3e5;
+  color: #fff;
+  font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 8px 0;
+  text-align: center;
+  text-shadow: 0 -1px 1px #64799e;
+  text-transform: uppercase;
+  width: 150px;
+}
+/* line 192, ../scss/_buttons.scss */
+button.blue-pill:hover {
+  background-color: #9badcc;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9badcc), color-stop(100%, #687fa6));
+  background-image: -webkit-linear-gradient(top, #9badcc, #687fa6);
+  background-image: -moz-linear-gradient(top, #9badcc, #687fa6);
+  background-image: -ms-linear-gradient(top, #9badcc, #687fa6);
+  background-image: -o-linear-gradient(top, #9badcc, #687fa6);
+  background-image: linear-gradient(top, #9badcc, #687fa6);
+  border-top: 1px solid #6d86ad;
+  border-right: 1px solid #647a9e;
+  border-bottom: 1px solid #546685;
+  border-left: 1px solid #647a9e;
+  -webkit-box-shadow: inset 0 1px 0 0 #a5b9d9;
+  box-shadow: inset 0 1px 0 0 #a5b9d9;
+  cursor: pointer;
+}
+/* line 202, ../scss/_buttons.scss */
+button.blue-pill:active {
+  border: 1px solid #546685;
+  -webkit-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
+  box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
+}
+
+/* thoughtbot (inspired by thoughtbot.com)
+*******************************************************************************/
+/* line 237, ../scss/_buttons.scss */
+button.thoughtbot {
+  background-color: #ee432e;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee432e), color-stop(50%, #c63929), color-stop(50%, #b51700), color-stop(100%, #891100));
+  background-image: -webkit-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+  background-image: -moz-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+  background-image: -ms-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+  background-image: -o-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+  background-image: linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+  border: 1px solid #951100;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333333;
+  box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333333;
+  color: #fff;
+  font: bold 20px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 12px 0 14px 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8);
+  width: 150px;
+}
+/* line 226, ../scss/_buttons.scss */
+button.thoughtbot:hover {
+  background-color: #f37873;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f37873), color-stop(50%, #db504d), color-stop(50%, #cb0500), color-stop(100%, #a20601));
+  background-image: -webkit-linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
+  background-image: -moz-linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
+  background-image: -ms-linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
+  background-image: -o-linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
+  background-image: linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
+  cursor: pointer;
+}
+/* line 231, ../scss/_buttons.scss */
+button.thoughtbot:active {
+  background-color: #d43c28;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d43c28), color-stop(50%, #ad3224), color-stop(50%, #9c1500), color-stop(100%, #700d00));
+  background-image: -webkit-linear-gradient(top, #d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%);
+  background-image: -moz-linear-gradient(top, #d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%);
+  background-image: -ms-linear-gradient(top, #d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%);
+  background-image: -o-linear-gradient(top, #d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%);
+  background-image: linear-gradient(top, #d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%);
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4);
+  box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4);
+}
+
+/* punch
+*******************************************************************************/
+/* line 271, ../scss/_buttons.scss */
+button.punch {
+  background: #4162a8;
+  border-top: 1px solid #38538c;
+  border-right: 1px solid #1f2d4d;
+  border-bottom: 1px solid #151e33;
+  border-left: 1px solid #1f2d4d;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  color: #fff;
+  font: bold 20px/1 "helvetica neue", helvetica, arial, sans-serif;
+  margin-bottom: 10px;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px #1e2d4d;
+  width: 150px;
+  -webkit-background-clip: padding-box;
+}
+/* line 260, ../scss/_buttons.scss */
+button.punch:hover {
+  -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+  cursor: pointer;
+}
+/* line 265, ../scss/_buttons.scss */
+button.punch:active {
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+  box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+  margin-top: 58px;
+}
+
+/* purple candy
+*******************************************************************************/
+/* line 305, ../scss/_buttons.scss */
+button.purple-candy {
+  background-color: #9e76e8;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9e76e8), color-stop(50%, #7038e0), color-stop(50%, #6021de), color-stop(100%, #6224de));
+  background-image: -webkit-linear-gradient(top, #9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%);
+  background-image: -moz-linear-gradient(top, #9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%);
+  background-image: -ms-linear-gradient(top, #9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%);
+  background-image: -o-linear-gradient(top, #9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%);
+  background-image: linear-gradient(top, #9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%);
+  border-radius: 3px;
+  color: #fff;
+  font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px #473569;
+  width: 150px;
+  -webkit-background-clip: padding-box;
+}
+/* line 288, ../scss/_buttons.scss */
+button.purple-candy:hover {
+  background-color: #8d69cf;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8d69cf), color-stop(50%, #6332c7), color-stop(50%, #551dc4), color-stop(100%, #561fc4));
+  background-image: -webkit-linear-gradient(top, #8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%);
+  background-image: -moz-linear-gradient(top, #8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%);
+  background-image: -ms-linear-gradient(top, #8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%);
+  background-image: -o-linear-gradient(top, #8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%);
+  background-image: linear-gradient(top, #8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%);
+  -webkit-background-clip: padding-box;
+  cursor: pointer;
+}
+/* line 294, ../scss/_buttons.scss */
+button.purple-candy:active {
+  background: #4a1aab;
+  background: -moz-radial-gradient(50% 31% 0deg, circle cover, rgba(38, 76, 153, 0.4), rgba(11, 23, 46, 0.4)), -moz-linear-gradient(top, #7b5cb5 0%, #572bad 50%, #4a1aab 50%, #4b1bab 100%);
+  background: -webkit-gradient(radial, 50% 20%, 75, 50% 50%, 0, from(rgba(38, 76, 153, 0.4)), to(rgba(11, 23, 46, 0.4))), -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #7b5cb5), color-stop(0.5, #572bad), color-stop(0.5, #4a1aab), color-stop(1, #4b1bab));
+  color: #ddd;
+  -webkit-background-clip: padding-box;
+}
+
+/* shiny blue (inspired by rdio iphone interface)
+*******************************************************************************/
+/* line 339, ../scss/_buttons.scss */
+button.shiny-blue {
+  background-color: #759ae9;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #759ae9), color-stop(50%, #376fe0), color-stop(50%, #1a5ad9), color-stop(100%, #2463de));
+  background-image: -webkit-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+  background-image: -moz-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+  background-image: -ms-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+  background-image: -o-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+  background-image: linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+  border-top: 1px solid #1f58cc;
+  border-right: 1px solid #1b4db3;
+  border-bottom: 1px solid #174299;
+  border-left: 1px solid #1b4db3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+  box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+  color: #fff;
+  font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 7px 0;
+  text-shadow: 0 -1px 1px #1a5ad9;
+  width: 150px;
+}
+/* line 325, ../scss/_buttons.scss */
+button.shiny-blue:hover {
+  background-color: #5d89e8;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d89e8), color-stop(50%, #2261e0), color-stop(50%, #044bd9), color-stop(100%, #0d53de));
+  background-image: -webkit-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+  background-image: -moz-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+  background-image: -ms-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+  background-image: -o-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+  background-image: linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+  cursor: pointer;
+}
+/* line 330, ../scss/_buttons.scss */
+button.shiny-blue:active {
+  border-top: 1px solid #1b4db3;
+  border-right: 1px solid #174299;
+  border-bottom: 1px solid #133780;
+  border-left: 1px solid #174299;
+  -webkit-box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+  box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+}
+
+/* download itunes
+   I wrote a blog post about creating this button:
+   http://robots.thoughtbot.com/post/2718077289/make-css3-buttons-like-a-boss
+*******************************************************************************/
+/* line 385, ../scss/_buttons.scss */
+button.download-itunes {
+  background-color: #52a8e8;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #52a8e8), color-stop(100%, #377ad0));
+  background-image: -webkit-linear-gradient(top, #52a8e8, #377ad0);
+  background-image: -moz-linear-gradient(top, #52a8e8, #377ad0);
+  background-image: -ms-linear-gradient(top, #52a8e8, #377ad0);
+  background-image: -o-linear-gradient(top, #52a8e8, #377ad0);
+  background-image: linear-gradient(top, #52a8e8, #377ad0);
+  border-top: 1px solid #4081af;
+  border-right: 1px solid #2e69a3;
+  border-bottom: 1px solid #20559a;
+  border-left: 1px solid #2e69a3;
+  border-radius: 16px;
+  -webkit-box-shadow: inset 0 1px 0 0 #72b9eb, 0 1px 2px 0 #b3b3b3;
+  box-shadow: inset 0 1px 0 0 #72b9eb, 0 1px 2px 0 #b3b3b3;
+  color: #fff;
+  font: normal 11px/1 "lucida grande", sans-serif;
+  padding: 3px 5px;
+  text-align: center;
+  text-shadow: 0 -1px 1px #3275bc;
+  width: 112px;
+  -webkit-background-clip: padding-box;
+}
+/* line 363, ../scss/_buttons.scss */
+button.download-itunes:hover {
+  background-color: #3e9ee5;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e9ee5), color-stop(100%, #206bcb));
+  background-image: -webkit-linear-gradient(top, #3e9ee5 0%, #206bcb 100%);
+  background-image: -moz-linear-gradient(top, #3e9ee5 0%, #206bcb 100%);
+  background-image: -ms-linear-gradient(top, #3e9ee5 0%, #206bcb 100%);
+  background-image: -o-linear-gradient(top, #3e9ee5 0%, #206bcb 100%);
+  background-image: linear-gradient(top, #3e9ee5 0%, #206bcb 100%);
+  border-top: 1px solid #2a73a6;
+  border-right: 1px solid #165899;
+  border-bottom: 1px solid #07428f;
+  border-left: 1px solid #165899;
+  -webkit-box-shadow: inset 0 1px 0 0 #62b1e9;
+  box-shadow: inset 0 1px 0 0 #62b1e9;
+  cursor: pointer;
+  text-shadow: 0 -1px 1px #1d62ab;
+  -webkit-background-clip: padding-box;
+}
+/* line 375, ../scss/_buttons.scss */
+button.download-itunes:active {
+  background: #3282d3;
+  border: 1px solid #154c8c;
+  border-bottom: 1px solid #0e408e;
+  -webkit-box-shadow: inset 0 0 6px 3px #1657b5, 0 1px 0 0 white;
+  box-shadow: inset 0 0 6px 3px #1657b5, 0 1px 0 0 white;
+  text-shadow: 0 -1px 1px #2361a4;
+  -webkit-background-clip: padding-box;
+}
+
+/* line 389, ../scss/_buttons.scss */
+button[disabled].download-itunes,
+button[disabled].download-itunes:hover,
+button[disabled].download-itunes:active {
+  background-color: #dadada;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dadada), color-stop(100%, #f3f3f3));
+  background-image: -webkit-linear-gradient(top, #dadada, #f3f3f3);
+  background-image: -moz-linear-gradient(top, #dadada, #f3f3f3);
+  background-image: -ms-linear-gradient(top, #dadada, #f3f3f3);
+  background-image: -o-linear-gradient(top, #dadada, #f3f3f3);
+  background-image: linear-gradient(top, #dadada, #f3f3f3);
+  border-top: 1px solid #c5c5c5;
+  border-right: 1px solid #cecece;
+  border-bottom: 1px solid #d9d9d9;
+  border-left: 1px solid #cecece;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #8f8f8f;
+  cursor: not-allowed;
+  text-shadow: 0 -1px 1px #ebebeb;
+}
+
+/* line 403, ../scss/_buttons.scss */
+button.download-itunes::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* skip (inspired by okcupid iphone interface)
+*******************************************************************************/
+/* line 434, ../scss/_buttons.scss */
+button.skip {
+  background-color: #8c9cbf;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8c9cbf), color-stop(50%, #546a9e), color-stop(50%, #36518f), color-stop(100%, #3d5691));
+  background-image: -webkit-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: -moz-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: -ms-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: -o-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  border: 1px solid #172d6e;
+  border-bottom: 1px solid #0e1d45;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  box-shadow: inset 0 1px 0 0 #b1b9cb;
+  color: #fff;
+  font: bold 16px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 7px 0 8px 0;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0 -1px 1px #000f4d;
+  width: 150px;
+}
+/* line 424, ../scss/_buttons.scss */
+button.skip:hover {
+  background-color: #7f8dad;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f8dad), color-stop(50%, #4a5e8c), color-stop(50%, #2f477d), color-stop(100%, #364c80));
+  background-image: -webkit-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: -moz-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: -ms-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: -o-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  cursor: pointer;
+}
+/* line 429, ../scss/_buttons.scss */
+button.skip:active {
+  -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+}
+
+/* minimal indent (inspired by okcupid iphone interface)
+*******************************************************************************/
+/* line 465, ../scss/_buttons.scss */
+div.indent {
+  background-color: #e2e2e2;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e2e2e2), color-stop(100%, #fafafa));
+  background-image: -webkit-linear-gradient(top, #e2e2e2, #fafafa);
+  background-image: -moz-linear-gradient(top, #e2e2e2, #fafafa);
+  background-image: -ms-linear-gradient(top, #e2e2e2, #fafafa);
+  background-image: -o-linear-gradient(top, #e2e2e2, #fafafa);
+  background-image: linear-gradient(top, #e2e2e2, #fafafa);
+  border-bottom: 1px solid #e7e7e7;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-top: 1px solid #dfdfdf;
+  border-radius: 8px;
+  margin: 50px auto 0;
+  padding: 10px 0;
+  width: 170px;
+}
+
+/* line 477, ../scss/_buttons.scss */
+button.minimal-indent {
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3f3f3), color-stop(50%, #dddddd), color-stop(50%, #d2d2d2), color-stop(100%, #dfdfdf));
+  background-image: -webkit-linear-gradient(top, #f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%);
+  background-image: -moz-linear-gradient(top, #f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%);
+  background-image: -ms-linear-gradient(top, #f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%);
+  background-image: -o-linear-gradient(top, #f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%);
+  background-image: linear-gradient(top, #f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%);
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #b4b4b4;
+  border-right: 1px solid #dfdfdf;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 0 0 white, 0 1px 0 0 #d5d5d5, 0 -1px 2px 1px #efefef;
+  box-shadow: inset 0 1px 0 0 white, 0 1px 0 0 #d5d5d5, 0 -1px 2px 1px #efefef;
+  color: #666;
+  font: bold 16px/1 "helvetica neue", helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 7px 0;
+  text-shadow: 0 1px 1px white;
+  width: 150px;
+}
+/* line 454, ../scss/_buttons.scss */
+button.minimal-indent:hover {
+  background-color: #e5e5e5;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e5e5e5), color-stop(50%, #d1d1d1), color-stop(50%, #c4c4c4), color-stop(100%, #b8b8b8));
+  background-image: -webkit-linear-gradient(top, #e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%);
+  background-image: -moz-linear-gradient(top, #e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%);
+  background-image: -ms-linear-gradient(top, #e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%);
+  background-image: -o-linear-gradient(top, #e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%);
+  background-image: linear-gradient(top, #e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%);
+  -webkit-box-shadow: inset 0 1px 0 0 #f2f2f2, 0 1px 0 0 #c9c9c9, 0 -1px 2px 1px #e3e3e3;
+  box-shadow: inset 0 1px 0 0 #f2f2f2, 0 1px 0 0 #c9c9c9, 0 -1px 2px 1px #e3e3e3;
+  cursor: pointer;
+}
+/* line 460, ../scss/_buttons.scss */
+button.minimal-indent:active {
+  -webkit-box-shadow: inset 0 0 30px 0 #999999, 0 1px 0 0 white;
+  box-shadow: inset 0 0 30px 0 #999999, 0 1px 0 0 white;
+}
+
+/* webkit badge
+*******************************************************************************/
+/* line 506, ../scss/_buttons.scss */
+button.webkit-badge {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #ee432e), color-stop(0.5, #c63929), color-stop(0.5, #b51700), color-stop(1, #891100));
+  color: #fff;
+  font: lighter italic 30px/1 "hoefler text", georgia, serif;
+  height: 88px;
+  padding: 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px #3d0700;
+  width: 150px;
+  -webkit-mask-image: url("../images/badge.png");
+  -webkit-mask-position: left top;
+  -webkit-mask-repeat: no-repeat;
+}
+/* line 496, ../scss/_buttons.scss */
+button.webkit-badge:hover {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #f37873), color-stop(0.5, #db504d), color-stop(0.5, #cb0500), color-stop(1, #a20601));
+  cursor: pointer;
+}
+/* line 501, ../scss/_buttons.scss */
+button.webkit-badge:active {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #d43c28), color-stop(0.5, #ad3224), color-stop(0.5, #9c1500), color-stop(1, #700d00));
+}
+
+/* webkit seal
+*******************************************************************************/
+/* line 536, ../scss/_buttons.scss */
+button.webkit-seal {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #9e76e8), color-stop(1, #6224de));
+  color: #fff;
+  height: 90px;
+  color: #fff;
+  font: bold 13px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px #473569;
+  width: 150px;
+  -webkit-mask-image: url("../images/seal.png");
+  -webkit-mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+}
+/* line 526, ../scss/_buttons.scss */
+button.webkit-seal:hover {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #8d69cf), color-stop(1, #561fc4));
+  cursor: pointer;
+}
+/* line 531, ../scss/_buttons.scss */
+button.webkit-seal:active {
+  background: -webkit-gradient(radial, 50% 50%, 40, 50% 50%, 0, from(rgba(38, 76, 153, 0.2)), to(rgba(11, 23, 46, 0.2))), -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #7b5cb5), color-stop(1, #4b1bab));
+}
+
+/* webkit check
+*******************************************************************************/
+/* line 565, ../scss/_buttons.scss */
+button.webkit-check {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #779be9), color-stop(1, #2463de));
+  color: #fff;
+  height: 88px;
+  padding: 0;
+  text-align: center;
+  text-indent: -9999px;
+  text-shadow: 0px -1px 1px #3d0700;
+  width: 150px;
+  -webkit-mask-image: url("../images/check.png");
+  -webkit-mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+}
+/* line 555, ../scss/_buttons.scss */
+button.webkit-check:hover {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #6989cf), color-stop(1, #1d55c4));
+  cursor: pointer;
+}
+/* line 560, ../scss/_buttons.scss */
+button.webkit-check:active {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #5c78b5), color-stop(1, #1b4bab));
+}
+
+/* disabled button styles
+   works with this markup: <button disabled="disabled">Submit</button>
+*******************************************************************************/
+/* line 572, ../scss/_buttons.scss */
+button[disabled],
+button[disabled]:hover,
+button[disabled]:active {
+  background: #999;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #aaa;
+  cursor: not-allowed;
+  text-shadow: none;
 }
 
 /*
@@ -844,14 +1580,15 @@ GENERAL STYLES
 *********************/
 /* line 18, ../scss/_base.scss */
 body {
-  font-family: "Lato", Helvetica, sans-serif;
+  font-family: "Signika", Helvetica, sans-serif;
+  font-weight: 300;
   font-size: 100%;
   line-height: 1.5;
   color: #565656;
   background: #468de0;
 }
 
-/* line 26, ../scss/_base.scss */
+/* line 27, ../scss/_base.scss */
 .bold {
   font-weight: bold;
   margin-bottom: 0;
@@ -862,19 +1599,147 @@ WORDPRESS BODY CLASSES
 style a page via class
 ********************/
 /* for sites that are read right to left (i.e. hebrew) */
-/* line 38, ../scss/_base.scss */
+/* line 39, ../scss/_base.scss */
 .home .header {
-  padding-top: 30px;
+  padding: 30px 0 50px;
   background: #fff;
 }
-/* line 42, ../scss/_base.scss */
+/* line 43, ../scss/_base.scss */
 .home .header .wrap {
   text-align: center;
 }
-/* line 45, ../scss/_base.scss */
+/* line 46, ../scss/_base.scss */
 .home .header #logo {
   float: none;
   margin: 0;
+}
+/* line 52, ../scss/_base.scss */
+.home .home-menu-container {
+  background: #fff;
+}
+/* line 55, ../scss/_base.scss */
+.home .home-menu-container .home-menu {
+  padding: 20px;
+  text-align: center;
+}
+/* line 59, ../scss/_base.scss */
+.home .home-menu-container .home-menu li {
+  display: inline-block;
+}
+/* line 62, ../scss/_base.scss */
+.home .home-menu-container .home-menu li:first-child a {
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #e6e6e6));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background-image: -o-linear-gradient(top, #f7f7f7, #e6e6e6);
+  background-image: linear-gradient(top, #f7f7f7, #e6e6e6);
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  box-shadow: inset 0 0 1px 1px #f6f6f6;
+  color: #555;
+  font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 8px 0 9px;
+  text-align: center;
+  text-shadow: 0 1px 0 white;
+  width: 150px;
+}
+/* line 21, ../scss/_buttons.scss */
+.home .home-menu-container .home-menu li:first-child a:hover {
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #eeeeee);
+  background-image: -moz-linear-gradient(top, #f7f7f7, #eeeeee);
+  background-image: -ms-linear-gradient(top, #f7f7f7, #eeeeee);
+  background-image: -o-linear-gradient(top, #f7f7f7, #eeeeee);
+  background-image: linear-gradient(top, #f7f7f7, #eeeeee);
+  -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+  box-shadow: inset 0 0 1px 1px #eaeaea;
+  color: #222;
+  cursor: pointer;
+}
+/* line 28, ../scss/_buttons.scss */
+.home .home-menu-container .home-menu li:first-child a:active {
+  background-color: #e6e6e6;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6e6e6), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(top, #e6e6e6, #dddddd);
+  background-image: -moz-linear-gradient(top, #e6e6e6, #dddddd);
+  background-image: -ms-linear-gradient(top, #e6e6e6, #dddddd);
+  background-image: -o-linear-gradient(top, #e6e6e6, #dddddd);
+  background-image: linear-gradient(top, #e6e6e6, #dddddd);
+  -webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
+  box-shadow: inset 0 0 1px 1px #e3e3e3;
+  color: #000;
+}
+/* line 65, ../scss/_base.scss */
+.home .home-menu-container .home-menu li:last-child a {
+  background-color: #ff8159;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff8159), color-stop(100%, #ff4d15));
+  background-image: -webkit-linear-gradient(top, #ff8159, #ff4d15);
+  background-image: -moz-linear-gradient(top, #ff8159, #ff4d15);
+  background-image: -ms-linear-gradient(top, #ff8159, #ff4d15);
+  background-image: -o-linear-gradient(top, #ff8159, #ff4d15);
+  background-image: linear-gradient(top, #ff8159, #ff4d15);
+  border: 1px solid #ff4004;
+  border-bottom: 1px solid #e13600;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 0 0 #ff7448;
+  box-shadow: inset 0 1px 0 0 #ff7448;
+  color: #fff;
+  font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 7px 0 8px 0;
+  text-align: center;
+  text-shadow: 0 -1px 0 #ff5a26;
+  width: 150px;
+}
+/* line 119, ../scss/_buttons.scss */
+.home .home-menu-container .home-menu li:last-child a:hover {
+  background-color: #ff6737;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff6737), color-stop(100%, #ff4004));
+  background-image: -webkit-linear-gradient(top, #ff6737, #ff4004);
+  background-image: -moz-linear-gradient(top, #ff6737, #ff4004);
+  background-image: -ms-linear-gradient(top, #ff6737, #ff4004);
+  background-image: -o-linear-gradient(top, #ff6737, #ff4004);
+  background-image: linear-gradient(top, #ff6737, #ff4004);
+  -webkit-box-shadow: inset 0 1px 0 0 #ff4004;
+  box-shadow: inset 0 1px 0 0 #ff4004;
+  cursor: pointer;
+}
+/* line 125, ../scss/_buttons.scss */
+.home .home-menu-container .home-menu li:last-child a:active {
+  border: 1px solid #ff5a26;
+  border-bottom: 1px solid #ff7448;
+  -webkit-box-shadow: inset 0 0 8px 4px #ff4004, 0 1px 0 0 #eeeeee;
+  box-shadow: inset 0 0 8px 4px #ff4004, 0 1px 0 0 #eeeeee;
+}
+/* line 68, ../scss/_base.scss */
+.home .home-menu-container .home-menu li a {
+  padding: 15px 30px !important;
+  font-size: 17pt !important;
+  margin: 20px;
+  text-decoration: none;
+  font-weight: normal !important;
+}
+/* line 79, ../scss/_base.scss */
+.home #inner-content #main article {
+  background-color: #f9f9f9;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#f9f9f9));
+  background-image: -webkit-linear-gradient(top, white, #f9f9f9);
+  background-image: -moz-linear-gradient(top, white, #f9f9f9);
+  background-image: -o-linear-gradient(top, white, #f9f9f9);
+  background-image: linear, to bottom, white, #f9f9f9;
+  border: 1px solid #f9f9f9;
+  border-bottom: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 20px;
+}
+/* line 86, ../scss/_base.scss */
+.home #inner-content #main article h2 {
+  text-align: center;
+  font-size: 15pt;
+  margin-top: 0;
 }
 
 /* blog template page */
@@ -913,7 +1778,7 @@ style a page via class
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-/* line 89, ../scss/_base.scss */
+/* line 131, ../scss/_base.scss */
 .wrap {
   width: 96%;
   margin: 0 auto;
@@ -922,18 +1787,18 @@ LAYOUT & GRID STYLES
 /*********************
 LINK STYLES
 *********************/
-/* line 98, ../scss/_base.scss */
+/* line 140, ../scss/_base.scss */
 a, a:visited {
   color: #1990db;
   /* on hover */
   /* on click */
   /* mobile tap color */
 }
-/* line 102, ../scss/_base.scss */
+/* line 144, ../scss/_base.scss */
 a:hover, a:focus, a:visited:hover, a:visited:focus {
   color: #1475b2;
 }
-/* line 112, ../scss/_base.scss */
+/* line 154, ../scss/_base.scss */
 a:link, a:visited:link {
   /*
   this highlights links on iPhones/iPads.
@@ -946,9 +1811,9 @@ a:link, a:visited:link {
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
-/* line 126, ../scss/_base.scss */
+/* line 168, ../scss/_base.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  font-family: "Lato", Helvetica, sans-serif;
+  font-family: "Strait", Helvetica, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 500;
   /*
@@ -957,36 +1822,36 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   */
   /* removing text decoration from all headline links */
 }
-/* line 136, ../scss/_base.scss */
+/* line 178, ../scss/_base.scss */
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
 
-/* line 141, ../scss/_base.scss */
+/* line 183, ../scss/_base.scss */
 h1, .h1 {
   font-size: 2.5em;
   line-height: 1.333em;
 }
 
-/* line 146, ../scss/_base.scss */
+/* line 188, ../scss/_base.scss */
 h2, .h2 {
   font-size: 1.75em;
   line-height: 1.4em;
   margin-bottom: 0.375em;
 }
 
-/* line 152, ../scss/_base.scss */
+/* line 194, ../scss/_base.scss */
 h3, .h3 {
   font-size: 1.125em;
 }
 
-/* line 156, ../scss/_base.scss */
+/* line 198, ../scss/_base.scss */
 h4, .h4 {
   font-size: 1.1em;
   font-weight: 700;
 }
 
-/* line 161, ../scss/_base.scss */
+/* line 203, ../scss/_base.scss */
 h5, .h5 {
   font-size: 0.846em;
   line-height: 2.09em;
@@ -997,7 +1862,7 @@ h5, .h5 {
 /*********************
 HEADER SYTLES
 *********************/
-/* line 172, ../scss/_base.scss */
+/* line 214, ../scss/_base.scss */
 .header {
   background: #F9F9F9;
 }
@@ -1012,7 +1877,7 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-/* line 188, ../scss/_base.scss */
+/* line 230, ../scss/_base.scss */
 .nav {
   border: 1px solid #cccccc;
   border-bottom: 0;
@@ -1020,7 +1885,7 @@ and more scalable.
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 192, ../scss/_base.scss */
+/* line 234, ../scss/_base.scss */
 .nav li {
   /*
   so you really have to rethink your dropdowns for mobile.
@@ -1030,7 +1895,7 @@ and more scalable.
   http://www.alistapart.com/articles/organizing-mobile/
   */
 }
-/* line 194, ../scss/_base.scss */
+/* line 236, ../scss/_base.scss */
 .nav li a {
   display: block;
   text-decoration: none;
@@ -1045,7 +1910,7 @@ and more scalable.
   keep this file as small as possible!
   */
 }
-/* line 229, ../scss/_base.scss */
+/* line 271, ../scss/_base.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 30px;
@@ -1055,10 +1920,10 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-/* line 265, ../scss/_base.scss */
+/* line 307, ../scss/_base.scss */
 #content {
   background: #FFF;
-  padding-top: 2.2em;
+  padding: 2.2em 0;
 }
 
 /* end .hentry */
@@ -1072,13 +1937,14 @@ POSTS & CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-/* line 298, ../scss/_base.scss */
+/* line 340, ../scss/_base.scss */
 .byline {
   color: #999;
+  font-family: "Strait", Helvetica, sans-serif;
 }
 
 /* entry content */
-/* line 305, ../scss/_base.scss */
+/* line 348, ../scss/_base.scss */
 .entry-content {
   /*
   image alignment on a screen this size may be
@@ -1087,25 +1953,25 @@ POSTS & CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 340, ../scss/_base.scss */
+/* line 383, ../scss/_base.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 347, ../scss/_base.scss */
+/* line 390, ../scss/_base.scss */
 .entry-content img {
   margin: 0 0 1.5em 0;
   max-width: 100%;
   height: auto;
 }
-/* line 363, ../scss/_base.scss */
+/* line 406, ../scss/_base.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 368, ../scss/_base.scss */
+/* line 411, ../scss/_base.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -1113,18 +1979,18 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 376, ../scss/_base.scss */
+/* line 419, ../scss/_base.scss */
 .wp-caption {
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 381, ../scss/_base.scss */
+/* line 424, ../scss/_base.scss */
 .wp-caption img {
   margin-bottom: 0;
   width: 100%;
 }
-/* line 386, ../scss/_base.scss */
+/* line 429, ../scss/_base.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -1138,13 +2004,13 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 423, ../scss/_base.scss */
+/* line 466, ../scss/_base.scss */
 .page-navigation,
 .wp-prev-next {
   margin: 1.1em 0 2.2em;
 }
 
-/* line 427, ../scss/_base.scss */
+/* line 470, ../scss/_base.scss */
 .bones_page_navi {
   /* current page link */
   /* end .bones_page_navi .bpn-current */
@@ -1155,44 +2021,44 @@ PAGE NAVI STYLES
   /* first page link */
   /* last page link */
 }
-/* line 429, ../scss/_base.scss */
+/* line 472, ../scss/_base.scss */
 .bones_page_navi li {
   float: left;
   margin-left: 10px;
 }
-/* line 433, ../scss/_base.scss */
+/* line 476, ../scss/_base.scss */
 .bones_page_navi li a {
   padding: 3px 6px;
   display: block;
   text-decoration: none;
   position: relative;
 }
-/* line 439, ../scss/_base.scss */
+/* line 482, ../scss/_base.scss */
 .bones_page_navi li a:hover, .bones_page_navi li a:focus {
   color: #f01d4f;
   text-decoration: underline;
 }
-/* line 449, ../scss/_base.scss */
+/* line 492, ../scss/_base.scss */
 .bones_page_navi li.bpn-current {
   padding: 3px 6px;
   border-bottom: 2px solid #f01d4f;
   position: relative;
 }
-/* line 454, ../scss/_base.scss */
+/* line 497, ../scss/_base.scss */
 .bones_page_navi li.bpn-current a {
   /* hovering on current page link */
 }
-/* line 464, ../scss/_base.scss */
+/* line 507, ../scss/_base.scss */
 .bones_page_navi li.bpn-prev-link,
 .bones_page_navi li.bpn-next-link {
   font-weight: 700;
 }
-/* line 468, ../scss/_base.scss */
+/* line 511, ../scss/_base.scss */
 .bones_page_navi li.bpn-prev-link a,
 .bones_page_navi li.bpn-next-link a {
   padding: 0;
 }
-/* line 474, ../scss/_base.scss */
+/* line 517, ../scss/_base.scss */
 .bones_page_navi li.bpn-prev-link a:hover,
 .bones_page_navi li.bpn-next-link a:hover,
 .bones_page_navi li.bpn-first-page-link a:hover,
@@ -1202,11 +2068,11 @@ PAGE NAVI STYLES
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
-/* line 520, ../scss/_base.scss */
+/* line 563, ../scss/_base.scss */
 .wp-prev-next .prev-link {
   float: left;
 }
-/* line 524, ../scss/_base.scss */
+/* line 567, ../scss/_base.scss */
 .wp-prev-next .next-link {
   float: right;
 }
@@ -1216,12 +2082,12 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 535, ../scss/_base.scss */
+/* line 578, ../scss/_base.scss */
 #comments {
   /* number of comments span */
 }
 
-/* line 552, ../scss/_base.scss */
+/* line 595, ../scss/_base.scss */
 .commentlist {
   /* general comment classes */
   /* vcard */
@@ -1232,7 +2098,7 @@ COMMENT STYLES
   /* comment reply link */
   /* end .commentlist .comment-reply-link */
 }
-/* line 554, ../scss/_base.scss */
+/* line 597, ../scss/_base.scss */
 .commentlist li {
   position: relative;
   clear: both;
@@ -1242,63 +2108,63 @@ COMMENT STYLES
   padding: 0.7335em 10px;
   /* end .commentlist li ul.children */
 }
-/* line 562, ../scss/_base.scss */
+/* line 605, ../scss/_base.scss */
 .commentlist li:last-child {
   margin-bottom: 0;
 }
-/* line 566, ../scss/_base.scss */
+/* line 609, ../scss/_base.scss */
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 584, ../scss/_base.scss */
+/* line 627, ../scss/_base.scss */
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 588, ../scss/_base.scss */
+/* line 631, ../scss/_base.scss */
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 593, ../scss/_base.scss */
+/* line 636, ../scss/_base.scss */
 .commentlist li:not(.depth-1) {
   margin-right: -10px;
   margin-left: -10px;
   margin-top: 0;
   padding-bottom: 0;
 }
-/* line 607, ../scss/_base.scss */
+/* line 650, ../scss/_base.scss */
 .commentlist .odd {
   background: #eee;
 }
-/* line 610, ../scss/_base.scss */
+/* line 653, ../scss/_base.scss */
 .commentlist .even {
   background: #fefefe;
 }
-/* line 625, ../scss/_base.scss */
+/* line 668, ../scss/_base.scss */
 .commentlist .vcard {
   margin-left: 50px;
 }
-/* line 628, ../scss/_base.scss */
+/* line 671, ../scss/_base.scss */
 .commentlist .vcard cite.fn {
   font-weight: 700;
   font-style: normal;
 }
-/* line 636, ../scss/_base.scss */
+/* line 679, ../scss/_base.scss */
 .commentlist .vcard time {
   float: right;
 }
-/* line 639, ../scss/_base.scss */
+/* line 682, ../scss/_base.scss */
 .commentlist .vcard time a {
   color: #999;
   text-decoration: none;
 }
-/* line 643, ../scss/_base.scss */
+/* line 686, ../scss/_base.scss */
 .commentlist .vcard time a:hover {
   text-decoration: underline;
 }
-/* line 653, ../scss/_base.scss */
+/* line 696, ../scss/_base.scss */
 .commentlist .vcard img.avatar {
   position: absolute;
   left: 10px;
@@ -1306,17 +2172,17 @@ COMMENT STYLES
   border: 1px solid #cecece;
   background: #fff;
 }
-/* line 678, ../scss/_base.scss */
+/* line 721, ../scss/_base.scss */
 .commentlist .comment_content {
   margin-left: 50px;
 }
-/* line 681, ../scss/_base.scss */
+/* line 724, ../scss/_base.scss */
 .commentlist .comment_content p {
   margin: 0.7335em 0 1.5em;
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 690, ../scss/_base.scss */
+/* line 733, ../scss/_base.scss */
 .commentlist .comment-reply-link {
   text-decoration: none;
   float: right;
@@ -1328,7 +2194,7 @@ COMMENT STYLES
   font-weight: 700;
   font-size: 0.9em;
 }
-/* line 701, ../scss/_base.scss */
+/* line 744, ../scss/_base.scss */
 .commentlist .comment-reply-link:hover, .commentlist .comment-reply-link:focus {
   opacity: 1;
 }
@@ -1337,27 +2203,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 714, ../scss/_base.scss */
+/* line 757, ../scss/_base.scss */
 .respond-form {
   margin: 1.5em 10px;
   padding-bottom: 2.2em;
 }
-/* line 718, ../scss/_base.scss */
+/* line 761, ../scss/_base.scss */
 .respond-form form {
   margin: 0.75em 0;
 }
-/* line 721, ../scss/_base.scss */
+/* line 764, ../scss/_base.scss */
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335em;
 }
-/* line 726, ../scss/_base.scss */
+/* line 769, ../scss/_base.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 732, ../scss/_base.scss */
+/* line 775, ../scss/_base.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -1368,14 +2234,14 @@ COMMENT FORM STYLES
   line-height: 1.5em;
   /* form validation */
 }
-/* line 741, ../scss/_base.scss */
+/* line 784, ../scss/_base.scss */
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 746, ../scss/_base.scss */
+/* line 789, ../scss/_base.scss */
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -1388,14 +2254,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 757, ../scss/_base.scss */
+/* line 800, ../scss/_base.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 400px;
   min-width: 250px;
 }
-/* line 764, ../scss/_base.scss */
+/* line 807, ../scss/_base.scss */
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -1404,7 +2270,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 777, ../scss/_base.scss */
+/* line 820, ../scss/_base.scss */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -1412,13 +2278,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 790, ../scss/_base.scss */
+/* line 833, ../scss/_base.scss */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 795, ../scss/_base.scss */
+/* line 838, ../scss/_base.scss */
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -1426,7 +2292,7 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 811, ../scss/_base.scss */
+/* line 854, ../scss/_base.scss */
 .widget ul li {
   /* deep nesting */
 }
@@ -1434,7 +2300,7 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 832, ../scss/_base.scss */
+/* line 875, ../scss/_base.scss */
 .footer {
   color: #ececec;
   clear: both;

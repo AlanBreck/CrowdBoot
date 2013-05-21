@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lustria|Brawler|Lato:100,300,400,700,900|Marcellus|Fjord+One|Strait|Archivo+Narrow|Nunito|Oswald|Signika|Francois+One|Asul);
+@import url(http://fonts.googleapis.com/css?family=Lustria|Brawler|Lato:100,300,400,700,900|Marcellus|Fjord+One|Strait|Archivo+Narrow|Nunito|Oswald|Signika:300,400,600,700|Francois+One|Asul);
 /******************************************************************
 Site Name: 
 Author: 
@@ -103,53 +103,53 @@ TYPOGRAPHY
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
-/* line 109, ../scss/_mixins.scss */
+/* line 110, ../scss/_mixins.scss */
 span.amp {
   font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif !important;
   font-style: italic;
 }
 
-/* line 115, ../scss/_mixins.scss */
+/* line 116, ../scss/_mixins.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 116, ../scss/_mixins.scss */
+/* line 117, ../scss/_mixins.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 117, ../scss/_mixins.scss */
+/* line 118, ../scss/_mixins.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 121, ../scss/_mixins.scss */
+/* line 122, ../scss/_mixins.scss */
 .alert-help, .alert-info, .alert-error, .alert-success {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
 }
 
-/* line 127, ../scss/_mixins.scss */
+/* line 128, ../scss/_mixins.scss */
 .alert-help {
   border-color: #e8dc59;
   background: #ebe16f;
 }
 
-/* line 133, ../scss/_mixins.scss */
+/* line 134, ../scss/_mixins.scss */
 .alert-info {
   border-color: #bfe4f4;
   background: #d5edf8;
 }
 
-/* line 139, ../scss/_mixins.scss */
+/* line 140, ../scss/_mixins.scss */
 .alert-error {
   border-color: #f8cdce;
   background: #fbe3e4;
 }
 
-/* line 145, ../scss/_mixins.scss */
+/* line 146, ../scss/_mixins.scss */
 .alert-success {
   border-color: #deeaae;
   background: #e6efc2;
@@ -179,9 +179,9 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BUTTONS
 *********************/
-/* line 207, ../scss/_mixins.scss */
+/* line 208, ../scss/_mixins.scss */
 .button, .button:visited {
-  font-family: "Lato", Helvetica, sans-serif;
+  font-family: "Signika", Helvetica, sans-serif;
   border: 1px solid #12699f;
   border-top-color: #157bbb;
   border-left-color: #157bbb;
@@ -203,7 +203,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1990db, #1681c4);
   background-image: linear-gradient(to bottom, #1990db, #1681c4);
 }
-/* line 226, ../scss/_mixins.scss */
+/* line 227, ../scss/_mixins.scss */
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: #ececec;
   border: 1px solid #12699f;
@@ -216,7 +216,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1681c4, #1472ad);
   background-image: linear-gradient(to bottom, #1681c4, #1472ad);
 }
-/* line 234, ../scss/_mixins.scss */
+/* line 235, ../scss/_mixins.scss */
 .button:active, .button:visited:active {
   background-color: #1990db;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
@@ -226,7 +226,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #1681c4, #1990db);
 }
 
-/* line 239, ../scss/_mixins.scss */
+/* line 240, ../scss/_mixins.scss */
 .blue-button, .blue-button:visited {
   border-color: #1472ad;
   text-shadow: 0 1px 1px #1472ad;
@@ -238,7 +238,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #1990db, #1681c4);
   box-shadow: inset 0 0 3px #59b3ec;
 }
-/* line 245, ../scss/_mixins.scss */
+/* line 246, ../scss/_mixins.scss */
 .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
   border-color: #116396;
   background-color: #1472ad;
@@ -248,7 +248,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1784c9, #1472ad);
   background-image: linear-gradient(to bottom, #1784c9, #1472ad);
 }
-/* line 249, ../scss/_mixins.scss */
+/* line 250, ../scss/_mixins.scss */
 .blue-button:active, .blue-button:visited:active {
   background-color: #1990db;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
