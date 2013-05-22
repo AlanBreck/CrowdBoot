@@ -174,7 +174,7 @@ SIDEBARS & ASIDES
 
 		ul {
 			li {
-				margin-bottom: 0.75em;
+				margin-bottom: 0.2em;
 
 				&:first-child {}
 				&:last-child {}
@@ -182,7 +182,8 @@ SIDEBARS & ASIDES
 				/* deep nesting */
 
 				ul {
-					margin-top: 0.75em;
+					margin-top: 0.2em;
+					margin-bottom: 0;
 					padding-left: 1em;
 				}
 			}

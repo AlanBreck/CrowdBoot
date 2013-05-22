@@ -879,6 +879,14 @@ FOOTER STYLES
 .footer {
 	color: $white;
 	clear: both;
+
+	a {
+		color: $footer-link-color;
+
+		&:hover {
+			color: $footer-link-hover;
+		}
+	}
 }
 
 	/*
@@ -901,5 +909,8 @@ FOOTER STYLES
 	} /* end .footer-links */
 
 
-	.copyright {}
+	.copyright {
+		display: block;
+		clear: both;
+	}
 

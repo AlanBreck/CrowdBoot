@@ -671,53 +671,53 @@ TYPOGRAPHY
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
-/* line 120, ../scss/_mixins.scss */
+/* line 123, ../scss/_mixins.scss */
 span.amp {
   font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif !important;
   font-style: italic;
 }
 
-/* line 126, ../scss/_mixins.scss */
+/* line 129, ../scss/_mixins.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 127, ../scss/_mixins.scss */
+/* line 130, ../scss/_mixins.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 128, ../scss/_mixins.scss */
+/* line 131, ../scss/_mixins.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 132, ../scss/_mixins.scss */
+/* line 135, ../scss/_mixins.scss */
 .alert-help, .alert-info, .alert-error, .alert-success {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
 }
 
-/* line 138, ../scss/_mixins.scss */
+/* line 141, ../scss/_mixins.scss */
 .alert-help {
   border-color: #e8dc59;
   background: #ebe16f;
 }
 
-/* line 144, ../scss/_mixins.scss */
+/* line 147, ../scss/_mixins.scss */
 .alert-info {
   border-color: #bfe4f4;
   background: #d5edf8;
 }
 
-/* line 150, ../scss/_mixins.scss */
+/* line 153, ../scss/_mixins.scss */
 .alert-error {
   border-color: #f8cdce;
   background: #fbe3e4;
 }
 
-/* line 156, ../scss/_mixins.scss */
+/* line 159, ../scss/_mixins.scss */
 .alert-success {
   border-color: #deeaae;
   background: #e6efc2;
@@ -747,7 +747,7 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BUTTONS
 *********************/
-/* line 218, ../scss/_mixins.scss */
+/* line 221, ../scss/_mixins.scss */
 .button, .button:visited {
   font-family: "Lato", Helvetica, sans-serif;
   border: 1px solid #12699f;
@@ -771,7 +771,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1990db, #1681c4);
   background-image: linear-gradient(to bottom, #1990db, #1681c4);
 }
-/* line 237, ../scss/_mixins.scss */
+/* line 240, ../scss/_mixins.scss */
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: #ececec;
   border: 1px solid #12699f;
@@ -784,7 +784,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1681c4, #1472ad);
   background-image: linear-gradient(to bottom, #1681c4, #1472ad);
 }
-/* line 245, ../scss/_mixins.scss */
+/* line 248, ../scss/_mixins.scss */
 .button:active, .button:visited:active {
   background-color: #1990db;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
@@ -794,7 +794,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #1681c4, #1990db);
 }
 
-/* line 250, ../scss/_mixins.scss */
+/* line 253, ../scss/_mixins.scss */
 .blue-button, .blue-button:visited {
   border-color: #1472ad;
   text-shadow: 0 1px 1px #1472ad;
@@ -806,7 +806,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #1990db, #1681c4);
   box-shadow: inset 0 0 3px #59b3ec;
 }
-/* line 256, ../scss/_mixins.scss */
+/* line 259, ../scss/_mixins.scss */
 .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
   border-color: #116396;
   background-color: #1472ad;
@@ -816,7 +816,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1784c9, #1472ad);
   background-image: linear-gradient(to bottom, #1784c9, #1472ad);
 }
-/* line 260, ../scss/_mixins.scss */
+/* line 263, ../scss/_mixins.scss */
 .blue-button:active, .blue-button:visited:active {
   background-color: #1990db;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
@@ -2315,6 +2315,14 @@ FOOTER STYLES
   color: #ececec;
   clear: both;
 }
+/* line 883, ../scss/_base.scss */
+.footer a {
+  color: #ececec;
+}
+/* line 886, ../scss/_base.scss */
+.footer a:hover {
+  color: #d5d5d5;
+}
 
 /*
 if you checked out the link above:
@@ -2326,6 +2334,12 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
+/* line 912, ../scss/_base.scss */
+.copyright {
+  display: block;
+  clear: both;
+}
+
 /* line 1, ../scss/_vcard.scss */
 .page-template-page-dashboard-php .vcard {
   width: 50%;
@@ -2710,12 +2724,13 @@ you can add resource intensive styles.
   }
   /* line 176, ../scss/_768up.scss */
   .widget ul li {
-    margin-bottom: 0.75em;
+    margin-bottom: 0.2em;
     /* deep nesting */
   }
   /* line 184, ../scss/_768up.scss */
   .widget ul li ul {
-    margin-top: 0.75em;
+    margin-top: 0.2em;
+    margin-bottom: 0;
     padding-left: 1em;
   }
 
@@ -2738,7 +2753,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 292, ../scss/_768up.scss */
+  /* line 293, ../scss/_768up.scss */
   .footer-links ul li {
     /*
     be careful with the depth of your menus.

@@ -2,9 +2,57 @@
 
 				<div id="inner-footer" class="wrap clearfix">
 
-					<nav role="navigation">
+					<div class="left-footer-widgets footer-widgets first fourcol">
+						<?php if ( is_active_sidebar( 'left_footer_widgets' ) ) : ?>
+
+							<?php dynamic_sidebar( 'left_footer_widgets' ); ?>
+
+						<?php else : ?>
+
+							<!-- This content shows up if there are no widgets defined in the backend. -->
+
+							<div class="alert help">
+								<p><?php _e("Please activate some Widgets.", "bonestheme");  ?></p>
+							</div>
+
+						<?php endif; ?>
+					</div>
+
+					<div class="middle-footer-widgets footer-widgets fourcol">
+						<?php if ( is_active_sidebar( 'middle_footer_widgets' ) ) : ?>
+
+							<?php dynamic_sidebar( 'middle_footer_widgets' ); ?>
+
+						<?php else : ?>
+
+							<!-- This content shows up if there are no widgets defined in the backend. -->
+
+							<div class="alert help">
+								<p><?php _e("Please activate some Widgets.", "bonestheme");  ?></p>
+							</div>
+
+						<?php endif; ?>
+					</div>
+
+					<div class="right-footer-widgets footer-widgets last fourcol">
+						<?php if ( is_active_sidebar( 'right_footer_widgets' ) ) : ?>
+
+							<?php dynamic_sidebar( 'right_footer_widgets' ); ?>
+
+						<?php else : ?>
+
+							<!-- This content shows up if there are no widgets defined in the backend. -->
+
+							<div class="alert help">
+								<p><?php _e("Please activate some Widgets.", "bonestheme");  ?></p>
+							</div>
+
+						<?php endif; ?>
+					</div>
+
+					<?php /* ?><nav role="navigation">
     					<?php bones_footer_links(); ?>
-	                </nav>
+	                </nav><?php */ ?>
 
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 

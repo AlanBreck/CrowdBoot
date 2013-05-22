@@ -93,13 +93,43 @@ add_filter('show_admin_bar', '__return_false');
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
     register_sidebar(array(
-    	'id' => 'sidebar1',
-    	'name' => __('Sidebar 1', 'bonestheme'),
+    	'id' => 'sidebar',
+    	'name' => __('Sidebar', 'bonestheme'),
     	'description' => __('The first (primary) sidebar.', 'bonestheme'),
     	'before_widget' => '<div id="%1$s" class="widget %2$s">',
     	'after_widget' => '</div>',
     	'before_title' => '<h4 class="widgettitle">',
     	'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'left_footer_widgets',
+        'name' => __('Left Footer Widgets', 'bonestheme'),
+        'description' => __('Far left column footer widgets.', 'bonestheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'middle_footer_widgets',
+        'name' => __('Middle Footer Widgets', 'bonestheme'),
+        'description' => __('Middle column footer widgets.', 'bonestheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'right_footer_widgets',
+        'name' => __('Right Footer Widgets', 'bonestheme'),
+        'description' => __('The second (secondary) sidebar.', 'bonestheme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
     ));
 
     /*
