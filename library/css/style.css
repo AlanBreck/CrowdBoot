@@ -839,7 +839,8 @@ button::-moz-focus-inner {
 /* minimal
 *******************************************************************************/
 /* line 35, ../scss/_buttons.scss */
-button.minimal {
+button.minimal,
+input.minimal {
   background-color: #f7f7f7;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #e6e6e6));
   background-image: -webkit-linear-gradient(top, #f7f7f7, #e6e6e6);
@@ -859,7 +860,8 @@ button.minimal {
   width: 150px;
 }
 /* line 21, ../scss/_buttons.scss */
-button.minimal:hover {
+button.minimal:hover,
+input.minimal:hover {
   background-color: #f7f7f7;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #eeeeee));
   background-image: -webkit-linear-gradient(top, #f7f7f7, #eeeeee);
@@ -873,7 +875,8 @@ button.minimal:hover {
   cursor: pointer;
 }
 /* line 28, ../scss/_buttons.scss */
-button.minimal:active {
+button.minimal:active,
+input.minimal:active {
   background-color: #e6e6e6;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6e6e6), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(top, #e6e6e6, #dddddd);
@@ -888,8 +891,9 @@ button.minimal:active {
 
 /* clean gray
 *******************************************************************************/
-/* line 68, ../scss/_buttons.scss */
-button.clean-gray {
+/* line 69, ../scss/_buttons.scss */
+button.clean-gray,
+input.clean-gray {
   background-color: #eeeeee;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
   background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
@@ -907,8 +911,9 @@ button.clean-gray {
   text-shadow: 0 1px 0 #eeeeee;
   width: 150px;
 }
-/* line 53, ../scss/_buttons.scss */
-button.clean-gray:hover {
+/* line 54, ../scss/_buttons.scss */
+button.clean-gray:hover,
+input.clean-gray:hover {
   background-color: #dddddd;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
   background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
@@ -921,8 +926,9 @@ button.clean-gray:hover {
   cursor: pointer;
   text-shadow: 0 1px 0 #dddddd;
 }
-/* line 61, ../scss/_buttons.scss */
-button.clean-gray:active {
+/* line 62, ../scss/_buttons.scss */
+button.clean-gray:active,
+input.clean-gray:active {
   border: 1px solid #aaaaaa;
   border-bottom: 1px solid #888888;
   -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
@@ -931,8 +937,9 @@ button.clean-gray:active {
 
 /* cupid green (inspired by okcupid.com)
 *******************************************************************************/
-/* line 100, ../scss/_buttons.scss */
-button.cupid-green {
+/* line 102, ../scss/_buttons.scss */
+button.cupid-green,
+input.cupid-green {
   background-color: #7fbf4d;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7fbf4d), color-stop(100%, #63a62f));
   background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);
@@ -952,8 +959,9 @@ button.cupid-green {
   text-shadow: 0 -1px 0 #4c9021;
   width: 150px;
 }
-/* line 87, ../scss/_buttons.scss */
-button.cupid-green:hover {
+/* line 89, ../scss/_buttons.scss */
+button.cupid-green:hover,
+input.cupid-green:hover {
   background-color: #76b347;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #76b347), color-stop(100%, #5e9e2e));
   background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
@@ -965,8 +973,9 @@ button.cupid-green:hover {
   box-shadow: inset 0 1px 0 0 #8dbf67;
   cursor: pointer;
 }
-/* line 93, ../scss/_buttons.scss */
-button.cupid-green:active {
+/* line 95, ../scss/_buttons.scss */
+button.cupid-green:active,
+input.cupid-green:active {
   border: 1px solid #5b992b;
   border-bottom: 1px solid #538c27;
   -webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
@@ -975,8 +984,9 @@ button.cupid-green:active {
 
 /* cupid orange
 *******************************************************************************/
-/* line 132, ../scss/_buttons.scss */
-button.cupid-orange {
+/* line 135, ../scss/_buttons.scss */
+button.cupid-orange,
+input.cupid-orange {
   background-color: #ff8159;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff8159), color-stop(100%, #ff4d15));
   background-image: -webkit-linear-gradient(top, #ff8159, #ff4d15);
@@ -996,8 +1006,9 @@ button.cupid-orange {
   text-shadow: 0 -1px 0 #ff5a26;
   width: 150px;
 }
-/* line 119, ../scss/_buttons.scss */
-button.cupid-orange:hover {
+/* line 122, ../scss/_buttons.scss */
+button.cupid-orange:hover,
+input.cupid-orange:hover {
   background-color: #ff6737;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff6737), color-stop(100%, #ff4004));
   background-image: -webkit-linear-gradient(top, #ff6737, #ff4004);
@@ -1009,8 +1020,9 @@ button.cupid-orange:hover {
   box-shadow: inset 0 1px 0 0 #ff4004;
   cursor: pointer;
 }
-/* line 125, ../scss/_buttons.scss */
-button.cupid-orange:active {
+/* line 128, ../scss/_buttons.scss */
+button.cupid-orange:active,
+input.cupid-orange:active {
   border: 1px solid #ff5a26;
   border-bottom: 1px solid #ff7448;
   -webkit-box-shadow: inset 0 0 8px 4px #ff4004, 0 1px 0 0 #eeeeee;
@@ -1019,8 +1031,9 @@ button.cupid-orange:active {
 
 /* cupid blue (inspired by okcupid.com)
 *******************************************************************************/
-/* line 170, ../scss/_buttons.scss */
-button.cupid-blue {
+/* line 174, ../scss/_buttons.scss */
+button.cupid-blue,
+input.cupid-blue {
   background-color: #d7e5f5;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d7e5f5), color-stop(100%, #cbe0f5));
   background-image: -webkit-linear-gradient(top, #d7e5f5, #cbe0f5);
@@ -1042,8 +1055,9 @@ button.cupid-blue {
   text-shadow: 0 1px 1px white;
   width: 150px;
 }
-/* line 153, ../scss/_buttons.scss */
-button.cupid-blue:hover {
+/* line 157, ../scss/_buttons.scss */
+button.cupid-blue:hover,
+input.cupid-blue:hover {
   background-color: #ccd9e8;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ccd9e8), color-stop(100%, #c1d4e8));
   background-image: -webkit-linear-gradient(top, #ccd9e8, #c1d4e8);
@@ -1060,8 +1074,9 @@ button.cupid-blue:hover {
   color: #163659;
   cursor: pointer;
 }
-/* line 164, ../scss/_buttons.scss */
-button.cupid-blue:active {
+/* line 168, ../scss/_buttons.scss */
+button.cupid-blue:active,
+input.cupid-blue:active {
   border: 1px solid #8c98a7;
   -webkit-box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee;
   box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee;
@@ -1069,8 +1084,9 @@ button.cupid-blue:active {
 
 /* blue pill (inspired by iTunes)
 *******************************************************************************/
-/* line 208, ../scss/_buttons.scss */
-button.blue-pill {
+/* line 213, ../scss/_buttons.scss */
+button.blue-pill,
+input.blue-pill {
   background-color: #a5b8da;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5b8da), color-stop(100%, #7089b3));
   background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
@@ -1093,8 +1109,9 @@ button.blue-pill {
   text-transform: uppercase;
   width: 150px;
 }
-/* line 192, ../scss/_buttons.scss */
-button.blue-pill:hover {
+/* line 197, ../scss/_buttons.scss */
+button.blue-pill:hover,
+input.blue-pill:hover {
   background-color: #9badcc;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9badcc), color-stop(100%, #687fa6));
   background-image: -webkit-linear-gradient(top, #9badcc, #687fa6);
@@ -1110,8 +1127,9 @@ button.blue-pill:hover {
   box-shadow: inset 0 1px 0 0 #a5b9d9;
   cursor: pointer;
 }
-/* line 202, ../scss/_buttons.scss */
-button.blue-pill:active {
+/* line 207, ../scss/_buttons.scss */
+button.blue-pill:active,
+input.blue-pill:active {
   border: 1px solid #546685;
   -webkit-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
   box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
@@ -1119,8 +1137,9 @@ button.blue-pill:active {
 
 /* thoughtbot (inspired by thoughtbot.com)
 *******************************************************************************/
-/* line 237, ../scss/_buttons.scss */
-button.thoughtbot {
+/* line 243, ../scss/_buttons.scss */
+button.thoughtbot,
+input.thoughtbot {
   background-color: #ee432e;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee432e), color-stop(50%, #c63929), color-stop(50%, #b51700), color-stop(100%, #891100));
   background-image: -webkit-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
@@ -1139,8 +1158,9 @@ button.thoughtbot {
   text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8);
   width: 150px;
 }
-/* line 226, ../scss/_buttons.scss */
-button.thoughtbot:hover {
+/* line 232, ../scss/_buttons.scss */
+button.thoughtbot:hover,
+input.thoughtbot:hover {
   background-color: #f37873;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f37873), color-stop(50%, #db504d), color-stop(50%, #cb0500), color-stop(100%, #a20601));
   background-image: -webkit-linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
@@ -1150,8 +1170,9 @@ button.thoughtbot:hover {
   background-image: linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
   cursor: pointer;
 }
-/* line 231, ../scss/_buttons.scss */
-button.thoughtbot:active {
+/* line 237, ../scss/_buttons.scss */
+button.thoughtbot:active,
+input.thoughtbot:active {
   background-color: #d43c28;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d43c28), color-stop(50%, #ad3224), color-stop(50%, #9c1500), color-stop(100%, #700d00));
   background-image: -webkit-linear-gradient(top, #d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%);
@@ -1165,8 +1186,9 @@ button.thoughtbot:active {
 
 /* punch
 *******************************************************************************/
-/* line 271, ../scss/_buttons.scss */
-button.punch {
+/* line 278, ../scss/_buttons.scss */
+button.punch,
+input.punch {
   background: #4162a8;
   border-top: 1px solid #38538c;
   border-right: 1px solid #1f2d4d;
@@ -1184,14 +1206,16 @@ button.punch {
   width: 150px;
   -webkit-background-clip: padding-box;
 }
-/* line 260, ../scss/_buttons.scss */
-button.punch:hover {
+/* line 267, ../scss/_buttons.scss */
+button.punch:hover,
+input.punch:hover {
   -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
   box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
   cursor: pointer;
 }
-/* line 265, ../scss/_buttons.scss */
-button.punch:active {
+/* line 272, ../scss/_buttons.scss */
+button.punch:active,
+input.punch:active {
   -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
   box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
   margin-top: 58px;
@@ -1199,8 +1223,9 @@ button.punch:active {
 
 /* purple candy
 *******************************************************************************/
-/* line 305, ../scss/_buttons.scss */
-button.purple-candy {
+/* line 313, ../scss/_buttons.scss */
+button.purple-candy,
+input.purple-candy {
   background-color: #9e76e8;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9e76e8), color-stop(50%, #7038e0), color-stop(50%, #6021de), color-stop(100%, #6224de));
   background-image: -webkit-linear-gradient(top, #9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%);
@@ -1217,8 +1242,9 @@ button.purple-candy {
   width: 150px;
   -webkit-background-clip: padding-box;
 }
-/* line 288, ../scss/_buttons.scss */
-button.purple-candy:hover {
+/* line 296, ../scss/_buttons.scss */
+button.purple-candy:hover,
+input.purple-candy:hover {
   background-color: #8d69cf;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8d69cf), color-stop(50%, #6332c7), color-stop(50%, #551dc4), color-stop(100%, #561fc4));
   background-image: -webkit-linear-gradient(top, #8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%);
@@ -1229,8 +1255,9 @@ button.purple-candy:hover {
   -webkit-background-clip: padding-box;
   cursor: pointer;
 }
-/* line 294, ../scss/_buttons.scss */
-button.purple-candy:active {
+/* line 302, ../scss/_buttons.scss */
+button.purple-candy:active,
+input.purple-candy:active {
   background: #4a1aab;
   background: -moz-radial-gradient(50% 31% 0deg, circle cover, rgba(38, 76, 153, 0.4), rgba(11, 23, 46, 0.4)), -moz-linear-gradient(top, #7b5cb5 0%, #572bad 50%, #4a1aab 50%, #4b1bab 100%);
   background: -webkit-gradient(radial, 50% 20%, 75, 50% 50%, 0, from(rgba(38, 76, 153, 0.4)), to(rgba(11, 23, 46, 0.4))), -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #7b5cb5), color-stop(0.5, #572bad), color-stop(0.5, #4a1aab), color-stop(1, #4b1bab));
@@ -1240,8 +1267,9 @@ button.purple-candy:active {
 
 /* shiny blue (inspired by rdio iphone interface)
 *******************************************************************************/
-/* line 339, ../scss/_buttons.scss */
-button.shiny-blue {
+/* line 348, ../scss/_buttons.scss */
+button.shiny-blue,
+input.shiny-blue {
   background-color: #759ae9;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #759ae9), color-stop(50%, #376fe0), color-stop(50%, #1a5ad9), color-stop(100%, #2463de));
   background-image: -webkit-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
@@ -1262,8 +1290,9 @@ button.shiny-blue {
   text-shadow: 0 -1px 1px #1a5ad9;
   width: 150px;
 }
-/* line 325, ../scss/_buttons.scss */
-button.shiny-blue:hover {
+/* line 334, ../scss/_buttons.scss */
+button.shiny-blue:hover,
+input.shiny-blue:hover {
   background-color: #5d89e8;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d89e8), color-stop(50%, #2261e0), color-stop(50%, #044bd9), color-stop(100%, #0d53de));
   background-image: -webkit-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
@@ -1273,8 +1302,9 @@ button.shiny-blue:hover {
   background-image: linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
   cursor: pointer;
 }
-/* line 330, ../scss/_buttons.scss */
-button.shiny-blue:active {
+/* line 339, ../scss/_buttons.scss */
+button.shiny-blue:active,
+input.shiny-blue:active {
   border-top: 1px solid #1b4db3;
   border-right: 1px solid #174299;
   border-bottom: 1px solid #133780;
@@ -1287,8 +1317,9 @@ button.shiny-blue:active {
    I wrote a blog post about creating this button:
    http://robots.thoughtbot.com/post/2718077289/make-css3-buttons-like-a-boss
 *******************************************************************************/
-/* line 385, ../scss/_buttons.scss */
-button.download-itunes {
+/* line 395, ../scss/_buttons.scss */
+button.download-itunes,
+input.download-itunes {
   background-color: #52a8e8;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #52a8e8), color-stop(100%, #377ad0));
   background-image: -webkit-linear-gradient(top, #52a8e8, #377ad0);
@@ -1311,8 +1342,9 @@ button.download-itunes {
   width: 112px;
   -webkit-background-clip: padding-box;
 }
-/* line 363, ../scss/_buttons.scss */
-button.download-itunes:hover {
+/* line 373, ../scss/_buttons.scss */
+button.download-itunes:hover,
+input.download-itunes:hover {
   background-color: #3e9ee5;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e9ee5), color-stop(100%, #206bcb));
   background-image: -webkit-linear-gradient(top, #3e9ee5 0%, #206bcb 100%);
@@ -1330,8 +1362,9 @@ button.download-itunes:hover {
   text-shadow: 0 -1px 1px #1d62ab;
   -webkit-background-clip: padding-box;
 }
-/* line 375, ../scss/_buttons.scss */
-button.download-itunes:active {
+/* line 385, ../scss/_buttons.scss */
+button.download-itunes:active,
+input.download-itunes:active {
   background: #3282d3;
   border: 1px solid #154c8c;
   border-bottom: 1px solid #0e408e;
@@ -1341,7 +1374,7 @@ button.download-itunes:active {
   -webkit-background-clip: padding-box;
 }
 
-/* line 389, ../scss/_buttons.scss */
+/* line 400, ../scss/_buttons.scss */
 button[disabled].download-itunes,
 button[disabled].download-itunes:hover,
 button[disabled].download-itunes:active {
@@ -1363,16 +1396,18 @@ button[disabled].download-itunes:active {
   text-shadow: 0 -1px 1px #ebebeb;
 }
 
-/* line 403, ../scss/_buttons.scss */
-button.download-itunes::-moz-focus-inner {
+/* line 414, ../scss/_buttons.scss */
+button.download-itunes::-moz-focus-inner,
+input.download-itunes::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
 /* skip (inspired by okcupid iphone interface)
 *******************************************************************************/
-/* line 434, ../scss/_buttons.scss */
-button.skip {
+/* line 446, ../scss/_buttons.scss */
+button.skip,
+input.skip {
   background-color: #8c9cbf;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8c9cbf), color-stop(50%, #546a9e), color-stop(50%, #36518f), color-stop(100%, #3d5691));
   background-image: -webkit-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
@@ -1393,8 +1428,9 @@ button.skip {
   text-shadow: 0 -1px 1px #000f4d;
   width: 150px;
 }
-/* line 424, ../scss/_buttons.scss */
-button.skip:hover {
+/* line 436, ../scss/_buttons.scss */
+button.skip:hover,
+input.skip:hover {
   background-color: #7f8dad;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f8dad), color-stop(50%, #4a5e8c), color-stop(50%, #2f477d), color-stop(100%, #364c80));
   background-image: -webkit-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
@@ -1404,15 +1440,16 @@ button.skip:hover {
   background-image: linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
   cursor: pointer;
 }
-/* line 429, ../scss/_buttons.scss */
-button.skip:active {
+/* line 441, ../scss/_buttons.scss */
+button.skip:active,
+input.skip:active {
   -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
 }
 
 /* minimal indent (inspired by okcupid iphone interface)
 *******************************************************************************/
-/* line 465, ../scss/_buttons.scss */
+/* line 478, ../scss/_buttons.scss */
 div.indent {
   background-color: #e2e2e2;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e2e2e2), color-stop(100%, #fafafa));
@@ -1431,8 +1468,9 @@ div.indent {
   width: 170px;
 }
 
-/* line 477, ../scss/_buttons.scss */
-button.minimal-indent {
+/* line 490, ../scss/_buttons.scss */
+button.minimal-indent,
+input.minimal-indent {
   background-color: #f3f3f3;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3f3f3), color-stop(50%, #dddddd), color-stop(50%, #d2d2d2), color-stop(100%, #dfdfdf));
   background-image: -webkit-linear-gradient(top, #f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%);
@@ -1453,8 +1491,9 @@ button.minimal-indent {
   text-shadow: 0 1px 1px white;
   width: 150px;
 }
-/* line 454, ../scss/_buttons.scss */
-button.minimal-indent:hover {
+/* line 467, ../scss/_buttons.scss */
+button.minimal-indent:hover,
+input.minimal-indent:hover {
   background-color: #e5e5e5;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e5e5e5), color-stop(50%, #d1d1d1), color-stop(50%, #c4c4c4), color-stop(100%, #b8b8b8));
   background-image: -webkit-linear-gradient(top, #e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%);
@@ -1466,16 +1505,18 @@ button.minimal-indent:hover {
   box-shadow: inset 0 1px 0 0 #f2f2f2, 0 1px 0 0 #c9c9c9, 0 -1px 2px 1px #e3e3e3;
   cursor: pointer;
 }
-/* line 460, ../scss/_buttons.scss */
-button.minimal-indent:active {
+/* line 473, ../scss/_buttons.scss */
+button.minimal-indent:active,
+input.minimal-indent:active {
   -webkit-box-shadow: inset 0 0 30px 0 #999999, 0 1px 0 0 white;
   box-shadow: inset 0 0 30px 0 #999999, 0 1px 0 0 white;
 }
 
 /* webkit badge
 *******************************************************************************/
-/* line 506, ../scss/_buttons.scss */
-button.webkit-badge {
+/* line 520, ../scss/_buttons.scss */
+button.webkit-badge,
+input.webkit-badge {
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #ee432e), color-stop(0.5, #c63929), color-stop(0.5, #b51700), color-stop(1, #891100));
   color: #fff;
   font: lighter italic 30px/1 "hoefler text", georgia, serif;
@@ -1488,20 +1529,23 @@ button.webkit-badge {
   -webkit-mask-position: left top;
   -webkit-mask-repeat: no-repeat;
 }
-/* line 496, ../scss/_buttons.scss */
-button.webkit-badge:hover {
+/* line 510, ../scss/_buttons.scss */
+button.webkit-badge:hover,
+input.webkit-badge:hover {
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #f37873), color-stop(0.5, #db504d), color-stop(0.5, #cb0500), color-stop(1, #a20601));
   cursor: pointer;
 }
-/* line 501, ../scss/_buttons.scss */
-button.webkit-badge:active {
+/* line 515, ../scss/_buttons.scss */
+button.webkit-badge:active,
+input.webkit-badge:active {
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #d43c28), color-stop(0.5, #ad3224), color-stop(0.5, #9c1500), color-stop(1, #700d00));
 }
 
 /* webkit seal
 *******************************************************************************/
-/* line 536, ../scss/_buttons.scss */
-button.webkit-seal {
+/* line 551, ../scss/_buttons.scss */
+button.webkit-seal,
+input.webkit-seal {
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #9e76e8), color-stop(1, #6224de));
   color: #fff;
   height: 90px;
@@ -1515,20 +1559,23 @@ button.webkit-seal {
   -webkit-mask-position: center center;
   -webkit-mask-repeat: no-repeat;
 }
-/* line 526, ../scss/_buttons.scss */
-button.webkit-seal:hover {
+/* line 541, ../scss/_buttons.scss */
+button.webkit-seal:hover,
+input.webkit-seal:hover {
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #8d69cf), color-stop(1, #561fc4));
   cursor: pointer;
 }
-/* line 531, ../scss/_buttons.scss */
-button.webkit-seal:active {
+/* line 546, ../scss/_buttons.scss */
+button.webkit-seal:active,
+input.webkit-seal:active {
   background: -webkit-gradient(radial, 50% 50%, 40, 50% 50%, 0, from(rgba(38, 76, 153, 0.2)), to(rgba(11, 23, 46, 0.2))), -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #7b5cb5), color-stop(1, #4b1bab));
 }
 
 /* webkit check
 *******************************************************************************/
-/* line 565, ../scss/_buttons.scss */
-button.webkit-check {
+/* line 581, ../scss/_buttons.scss */
+button.webkit-check,
+input.webkit-check {
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #779be9), color-stop(1, #2463de));
   color: #fff;
   height: 88px;
@@ -1541,20 +1588,22 @@ button.webkit-check {
   -webkit-mask-position: center center;
   -webkit-mask-repeat: no-repeat;
 }
-/* line 555, ../scss/_buttons.scss */
-button.webkit-check:hover {
+/* line 571, ../scss/_buttons.scss */
+button.webkit-check:hover,
+input.webkit-check:hover {
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #6989cf), color-stop(1, #1d55c4));
   cursor: pointer;
 }
-/* line 560, ../scss/_buttons.scss */
-button.webkit-check:active {
+/* line 576, ../scss/_buttons.scss */
+button.webkit-check:active,
+input.webkit-check:active {
   background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #5c78b5), color-stop(1, #1b4bab));
 }
 
 /* disabled button styles
    works with this markup: <button disabled="disabled">Submit</button>
 *******************************************************************************/
-/* line 572, ../scss/_buttons.scss */
+/* line 589, ../scss/_buttons.scss */
 button[disabled],
 button[disabled]:hover,
 button[disabled]:active {
@@ -1710,7 +1759,7 @@ style a page via class
   text-shadow: 0 -1px 0 #ff5a26;
   width: 150px;
 }
-/* line 119, ../scss/_buttons.scss */
+/* line 122, ../scss/_buttons.scss */
 .home .home-menu-container .home-menu li:last-child a:hover {
   background-color: #ff6737;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff6737), color-stop(100%, #ff4004));
@@ -1723,7 +1772,7 @@ style a page via class
   box-shadow: inset 0 1px 0 0 #ff4004;
   cursor: pointer;
 }
-/* line 125, ../scss/_buttons.scss */
+/* line 128, ../scss/_buttons.scss */
 .home .home-menu-container .home-menu li:last-child a:active {
   border: 1px solid #ff5a26;
   border-bottom: 1px solid #ff7448;
@@ -2717,25 +2766,20 @@ you can add resource intensive styles.
   /*********************
   HEADER SYTLES
   *********************/
-  /* line 34, ../scss/_768up.scss */
-  .header {
-    padding: 15px 0;
-  }
-
-  /* line 38, ../scss/_768up.scss */
+  /* line 36, ../scss/_768up.scss */
   .loginout {
     margin: 1em 0 0;
     float: right;
   }
 
-  /* line 43, ../scss/_768up.scss */
+  /* line 41, ../scss/_768up.scss */
   #logo {
     float: left;
     display: inline-block;
-    margin-right: 20px;
+    margin: 15px 20px 15px 0;
   }
 
-  /* line 49, ../scss/_768up.scss */
+  /* line 47, ../scss/_768up.scss */
   #logo img {
     display: block;
   }
@@ -2743,14 +2787,13 @@ you can add resource intensive styles.
   /*********************
   NAVIGATION STYLES
   *********************/
-  /* line 55, ../scss/_768up.scss */
+  /* line 53, ../scss/_768up.scss */
   nav {
-    margin: -15px 0;
     float: left;
     line-height: 55px;
   }
 
-  /* line 61, ../scss/_768up.scss */
+  /* line 58, ../scss/_768up.scss */
   .nav {
     border: 0;
     margin: 0;
@@ -2758,7 +2801,7 @@ you can add resource intensive styles.
     /* highlight current page */
     /* end current highlighters */
   }
-  /* line 65, ../scss/_768up.scss */
+  /* line 62, ../scss/_768up.scss */
   .nav li {
     float: left;
     position: relative;
@@ -2767,7 +2810,7 @@ you can add resource intensive styles.
     */
     /* showing sub-menus */
   }
-  /* line 69, ../scss/_768up.scss */
+  /* line 66, ../scss/_768up.scss */
   .nav li a {
     border-bottom: 0;
     padding: 10px 20px;
@@ -2776,11 +2819,56 @@ you can add resource intensive styles.
     has the possibility of being a mobile device.
     */
   }
-  /* line 77, ../scss/_768up.scss */
+  /* line 74, ../scss/_768up.scss */
   .nav li a:hover, .nav li a:focus {
-    background-color: #dedede;
+    background-color: #efefef;
   }
-  /* line 89, ../scss/_768up.scss */
+  /* line 80, ../scss/_768up.scss */
+  .nav li.create-project {
+    padding-top: 26px;
+  }
+  /* line 83, ../scss/_768up.scss */
+  .nav li.create-project a {
+    background-color: #ff8159;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff8159), color-stop(100%, #ff4d15));
+    background-image: -webkit-linear-gradient(top, #ff8159, #ff4d15);
+    background-image: -moz-linear-gradient(top, #ff8159, #ff4d15);
+    background-image: -ms-linear-gradient(top, #ff8159, #ff4d15);
+    background-image: -o-linear-gradient(top, #ff8159, #ff4d15);
+    background-image: linear-gradient(top, #ff8159, #ff4d15);
+    border: 1px solid #ff4004;
+    border-bottom: 1px solid #e13600;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 0 0 #ff7448;
+    box-shadow: inset 0 1px 0 0 #ff7448;
+    color: #fff;
+    font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    padding: 7px 0 8px 0;
+    text-align: center;
+    text-shadow: 0 -1px 0 #ff5a26;
+    width: 150px;
+  }
+  /* line 122, ../scss/_buttons.scss */
+  .nav li.create-project a:hover {
+    background-color: #ff6737;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff6737), color-stop(100%, #ff4004));
+    background-image: -webkit-linear-gradient(top, #ff6737, #ff4004);
+    background-image: -moz-linear-gradient(top, #ff6737, #ff4004);
+    background-image: -ms-linear-gradient(top, #ff6737, #ff4004);
+    background-image: -o-linear-gradient(top, #ff6737, #ff4004);
+    background-image: linear-gradient(top, #ff6737, #ff4004);
+    -webkit-box-shadow: inset 0 1px 0 0 #ff4004;
+    box-shadow: inset 0 1px 0 0 #ff4004;
+    cursor: pointer;
+  }
+  /* line 128, ../scss/_buttons.scss */
+  .nav li.create-project a:active {
+    border: 1px solid #ff5a26;
+    border-bottom: 1px solid #ff7448;
+    -webkit-box-shadow: inset 0 0 8px 4px #ff4004, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 8px 4px #ff4004, 0 1px 0 0 #eeeeee;
+  }
+  /* line 94, ../scss/_768up.scss */
   .nav li ul.sub-menu,
   .nav li ul.children {
     line-height: 1.5;
@@ -2794,7 +2882,7 @@ you can add resource intensive styles.
     background: rgba(255, 255, 255, 0.9);
     /* highlight sub-menu current page */
   }
-  /* line 101, ../scss/_768up.scss */
+  /* line 106, ../scss/_768up.scss */
   .nav li ul.sub-menu li,
   .nav li ul.children li {
     /*
@@ -2803,7 +2891,7 @@ you can add resource intensive styles.
     for usability. k, bai.
     */
   }
-  /* line 103, ../scss/_768up.scss */
+  /* line 108, ../scss/_768up.scss */
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
     padding-left: 10px;
@@ -2812,12 +2900,12 @@ you can add resource intensive styles.
     width: 180px;
     border-bottom: 1px solid #cccccc;
   }
-  /* line 120, ../scss/_768up.scss */
+  /* line 125, ../scss/_768up.scss */
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  /* line 142, ../scss/_768up.scss */
+  /* line 147, ../scss/_768up.scss */
   .nav li:hover ul {
     top: auto;
     display: block;
@@ -2827,28 +2915,28 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 162, ../scss/_768up.scss */
+  /* line 167, ../scss/_768up.scss */
   .sidebar {
     margin-top: 2.2em;
   }
 
-  /* line 166, ../scss/_768up.scss */
+  /* line 171, ../scss/_768up.scss */
   .widgettitle {
     border-bottom: 2px solid #444444;
     margin-bottom: 0.75em;
   }
 
-  /* line 171, ../scss/_768up.scss */
+  /* line 176, ../scss/_768up.scss */
   .widget {
     padding: 0 10px;
     margin: 2.2em 0;
   }
-  /* line 176, ../scss/_768up.scss */
+  /* line 181, ../scss/_768up.scss */
   .widget ul li {
     margin-bottom: 0.2em;
     /* deep nesting */
   }
-  /* line 184, ../scss/_768up.scss */
+  /* line 189, ../scss/_768up.scss */
   .widget ul li ul {
     margin-top: 0.2em;
     margin-bottom: 0;
@@ -2869,12 +2957,41 @@ you can add resource intensive styles.
   /*********************
   FOOTER STYLES
   *********************/
+  /* line 292, ../scss/_768up.scss */
+  .footer .widgettitle {
+    border-bottom: 1px dotted #eeeeee;
+    margin-bottom: 0;
+  }
+  /* line 297, ../scss/_768up.scss */
+  .footer .widget {
+    padding: 0;
+  }
+  /* line 300, ../scss/_768up.scss */
+  .footer .widget ul {
+    margin: 0.5em 0 1em;
+  }
+  /* line 302, ../scss/_768up.scss */
+  .footer .widget ul li {
+    font-size: 10pt;
+    /* deep nesting */
+  }
+  /* line 307, ../scss/_768up.scss */
+  .footer .widget ul li a {
+    text-decoration: none;
+  }
+  /* line 312, ../scss/_768up.scss */
+  .footer .widget ul li ul {
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    padding-left: 1em;
+  }
+
   /*
   you'll probably need to do quite a bit
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 293, ../scss/_768up.scss */
+  /* line 329, ../scss/_768up.scss */
   .footer-links ul li {
     /*
     be careful with the depth of your menus.

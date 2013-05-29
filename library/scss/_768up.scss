@@ -31,9 +31,7 @@ LAYOUT & GRID STYLES
 HEADER SYTLES
 *********************/
 
-.header {
-	padding: 15px 0;
-}
+.header {}
 
 	.loginout {
 		margin: 1em 0 0;
@@ -43,7 +41,7 @@ HEADER SYTLES
 	#logo {
 		float: left;
 		display: inline-block;
-		margin-right: 20px;
+		margin: 15px 20px 15px 0;
 	}
 
 	#logo img { display: block; }
@@ -53,7 +51,6 @@ NAVIGATION STYLES
 *********************/
 
 nav {
-	margin: -15px 0;
 	float: left;
 	line-height: 55px;
 }
@@ -75,8 +72,16 @@ nav {
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: #dedede;
+				background-color: #efefef;
 
+			}
+		}
+
+		&.create-project {
+			padding-top: 26px;
+
+			a {
+				@include cupid-orange;
 			}
 		}
 
@@ -282,6 +287,37 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
+
+.footer {
+	.widgettitle {
+		border-bottom: 1px dotted #eee;
+		margin-bottom: 0;
+	}
+
+	.widget {
+		padding: 0;
+
+		ul {
+			margin: 0.5em 0 1em;
+			li {
+				font-size: 10pt;
+
+				&:first-child {}
+				&:last-child {}
+				a {
+					text-decoration: none;
+				}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.2em;
+					margin-bottom: 0;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+}
 
 /*
 you'll probably need to do quite a bit
