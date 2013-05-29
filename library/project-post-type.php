@@ -29,7 +29,7 @@ function project_post_type() {
 			'menu_position'       => 8, /* this is what order you want it to appear in on the left hand side menu */
 			'menu_icon'           => get_stylesheet_directory_uri() . '/library/images/custom-post-icon.png', /* the icon for the custom post type menu */
 			'rewrite'             => false,
-			'has_archive'         => 'project', /* you can rename the slug here */
+			'has_archive'         => 'projects', /* you can rename the slug here */
 			'capability_type'     => 'project',
 			'capabilities'		  => array(
 				'edit_post'          => 'edit_project',

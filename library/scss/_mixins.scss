@@ -25,6 +25,9 @@ CLEARFIXIN'
 	&:before, &:after { content: ""; display: table; }
 	&:after { clear: both; }
 }
+.clear {
+	clear: both;
+}
 
 /*********************
 TOOLS

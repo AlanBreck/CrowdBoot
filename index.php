@@ -4,12 +4,16 @@
 
 				<div id="inner-content" class="wrap clearfix">
 
-				    <div id="main" class="eightcol first clearfix" role="main">
+				    <div id="main" class="clearfix" role="main">
+						<?php $i = 1; ?>
 
 						<?php $project_loop = new WP_Query( array( 'post_type' => 'project' ) ); ?>
 					    <?php if ( $project_loop->have_posts() ) : while ( $project_loop->have_posts() ) : $project_loop->the_post(); ?>
 
-					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+					    <?php $firstOrLast = $i === 1 ? 'first' : ( $i === 3 ? 'last' : '' ); ?>
+
+						<?php $classes = array( 'clearfix', 'fourcol', $firstOrLast ); ?>
+					    <article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?> role="article">
 
 						    <header class="article-header">
 
@@ -49,7 +53,9 @@
 
 					    </article> <!-- end article -->
 
-					    <?php endwhile; ?>
+					    <?php $i++; if( $i > 3) : ?>
+					    	<div class="clear"></div>
+					    <?php $i = 1; endif; endwhile; ?>
 
 					        <?php if (function_exists('bones_page_navi')) { ?>
 					            <?php bones_page_navi(); ?>
@@ -80,8 +86,6 @@
 					    <?php wp_reset_postdata(); ?>
 
 				    </div> <!-- end #main -->
-
-				    <?php get_sidebar(); ?>
 
 				</div> <!-- end #inner-content -->
 

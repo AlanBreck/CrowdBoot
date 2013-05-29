@@ -58,99 +58,19 @@ Template Name: Project Creation Template
 
 								<?php if ( is_user_logged_in() && current_user_can( 'publish_projects' ) ) : ?>
 
-									<h2>Your Project</h2>
-
 									<form method="post">
-										<div>
-											<input type="text" name="post_title" placeholder="Project Name" required />
+										<div class="project-name">
+											<input type="text" name="post_title" placeholder="Project Name *" required />
 										</div>
 										<div>
-											<textarea type="text" name="post_excerpt" placeholder="Short Description" required></textarea>
+											<textarea type="text" name="post_excerpt" placeholder="Short Description *" rows="4" required></textarea>
 										</div>
 										<div>
-											<textarea type="text" name="post_content" placeholder="Full Description"></textarea>
+											<textarea type="text" name="post_content" placeholder="Full Description" rows="7"></textarea>
 										</div>
 										<div>
-											<input type="number" name="min_funding_goal" maxlength="6" placeholder="Minimum Funding Goal" required />
-											<input type="number" name="max_funding_goal" maxlength="6" placeholder="Maximum Funding Goal" required />
-										</div>
-										<div>
-											<label for="minimum_investment_amount">Minimum Investment Amount</label>
-											<select name="minimum_investment_amount" id="minimum_investment_amount" required>
-												<option>--</option>
-												<option value="$1 - $5">$10</option>
-												<option value="$5 - $20">$20</option>
-												<option value="$20 - $100">$40</option>
-												<option value="$100 - $1,000">$80</option>
-											</select>
-										</div>
-										<div>
-											Are donations to your organization, and this project, tax deductible? <br/>
-											<input type="radio" name="irs_tax_deductible" value="true" /> Yes<br/>
-											<input type="radio" name="irs_tax_deductible" value="false" /> No<br/>
-											<input type="text" name="irs_ein" placeholder="EIN" />
-											<input type="text" name="irs_name" placeholder="Name" />
-											<input type="text" name="irs_city" placeholder="City" />
-											<select name="state">
-												<option value="" selected="selected">Select a State</option>
-												<option value="AL">Alabama</option>
-												<option value="AK">Alaska</option>
-												<option value="AZ">Arizona</option>
-												<option value="AR">Arkansas</option>
-												<option value="CA">California</option>
-												<option value="CO">Colorado</option>
-												<option value="CT">Connecticut</option>
-												<option value="DE">Delaware</option>
-												<option value="DC">District Of Columbia</option>
-												<option value="FL">Florida</option>
-												<option value="GA">Georgia</option>
-												<option value="HI">Hawaii</option>
-												<option value="ID">Idaho</option>
-												<option value="IL">Illinois</option>
-												<option value="IN">Indiana</option>
-												<option value="IA">Iowa</option>
-												<option value="KS">Kansas</option>
-												<option value="KY">Kentucky</option>
-												<option value="LA">Louisiana</option>
-												<option value="ME">Maine</option>
-												<option value="MD">Maryland</option>
-												<option value="MA">Massachusetts</option>
-												<option value="MI">Michigan</option>
-												<option value="MN">Minnesota</option>
-												<option value="MS">Mississippi</option>
-												<option value="MO">Missouri</option>
-												<option value="MT">Montana</option>
-												<option value="NE">Nebraska</option>
-												<option value="NV">Nevada</option>
-												<option value="NH">New Hampshire</option>
-												<option value="NJ">New Jersey</option>
-												<option value="NM">New Mexico</option>
-												<option value="NY">New York</option>
-												<option value="NC">North Carolina</option>
-												<option value="ND">North Dakota</option>
-												<option value="OH">Ohio</option>
-												<option value="OK">Oklahoma</option>
-												<option value="OR">Oregon</option>
-												<option value="PA">Pennsylvania</option>
-												<option value="RI">Rhode Island</option>
-												<option value="SC">South Carolina</option>
-												<option value="SD">South Dakota</option>
-												<option value="TN">Tennessee</option>
-												<option value="TX">Texas</option>
-												<option value="UT">Utah</option>
-												<option value="VT">Vermont</option>
-												<option value="VA">Virginia</option>
-												<option value="WA">Washington</option>
-												<option value="WV">West Virginia</option>
-												<option value="WI">Wisconsin</option>
-												<option value="WY">Wyoming</option>
-											</select>
-											<input type="text" name="irs_country" placeholder="Country" />
-										</div>
-										<div>
-											<label for="post_category">Project Category</label>
-											<select name="post_category" id="post_category" required>
-												<option>--</option>
+											<select name="post_category" id="post_category" class="project-category" required>
+												<option>Project Category *</option>
 												<option value="Culinary Arts">Culinary Arts</option>
 												<option value="Education">Education</option>
 												<option value="Finance">Finance</option>
@@ -170,10 +90,85 @@ Template Name: Project Creation Template
 												<option value="Boy Scout Projects">Boy Scout Projects</option>
 												<option value="Science Fair Projects">Science Fair Projects</option>
 											</select>
+											<input type="text" name="tags_input" placeholder="Tags" class="project-tags" required />
 										</div>
-										<div>
-											<p>Please insert comma-separated list.</p>
-											<input type="text" name="tags_input" placeholder="Tags" required />
+										<div class="funding-goals">
+											<input type="number" name="min_funding_goal" maxlength="6" placeholder="Minimum Funding Goal *" required />
+											<!-- Hidden until equity investments begin. -->
+											<!-- <input type="number" name="max_funding_goal *" maxlength="6" placeholder="Maximum Funding Goal" required />
+											<label for="minimum_investment_amount">Minimum Investment Amount *</label>
+											<select name="minimum_investment_amount" id="minimum_investment_amount" required>
+												<option>--</option>
+												<option value="$1 - $5">$10</option>
+												<option value="$5 - $20">$20</option>
+												<option value="$20 - $100">$40</option>
+												<option value="$100 - $1,000">$80</option>
+											</select> -->
+										</div>
+										<div class="tax-status">
+											<strong>Are donations to your organization, and this project, tax deductible?</strong>
+											<input type="radio" name="irs_tax_deductible" value="true" id="irs_tax_deductible=yes" /> <label for="irs_tax_deductible=yes">Yes</label>
+											<input type="radio" name="irs_tax_deductible" value="false" id="irs_tax_deductible=no" /> <label for="irs_tax_deductible=no">No</label>
+											<div>
+												<input type="text" name="irs_ein" placeholder="EIN" />
+												<input type="text" name="irs_name" placeholder="Name" />
+												<input type="text" name="irs_city" placeholder="City" />
+												<select name="state" class="state">
+													<option value="" selected="selected">State</option>
+													<option value="AL">Alabama</option>
+													<option value="AK">Alaska</option>
+													<option value="AZ">Arizona</option>
+													<option value="AR">Arkansas</option>
+													<option value="CA">California</option>
+													<option value="CO">Colorado</option>
+													<option value="CT">Connecticut</option>
+													<option value="DE">Delaware</option>
+													<option value="DC">District Of Columbia</option>
+													<option value="FL">Florida</option>
+													<option value="GA">Georgia</option>
+													<option value="HI">Hawaii</option>
+													<option value="ID">Idaho</option>
+													<option value="IL">Illinois</option>
+													<option value="IN">Indiana</option>
+													<option value="IA">Iowa</option>
+													<option value="KS">Kansas</option>
+													<option value="KY">Kentucky</option>
+													<option value="LA">Louisiana</option>
+													<option value="ME">Maine</option>
+													<option value="MD">Maryland</option>
+													<option value="MA">Massachusetts</option>
+													<option value="MI">Michigan</option>
+													<option value="MN">Minnesota</option>
+													<option value="MS">Mississippi</option>
+													<option value="MO">Missouri</option>
+													<option value="MT">Montana</option>
+													<option value="NE">Nebraska</option>
+													<option value="NV">Nevada</option>
+													<option value="NH">New Hampshire</option>
+													<option value="NJ">New Jersey</option>
+													<option value="NM">New Mexico</option>
+													<option value="NY">New York</option>
+													<option value="NC">North Carolina</option>
+													<option value="ND">North Dakota</option>
+													<option value="OH">Ohio</option>
+													<option value="OK">Oklahoma</option>
+													<option value="OR">Oregon</option>
+													<option value="PA">Pennsylvania</option>
+													<option value="RI">Rhode Island</option>
+													<option value="SC">South Carolina</option>
+													<option value="SD">South Dakota</option>
+													<option value="TN">Tennessee</option>
+													<option value="TX">Texas</option>
+													<option value="UT">Utah</option>
+													<option value="VT">Vermont</option>
+													<option value="VA">Virginia</option>
+													<option value="WA">Washington</option>
+													<option value="WV">West Virginia</option>
+													<option value="WI">Wisconsin</option>
+													<option value="WY">Wyoming</option>
+												</select>
+												<input type="text" name="irs_country" placeholder="Country" class="country" />
+											</div>
 										</div>
 										<div>
 											<input type="submit" value="Submit" />
@@ -229,8 +224,6 @@ Template Name: Project Creation Template
 					    <?php endif; ?>
 
 				    </div> <!-- end #main -->
-
-				    <?php get_sidebar(); ?>
 
 				</div> <!-- end #inner-content -->
 
