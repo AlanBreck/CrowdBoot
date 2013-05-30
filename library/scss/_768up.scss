@@ -27,6 +27,17 @@ LAYOUT & GRID STYLES
 	max-width: 1140px;
 }
 
+.blog,
+.archive,
+.date,
+.author,
+.category,
+.tag {
+	#inner-content #main article {
+		margin-left: 0;
+	}
+}
+
 /*********************
 HEADER SYTLES
 *********************/

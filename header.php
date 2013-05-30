@@ -42,7 +42,7 @@
 
 					<?php if ( is_page( 'Home' ) ) : ?>
 
-						<a id="logo" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/logo.png" width="768"></a>
+						<a id="logo" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/logo.png"></a>
 						<?php // bloginfo('description'); ?>
 
 					<?php else : ?>

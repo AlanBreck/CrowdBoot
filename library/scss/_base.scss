@@ -41,7 +41,7 @@ style a page via class
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
 .home {
 	.header {
-		padding: 30px 0 50px;
+		padding: 30px 0;
 		background: #fff;
 		border-bottom: none;
 
@@ -51,6 +51,10 @@ style a page via class
 		#logo {
 			float: none;
 			margin: 0;
+
+			img {
+				width: 100%;
+			}
 		}
 	}
 
@@ -58,7 +62,6 @@ style a page via class
 		background: #fff;
 
 		.home-menu {
-			padding: 20px;
 			text-align: center;
 
 			li {
@@ -71,6 +74,7 @@ style a page via class
 					@include cupid-orange;
 				}
 				a {
+					display: inline-block;
 					padding: 15px 30px !important;
 					font-size: 17pt !important;
 					margin: 20px;

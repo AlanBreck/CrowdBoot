@@ -1,12 +1,12 @@
 /*
 Syntax error: Undefined mixin 'cupid-orange'.
-        on line 84 of /Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/_768up.scss, in `cupid-orange'
-        from line 84 of /Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/_768up.scss
+        on line 95 of /Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/_768up.scss, in `cupid-orange'
+        from line 95 of /Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/_768up.scss
         from line 25 of /Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/ie.scss
 
 Backtrace:
-/Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/_768up.scss:84:in `cupid-orange'
-/Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/_768up.scss:84
+/Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/_768up.scss:95:in `cupid-orange'
+/Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/_768up.scss:95
 /Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/ie.scss:25
 /Library/Ruby/Gems/1.8/gems/sass-3.3.0.alpha.69/lib/sass/../sass/tree/visitors/perform.rb:254:in `visit_mixin'
 /Library/Ruby/Gems/1.8/gems/sass-3.3.0.alpha.69/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
@@ -126,4 +126,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'cupid-orange'.\A         on line 84 of /Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/_768up.scss, in `cupid-orange'\A         from line 84 of /Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/_768up.scss\A         from line 25 of /Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/ie.scss"; }
+  content: "Syntax error: Undefined mixin 'cupid-orange'.\A         on line 95 of /Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/_768up.scss, in `cupid-orange'\A         from line 95 of /Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/_768up.scss\A         from line 25 of /Users/jacob_lamont/Google Drive/Project Files/Dev Site/wp-content/themes/crowdboot/library/scss/ie.scss"; }

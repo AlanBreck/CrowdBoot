@@ -72,6 +72,32 @@
 			});
 		</script>
 
+		<!-- Vanilla-Masonry.js -->
+		<script>
+			$(function(){
+
+				toggleMasonry();
+
+				$(window).bind( 'resize', toggleMasonry );
+
+				function toggleMasonry( e ) {
+					if ( $(document).width() > 767 ) {
+						$('#main').masonry({
+							// options
+							itemSelector : '.project',
+							columnWidth: function( containerWidth ) {
+								return containerWidth / 3;
+							},
+							isAnimated : true
+						}).addClass( 'masonry' ).children( 'article' ).addClass( 'masonry-brick' );
+					} else {
+						$( '#main' ).removeClass( 'masonry' ).children( 'article' ).removeClass( 'masonry-brick' );
+					};
+				}
+
+			});
+		</script>
+
 	</body>
 
 </html> <!-- end page. what a ride! -->

@@ -5,6 +5,8 @@
 				<div id="inner-content" class="wrap clearfix">
 
 				    <div id="main" class="clearfix" role="main">
+				    	<?php $isProjectsPage = is_page( 'projects' ); ?>
+
 						<?php $i = 1; ?>
 
 						<?php $project_loop = new WP_Query( array( 'post_type' => 'project' ) ); ?>

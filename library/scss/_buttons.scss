@@ -16,7 +16,7 @@ button::-moz-focus-inner {
   padding: 8px 0 9px;
   text-align: center;
   text-shadow: 0 1px 0 #fff;
-  width: 150px;
+  min-width: 150px;
 
   &:hover {
     @include linear-gradient(top, #f7f7f7, #eee);
@@ -49,7 +49,7 @@ input.minimal {
   padding: 8px 0;
   text-align: center;
   text-shadow: 0 1px 0 #eee;
-  width: 150px;
+  min-width: 150px;
 
   &:hover {
     @include linear-gradient(top, #ddd, #bbb);
@@ -84,7 +84,7 @@ input.clean-gray {
   padding: 7px 0 8px 0;
   text-align: center;
   text-shadow: 0 -1px 0 #4c9021;
-  width: 150px;
+  min-width: 150px;
 
   &:hover {
     @include linear-gradient(top, #76b347, #5e9e2e);
@@ -117,7 +117,7 @@ input.cupid-green {
   padding: 7px 0 8px 0;
   text-align: center;
   text-shadow: 0 -1px 0 #ff5a26;
-  width: 150px;
+  min-width: 150px;
 
   &:hover {
     @include linear-gradient(top, #ff6737, #ff4004);
@@ -152,7 +152,7 @@ input.cupid-orange {
   padding: 6px 0 7px 0;
   text-align: center;
   text-shadow: 0 1px 1px #fff;
-  width: 150px;
+  min-width: 150px;
 
   &:hover {
     @include linear-gradient(top, #ccd9e8, #c1d4e8);
@@ -192,7 +192,7 @@ input.cupid-blue {
   text-align: center;
   text-shadow: 0 -1px 1px #64799e;
   text-transform: uppercase;
-  width: 150px;
+  min-width: 150px;
 
   &:hover {
     @include linear-gradient(top, #9badcc, #687fa6);
@@ -227,7 +227,7 @@ input.blue-pill {
   padding: 12px 0 14px 0;
   text-align: center;
   text-shadow: 0px -1px 1px rgba(0, 0, 0, .8);
-  width: 150px;
+  min-width: 150px;
 
   &:hover {
     @include linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
@@ -261,7 +261,7 @@ input.thoughtbot {
   padding: 10px 0 12px 0;
   text-align: center;
   text-shadow: 0px -1px 1px #1e2d4d;
-  width: 150px;
+  min-width: 150px;
   -webkit-background-clip: padding-box;
 
   &:hover {
@@ -290,7 +290,7 @@ input.punch {
   padding: 10px 0 12px 0;
   text-align: center;
   text-shadow: 0px -1px 1px #473569;
-  width: 150px;
+  min-width: 150px;
   -webkit-background-clip: padding-box;
 
   &:hover {
@@ -329,7 +329,7 @@ input.purple-candy {
   font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
   padding: 7px 0;
   text-shadow: 0 -1px 1px #1a5ad9;
-  width: 150px;
+  min-width: 150px;
 
   &:hover {
     @include linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
@@ -431,7 +431,7 @@ input.download-itunes::-moz-focus-inner {
   text-decoration: none;
   text-align: center;
   text-shadow: 0 -1px 1px #000f4d;
-  width: 150px;
+  min-width: 150px;
 
   &:hover {
     @include linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
@@ -462,7 +462,7 @@ input.skip {
   margin: 0;
   padding: 7px 0;
   text-shadow: 0 1px 1px #fff;
-  width: 150px;
+  min-width: 150px;
 
   &:hover {
     @include linear-gradient(top, #e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%);
@@ -502,7 +502,7 @@ input.minimal-indent {
   padding: 0;
   text-align: center;
   text-shadow: 0px -1px 1px #3d0700;
-  width: 150px;
+  min-width: 150px;
   -webkit-mask-image: url("../images/badge.png");
   -webkit-mask-position: left top;
   -webkit-mask-repeat: no-repeat;
@@ -533,7 +533,7 @@ input.webkit-badge {
   padding: 0;
   text-align: center;
   text-shadow: 0px -1px 1px #473569;
-  width: 150px;
+  min-width: 150px;
   -webkit-mask-image: url("../images/seal.png");
   -webkit-mask-position: center center;
   -webkit-mask-repeat: no-repeat;
@@ -563,7 +563,7 @@ input.webkit-seal {
   text-align: center;
   text-indent: -9999px;
   text-shadow: 0px -1px 1px #3d0700;
-  width: 150px;
+  min-width: 150px;
   -webkit-mask-image: url("../images/check.png");
   -webkit-mask-position: center center;
   -webkit-mask-repeat: no-repeat;

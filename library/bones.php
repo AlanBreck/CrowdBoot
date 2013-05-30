@@ -133,6 +133,9 @@ function bones_scripts_and_styles() {
     // register formalize styles
     wp_register_style( 'formalize-stylesheet', get_stylesheet_directory_uri() . '/library/css/formalize.css', array(), '', 'all' );
 
+    // register vanilla-masonry styles
+    wp_register_style( 'masonry-stylesheet', get_stylesheet_directory_uri() . '/library/css/masonry.css', array(), '', 'all' );
+
     // register formvalidation.css
 	wp_register_style( 'formvalidation', get_stylesheet_directory_uri() . '/library/css/formvalidation.css', array(), '', 'all' );
 
@@ -149,6 +152,7 @@ function bones_scripts_and_styles() {
     wp_register_script( 'formalize', get_stylesheet_directory_uri() . '/library/js/jquery.formalize.min.js', array( 'jquery' ), '', true );
     wp_register_script( 'fitvids', get_stylesheet_directory_uri() . '/library/js/jquery.fitvids.js', array( 'jquery' ), '', true );
     wp_register_script( 'formvalidation', get_stylesheet_directory_uri() . '/library/js/formvalidation.js', array( 'jquery' ), '', true );
+    wp_register_script( 'masonry', get_stylesheet_directory_uri() . '/library/js/jquery.masonry.js', array( 'jquery' ), '', true );
 
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' );
@@ -156,6 +160,11 @@ function bones_scripts_and_styles() {
     wp_enqueue_style('bones-ie-only');
     wp_enqueue_style( 'formvalidation' );
     wp_enqueue_style( 'formalize-stylesheet' );
+
+    if ( is_home() ) {
+    	wp_enqueue_style( 'masonry-stylesheet' );
+    }
+
     /*
     I recommend using a plugin to call jQuery
     using the google cdn. That way it stays cached
@@ -171,6 +180,10 @@ function bones_scripts_and_styles() {
     wp_enqueue_script( 'formalize' );
     wp_enqueue_script( 'fitvids' );
     wp_enqueue_script( 'formvalidation' );
+
+    if ( is_home() ) {
+    	wp_enqueue_script( 'masonry' );
+    }
 
   }
 }
