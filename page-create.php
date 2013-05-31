@@ -4,6 +4,11 @@ Template Name: Project Creation Template
 */
 ?>
 <?php
+
+	if ( ! is_user_logged_in() ) {
+		header( "location: " . site_url( 'log-in' ) . '/?back=' . get_permalink() );
+	}
+
 	if ( $_POST ) {
 		$post_category = get_cat_ID( $_POST['post_category'] );
 		$project_post = array(
@@ -109,7 +114,7 @@ Template Name: Project Creation Template
 											<strong>Are donations to your organization, and this project, tax deductible?</strong>
 											<input type="radio" name="irs_tax_deductible" value="true" id="irs_tax_deductible=yes" /> <label for="irs_tax_deductible=yes">Yes</label>
 											<input type="radio" name="irs_tax_deductible" value="false" id="irs_tax_deductible=no" /> <label for="irs_tax_deductible=no">No</label>
-											<div>
+											<div class="tax-status-details">
 												<input type="text" name="irs_ein" placeholder="EIN" />
 												<input type="text" name="irs_name" placeholder="Name" />
 												<input type="text" name="irs_city" placeholder="City" />
@@ -177,24 +182,7 @@ Template Name: Project Creation Template
 
 								<?php else : ?>
 
-									<h2>Whoah!</h2>
-									<p>Hold on there partner. You'll have to log in first.</p>
-
-									<?php
-										$args = array(
-										    'redirect' => site_url( '/create-a-project/' ),
-										    'label_username' => __( 'Email' ),
-										    'label_password' => __( 'Password' ),
-										    'label_remember' => __( 'Remember Me' ),
-										    'label_log_in' => __( 'Log In' ),
-										    'remember' => true
-										);
-										wp_login_form( $args );
-									?>
-
-									<h3>Don't have an account?</h3>
-									<a href="/new-user">Register</a>
-									<p>Don't have an account yet? The Monkey can help – <a href="http://dev.crowdboot.com/new-user/">Register</a></p>
+									<?php get_template_part( 'login' ); ?>
 
 								<?php endif; ?>
 

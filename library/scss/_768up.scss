@@ -23,9 +23,7 @@ body {}
 LAYOUT & GRID STYLES
 *********************/
 
-.wrap {
-	max-width: 1140px;
-}
+.wrap { width: 90%; }
 
 .blog,
 .archive,
@@ -35,6 +33,7 @@ LAYOUT & GRID STYLES
 .tag {
 	#inner-content #main article {
 		margin-left: 0;
+
 	}
 }
 
@@ -62,13 +61,58 @@ NAVIGATION STYLES
 *********************/
 
 nav {
-	float: left;
 	line-height: 55px;
+
+	.user-quicklinks {
+		float: right;
+		line-height: 28px;
+		margin: 0;
+
+		li {
+			position: relative;
+			padding: 15px;
+			margin-top: 5px;
+			background: #eee;
+
+			.pictogram {
+				font-size: 40pt;
+				text-decoration: none;
+				color: #444;
+			}
+
+			ul {
+				display: none;
+				margin: 0;
+				width: 120px;
+				left: -60px;
+
+				li {
+					background: rgba( 255, 255, 255, 0.8 );
+					margin: 0;
+
+					a {
+						color: #444;
+						text-decoration: none;
+					}
+
+					&:hover {
+						background: #eee;
+					}
+				}
+			}
+
+			&:hover ul {
+				display: block;
+				top: 65px;
+			}
+		}
+	}
 }
 
 .nav {
 	border: 0;
 	margin: 0;
+	float: left;
 
 	li {
 		float: left;
@@ -84,12 +128,12 @@ nav {
 			*/
 			&:hover, &:focus {
 				background-color: #efefef;
-
 			}
 		}
 
 		&.create-project {
 			padding-top: 26px;
+			margin-left: 15px;
 
 			a {
 				@include cupid-orange;
@@ -98,61 +142,6 @@ nav {
 
 		&:first-child {}
 		&:last-child {}
-
-		/*
-		plan your menus and drop-downs wisely.
-		*/
-		ul.sub-menu,
-		ul.children {
-			line-height: 1.5;
-			width: 200px;
-			border: 1px solid #ccc;
-			border-top: 0;
-			margin-top: 0;
-			position: absolute;
-			display: none;
-			z-index: 8999;
-			background: rgba(255, 255, 255, 0.9);
-
-			li {
-
-				a {
-					padding-left: 10px;
-					border-right: 0;
-					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
-				}
-
-				&:first-child {}
-
-				&:last-child {
-
-					a {
-						border-bottom: 0;
-					}
-				}
-
-				/*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
-				ul {}
-			}
-
-			/* highlight sub-menu current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current-page-ancestor {
-				a {}
-			}
-		}
 
 		/* showing sub-menus */
 		&:hover ul {
@@ -170,6 +159,61 @@ nav {
 	}  /* end current highlighters */
 
 } /* end .nav */
+
+/*
+plan your menus and drop-downs wisely.
+*/
+ul.sub-menu,
+ul.children {
+	line-height: 1.5;
+	width: 200px;
+	border: 1px solid #ccc;
+	border-top: 0;
+	margin-top: 0;
+	position: absolute;
+	display: none;
+	z-index: 8999;
+	background: rgba(255, 255, 255, 0.9);
+
+	li {
+
+		a {
+			padding-left: 10px;
+			border-right: 0;
+			display: block;
+			width: 198px;
+			border-bottom: 1px solid #ccc;
+
+			&:hover,
+			&:focus {}
+
+			&:link {}
+		}
+
+		&:first-child {}
+
+		&:last-child {
+
+			a {
+				border-bottom: 0;
+			}
+		}
+
+		/*
+		if you need to go deeper, go nuts
+		just remember deeper menus suck
+		for usability. k, bai.
+		*/
+		ul {}
+	}
+
+	/* highlight sub-menu current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+		a {}
+	}
+}
 
 /*********************
 SIDEBARS & ASIDES
@@ -300,34 +344,7 @@ FOOTER STYLES
 *********************/
 
 .footer {
-	.widgettitle {
-		border-bottom: 1px dotted #eee;
-		margin-bottom: 0;
-	}
 
-	.widget {
-		padding: 0;
-
-		ul {
-			margin: 0.5em 0 1em;
-			li {
-				font-size: 10pt;
-
-				&:first-child {}
-				&:last-child {}
-				a {
-					text-decoration: none;
-				}
-				/* deep nesting */
-
-				ul {
-					margin-top: 0.2em;
-					margin-bottom: 0;
-					padding-left: 1em;
-				}
-			}
-		}
-	}
 }
 
 /*

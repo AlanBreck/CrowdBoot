@@ -488,7 +488,7 @@ POSTS & CONTENT STYLES
 				width: 100%;
 			}
 			.project-category {
-				margin-right: 34px;
+				margin-right: 39px;
 				width: 25%;
 			}
 			.project-tags {
@@ -512,6 +512,11 @@ POSTS & CONTENT STYLES
 				}
 				.country {
 					width: 20%;
+				}
+
+				.tax-status-details input {
+					width: 22%;
+					margin-right: 3px;
 				}
 			}
 
@@ -977,11 +982,37 @@ FOOTER STYLES
 	color: $white;
 	clear: both;
 
-	a {
-		color: $footer-link-color;
+	.widgettitle {
+		border-bottom: 1px dotted #eee;
+		margin-bottom: 0;
+	}
 
-		&:hover {
-			color: $footer-link-hover;
+	.widget {
+		padding: 0;
+
+		ul {
+			margin: 0.5em 0 1em;
+			li {
+				font-size: 10pt;
+
+				&:first-child {}
+				&:last-child {}
+				a {
+					text-decoration: none;
+					color: $footer-link-color;
+
+					&:hover {
+						color: $footer-link-hover;
+					}
+				}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.2em;
+					margin-bottom: 0;
+					padding-left: 1em;
+				}
+			}
 		}
 	}
 }

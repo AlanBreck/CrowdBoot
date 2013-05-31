@@ -59,6 +59,16 @@
 
 						<nav role="navigation" class="clearfix">
 							<?php bones_main_nav(); ?>
+							<?php if ( is_user_logged_in() ) : ?>
+								<ul class="user-quicklinks">
+									<li class="user-profile">
+										<a href="#" class="pictogram">&#128100;</a>
+										<ul class="sub-menu">
+											<li><?php echo wp_loginout(); ?></li>
+										</ul>
+									</li>
+								</ul>
+							<?php endif; ?>
 						</nav>
 
 					<?php endif; ?>
