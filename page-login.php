@@ -52,7 +52,7 @@ Template Name: User Creation Template
 						    				$redirect_url = site_url();
 						    			}
 						    			if ( ! is_user_logged_in() ) { // Display WordPress login form:
-						    			    $args = array(
+						    			    /*$args = array(
 						    			        'redirect' => $redirect_url,
 						    			        'label_username' => __( 'Email' ),
 						    			        'label_password' => __( 'Password' ),
@@ -60,8 +60,26 @@ Template Name: User Creation Template
 						    			        'label_log_in' => __( 'Log In' ),
 						    			        'remember' => true
 						    			    );
-						    			    wp_login_form( $args );
-						    			} else { // If logged in:
+						    			    wp_login_form( $args );*/ ?>
+
+						    			    <form name="loginform" id="loginform" action="<?php echo site_url(); ?>/wp-login.php" method="post">
+
+				    			    			<p class="login-username">
+				    			    				<input type="text" name="log" id="user_login" class="input" placeholder="Email" value="" size="20" />
+				    			    			</p>
+				    			    			<p class="login-password">
+				    			    				<input type="password" name="pwd" id="user_pass" class="input" placeholder="Password" value="" size="20" />
+				    			    			</p>
+
+				    			    			<p class="login-remember"><label><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label></p>
+				    			    			<p class="login-submit">
+				    			    				<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Log In" />
+				    			    				<input type="hidden" name="redirect_to" value="<?php echo get_permalink(); ?>" />
+				    			    			</p>
+
+				    			    		</form>
+
+						    			<?php } else { // If logged in:
 						    			    echo "Awesome! You've already logged in!";
 						    			}
 						    		?>
@@ -75,16 +93,22 @@ Template Name: User Creation Template
 										<form method="post">
 											<div>
 												<!-- <input type="hidden" name="redirect_to" id="redirect_to" value="<?php echo $_GET['redirect_to']; ?>" /> -->
-												<input type="email" maxlength="100" name="user_email" placeholder="Email" required />
-												<input type="password" maxlength="20" name="user_pass" id="user_pass" placeholder="Password" required />
-												<input type="password" maxlength="20" name="user_pass2" id="user_pass2" placeholder="Confirm Password" required />
-												<script type="text/javascript">
+												<p>
+													<input type="email" maxlength="100" name="user_email" placeholder="Email" required />
+												</p>
+												<p>
+													<input type="password" maxlength="20" name="user_pass" id="user_pass" placeholder="Password" required />
+												</p>
+												<p>
+													<input type="password" maxlength="20" name="user_pass2" id="user_pass2" placeholder="Confirm Password" required />
+												</p>
+												<?php /* ?><script type="text/javascript">
 													$("#user_pass2").on("change blur", function () {
-													    if ( $(this).val() !== $("#user_pass").val() ) {
+													    if ( $(this).val() != $("#user_pass").val() ) {
 													        alert( "Your passwords don't match.");
 													    }
 													});
-												</script>
+												</script><?php */ ?>
 											</div>
 											<div>
 												<input type="submit" value="Submit" />
