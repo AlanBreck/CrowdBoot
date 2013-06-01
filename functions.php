@@ -215,20 +215,21 @@ function get_gravatar_url( $email, $size ) {
     echo 'http://gravatar.com/avatar/' . $hash . '?s=' . $size;
 }
 
-/************* Archives Pages *****************/
+/************* ARCHIVES PAGES *****************/
 
 // Add Custom Post Types to Archive.php pages
 function namespace_add_custom_types( $query ) {
-  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+  if( is_category() || is_author() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
-     'post', 'project'
-        ));
-      return $query;
+        'post', 'project'
+    ));
+        return $query;
     }
 }
 add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 
-// Convert Fancy Quotes to Plain Quotes
+
+/************* CONVERT FANCY QUOTES TO PLAIN QUOTES *****************/
 function convert_smart_quotes($string)
 {
     $search = array("&#8216;",
