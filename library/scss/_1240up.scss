@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name: 
-Author: 
+Site Name:
+Author:
 
 Stylesheet: Super Large Monitor Stylesheet
 
@@ -9,3 +9,10 @@ on larger screens.
 
 ******************************************************************/
 
+@media only screen and (min-width: 1441px) {
+
+	.wrap {
+		width: 1300px;
+	}
+
+}

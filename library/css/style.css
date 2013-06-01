@@ -3088,8 +3088,8 @@ This is for the larger monitors and possibly full screen viewers.
 */
 @media only screen and (min-width: 1240px) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name:
+  Author:
   
   Stylesheet: Super Large Monitor Stylesheet
   
@@ -3097,6 +3097,12 @@ This is for the larger monitors and possibly full screen viewers.
   on larger screens.
   
   ******************************************************************/
+}
+@media only screen and (min-width: 1240px) and (min-width: 1441px) {
+  /* line 14, ../scss/_1240up.scss */
+  .wrap {
+    width: 1300px;
+  }
 }
 /*
 RETINA (2x RESOLUTION DEVICES)

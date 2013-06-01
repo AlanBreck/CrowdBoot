@@ -42,53 +42,57 @@ Template Name: User Creation Template
 									<p>Please log in to create a new project.</p>
 						    	<?php endif; ?>
 
-						    	<h2>Log In</h2>
+						    	<div id="login" class="sixcol first">
+						    		<h2>Log In</h2>
 
-						    	<?php
-						    		if ( $_GET['redirect_to'] != '' ) {
-						    			$redirect_url = $_GET['redirect_to'];
-						    		} else {
-						    			$redirect_url = site_url();
-						    		}
-						    		if ( ! is_user_logged_in() ) { // Display WordPress login form:
-						    		    $args = array(
-						    		        'redirect' => $redirect_url,
-						    		        'label_username' => __( 'Email' ),
-						    		        'label_password' => __( 'Password' ),
-						    		        'label_remember' => __( 'Remember Me' ),
-						    		        'label_log_in' => __( 'Log In' ),
-						    		        'remember' => true
-						    		    );
-						    		    wp_login_form( $args );
-						    		} else { // If logged in:
-						    		    echo "Awesome! You've already logged in!";
-						    		}
-						    	?>
+						    		<?php
+						    			if ( $_GET['redirect_to'] != '' ) {
+						    				$redirect_url = $_GET['redirect_to'];
+						    			} else {
+						    				$redirect_url = site_url();
+						    			}
+						    			if ( ! is_user_logged_in() ) { // Display WordPress login form:
+						    			    $args = array(
+						    			        'redirect' => $redirect_url,
+						    			        'label_username' => __( 'Email' ),
+						    			        'label_password' => __( 'Password' ),
+						    			        'label_remember' => __( 'Remember Me' ),
+						    			        'label_log_in' => __( 'Log In' ),
+						    			        'remember' => true
+						    			    );
+						    			    wp_login_form( $args );
+						    			} else { // If logged in:
+						    			    echo "Awesome! You've already logged in!";
+						    			}
+						    		?>
+						    	</div>
 
-						    	<h2>Register</h2>
+						    	<div id="register" class="sixcol last">
+						    		<h2>Register</h2>
 
-								<?php if ( ! is_user_logged_in() ) : ?>
+									<?php if ( ! is_user_logged_in() ) : ?>
 
-									<form method="post">
-										<div>
-											<!-- <input type="hidden" name="redirect_to" id="redirect_to" value="<?php echo $_GET['redirect_to']; ?>" /> -->
-											<input type="email" maxlength="100" name="user_email" placeholder="Email" required />
-											<input type="password" maxlength="20" name="user_pass" id="user_pass" placeholder="Password" required />
-											<input type="password" maxlength="20" name="user_pass2" id="user_pass2" placeholder="Confirm Password" required />
-											<script type="text/javascript">
-												$("#user_pass2").on("change blur", function () {
-												    if ( $(this).val() !== $("#user_pass").val() ) {
-												        alert( "Your passwords don't match.");
-												    }
-												});
-											</script>
-										</div>
-										<div>
-											<input type="submit" value="Submit" />
-										</div>
-									</form>
+										<form method="post">
+											<div>
+												<!-- <input type="hidden" name="redirect_to" id="redirect_to" value="<?php echo $_GET['redirect_to']; ?>" /> -->
+												<input type="email" maxlength="100" name="user_email" placeholder="Email" required />
+												<input type="password" maxlength="20" name="user_pass" id="user_pass" placeholder="Password" required />
+												<input type="password" maxlength="20" name="user_pass2" id="user_pass2" placeholder="Confirm Password" required />
+												<script type="text/javascript">
+													$("#user_pass2").on("change blur", function () {
+													    if ( $(this).val() !== $("#user_pass").val() ) {
+													        alert( "Your passwords don't match.");
+													    }
+													});
+												</script>
+											</div>
+											<div>
+												<input type="submit" value="Submit" />
+											</div>
+										</form>
 
-								<?php endif; ?>
+									<?php endif; ?>
+								</div>
 
 						    </section> <!-- end article section -->
 
