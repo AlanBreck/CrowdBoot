@@ -2811,8 +2811,8 @@ you can add resource intensive styles.
   HEADER SYTLES
   *********************/
   /* line 46, ../scss/_768up.scss */
-  .loginout {
-    margin: 1em 0 0;
+  .hello {
+    margin: 0.5em 0.5em 0;
     float: right;
   }
 

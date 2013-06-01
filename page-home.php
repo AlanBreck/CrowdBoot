@@ -32,13 +32,13 @@ Template Name: Home Page
 
 						<article class="last fourcol box3">
 							<h2>What customers do CrowdBoot serve?</h2>
-							<p>Investors / Supporters
+							<p><strong>Investors / Supporters</strong>
 							<br/>
-							Are you an investor looking for a return or a supporter looking to further a cause that is important to you? Either way CrowdBoot.com is a place you can connect with innovators who have dreams and a plan to fulfill them. Our goal is to provide a simple way to connect with ideas and projects you believe in and then to make it easy to support them financially.
+							Are you an investor looking for a return or a supporter looking to further a cause? Either way CrowdBoot.com will connect you to today’s innovators.
 							<br/>
-							Small Businesses / Startups / Social Entrepreneurs
+							<strong>Small Businesses / Startups / Social Entrepreneurs</strong>
 							<br/>
-							Are you a small business owner looking to expand, an entrepreneur with a new business idea seeking initial capital, or an innovator with an idea to benefit your local or global community? CrowdBoot.com will be a top resource for you to achieve your goals. We provide the platform to share your vision and connect with individuals who can help make your dreams a reality.</p>
+							Create your own custom project and give your ideas wings by becomimg one of the growing CrowdBoot community.  CrowdBoot is a fantastic way to raise money and spread the word.</p>
 						</article>
 
 				    </div> <!-- end #main -->

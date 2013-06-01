@@ -14,7 +14,8 @@
 								></script>
 							<?php else : ?>
 								<form method="get" action="<?php echo site_url( 'log-in' ) ?>">
-									<input type="hidden" name="back" value="<?php echo get_permalink(); ?>" />
+									<input type="hidden" name="redirect_to" value="<?php echo get_permalink(); ?>" />
+									<input type="hidden" name="test" value="testing" />
 									<button type="submit">Log In to Donate</button>
 								</form>
 							<?php endif; ?>

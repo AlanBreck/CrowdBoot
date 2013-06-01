@@ -6,7 +6,7 @@ Template Name: Project Creation Template
 <?php
 
 	if ( ! is_user_logged_in() ) {
-		header( "location: " . site_url( 'log-in' ) . '/?back=' . get_permalink() );
+		header( "location: " . site_url( 'log-in' ) . '/?redirect_to=' . get_permalink() . '&intent=create_project' );
 	}
 
 	if ( $_POST ) {
@@ -95,12 +95,12 @@ Template Name: Project Creation Template
 												<option value="Boy Scout Projects">Boy Scout Projects</option>
 												<option value="Science Fair Projects">Science Fair Projects</option>
 											</select>
-											<input type="text" name="tags_input" placeholder="Tags" class="project-tags" required />
+											<input type="text" name="tags_input" placeholder="Tags *" class="project-tags" required />
 										</div>
 										<div class="funding-goals">
 											<input type="number" name="min_funding_goal" maxlength="6" placeholder="Minimum Funding Goal *" required />
 											<!-- Hidden until equity investments begin. -->
-											<!-- <input type="number" name="max_funding_goal *" maxlength="6" placeholder="Maximum Funding Goal" required />
+											<!-- <input type="number" name="max_funding_goal" maxlength="6" placeholder="Maximum Funding Goal *" required />
 											<label for="minimum_investment_amount">Minimum Investment Amount *</label>
 											<select name="minimum_investment_amount" id="minimum_investment_amount" required>
 												<option>--</option>

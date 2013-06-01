@@ -47,27 +47,22 @@
 
 					<?php else : ?>
 
-						<?php/* if( is_user_logged_in() ): ?>
-							<?php global $current_user; ?>
-							<p class="loginout">Hey, <a href="<?php home_url( '/' ) ?>/my-dashboard/"><?php echo $current_user->user_firstname; ?></a> (<?php wp_loginout(); ?>)</p>
-						<?php else : ?>
-							<p class="loginout"><a href="/log-in">Log In/Register</a></p>
-						<?php endif; */?>
-
 						<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
 						<a id="logo" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/logo.png" width="260"></a>
 
 						<nav role="navigation" class="clearfix">
 							<?php bones_main_nav(); ?>
-							<?php if ( is_user_logged_in() ) : ?>
-								<ul class="user-quicklinks">
-									<li class="user-profile">
-										<a href="#" class="pictogram">&#128100;</a>
-										<ul class="sub-menu">
-											<li><?php echo wp_loginout(); ?></li>
-										</ul>
-									</li>
-								</ul>
+							<ul class="user-quicklinks">
+								<li class="user-profile">
+									<a href="#" class="pictogram">&#128100;</a>
+									<ul class="sub-menu">
+										<li><?php wp_loginout( get_permalink(), true ); ?></li>
+									</ul>
+								</li>
+							</ul>
+							<?php if( is_user_logged_in() ): ?>
+								<?php global $current_user; ?>
+								<span class="hello">Hey, <?php echo $current_user->user_firstname; ?></span>
 							<?php endif; ?>
 						</nav>
 

@@ -19,7 +19,7 @@ Template Name: User Creation Template
 
 		$new_user = wp_insert_user( $new_user );
 
-		header( "location: " . ( TRUE == $new_user ? '/log-in' : '/you-are-dumb' ) );
+		header( "location: " . ( TRUE == $new_user ? '/log-in/?redirect_to=' . $_GET['redirect_to'] . '&new_registration=true'  : '/you-are-dumb' ) );
 	}
 ?>
 <?php get_header(); ?>
@@ -36,13 +36,19 @@ Template Name: User Creation Template
 
 						    <section class="entry-content">
 
+						    	<?php if ( $_GET['new_registration'] === 'true' ) : ?>
+									<p>Congratulations! Your account has been created! Please log in below.</p>
+						    	<?php elseif ( $_GET['intent'] === 'create_project' ) : ?>
+									<p>Please log in to create a new project.</p>
+						    	<?php endif; ?>
+
 						    	<h2>Log In</h2>
 
 						    	<?php
-						    		if ( $_GET['back'] != '' ) {
-						    			$redirect_url = $_GET['back'];
+						    		if ( $_GET['redirect_to'] != '' ) {
+						    			$redirect_url = $_GET['redirect_to'];
 						    		} else {
-						    			$redirect_url = site_url( 'get-started' );
+						    			$redirect_url = site_url();
 						    		}
 						    		if ( ! is_user_logged_in() ) { // Display WordPress login form:
 						    		    $args = array(
@@ -65,13 +71,14 @@ Template Name: User Creation Template
 
 									<form method="post">
 										<div>
-											<input type="email" maxlength="20" name="user_email" placeholder="Email" required />
+											<!-- <input type="hidden" name="redirect_to" id="redirect_to" value="<?php echo $_GET['redirect_to']; ?>" /> -->
+											<input type="email" maxlength="100" name="user_email" placeholder="Email" required />
 											<input type="password" maxlength="20" name="user_pass" id="user_pass" placeholder="Password" required />
 											<input type="password" maxlength="20" name="user_pass2" id="user_pass2" placeholder="Confirm Password" required />
 											<script type="text/javascript">
 												$("#user_pass2").on("change blur", function () {
 												    if ( $(this).val() !== $("#user_pass").val() ) {
-												        alert( "Fix your passwords, moron!");
+												        alert( "Your passwords don't match.");
 												    }
 												});
 											</script>
