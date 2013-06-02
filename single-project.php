@@ -10,6 +10,12 @@
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
+								<?php if ( get_post_status( get_the_ID() ) == 'pending' ) : ?>
+
+									<p>You're project was succesfully submitted! It will now be reviewed by our team. We'll notify you if we have any questions or once it's approved.</p>
+
+								<?php endif; ?>
+
 								<header class="article-header">
 
 									<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
