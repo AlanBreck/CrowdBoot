@@ -51,7 +51,15 @@
 						<a id="logo" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/logo.png" width="260"></a>
 
 						<nav role="navigation" class="clearfix">
-							<?php bones_main_nav(); ?>
+							<?php
+								if(!getMainMenu('main-nav')){
+									$backup = $wp_query;
+									$wp_query = NULL;
+									$wp_query = new WP_Query(array('post_type' => 'post'));
+									getMainMenu('main-nav');
+									$wp_query = $backup;
+								}
+							?>
 							<ul class="user-quicklinks">
 								<li class="user-profile">
 									<a href="#" class="pictogram">&#128100;</a>

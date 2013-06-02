@@ -275,6 +275,18 @@ function bones_main_nav() {
 	));
 } /* end bones main nav */
 
+// category menu fix
+function getMainMenu($menulocation){
+  $locations = get_nav_menu_locations();
+  $menuItems = wp_get_nav_menu_items( $locations[ $menulocation ] );
+    if(empty($menuItems))
+      return false;
+    else{
+      bones_main_nav();
+      return true;
+    }
+}
+
 // the footer menu (should you choose to use one)
 function bones_footer_links() {
 	// display the wp3 menu if available
