@@ -76,7 +76,9 @@
 		<script>
 			$(function(){
 
-				toggleMasonry();
+				if ( $("#main .project").length !== 0 ) {
+				    toggleMasonry();
+				}
 
 				$(window).bind( 'resize', toggleMasonry );
 
