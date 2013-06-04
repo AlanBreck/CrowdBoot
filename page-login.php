@@ -34,12 +34,12 @@ Template Name: User Creation Template
 
 					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-						    <section class="entry-content">
+						    <section class="entry-content clearfix">
 
 						    	<?php if ( $_GET['new_registration'] === 'true' ) : ?>
-									<p>Congratulations! Your account has been created! Please log in below.</p>
+									<p class="success-alert alert">Congratulations! Your account has been created! Please log in below.</p>
 						    	<?php elseif ( $_GET['intent'] === 'create_project' ) : ?>
-									<p>Please log in to create a new project.</p>
+									<p class="alert">Please log in to create a new project.</p>
 						    	<?php endif; ?>
 
 						    	<div id="login" class="sixcol first">
@@ -92,23 +92,25 @@ Template Name: User Creation Template
 
 										<form method="post">
 											<div>
-												<!-- <input type="hidden" name="redirect_to" id="redirect_to" value="<?php echo $_GET['redirect_to']; ?>" /> -->
+												<input type="hidden" name="redirect_to" id="redirect_to" value="<?php echo $_GET['redirect_to']; ?>" />
 												<p>
 													<input type="email" maxlength="100" name="user_email" placeholder="Email" required />
 												</p>
 												<p>
-													<input type="password" maxlength="20" name="user_pass" id="user_pass" placeholder="Password" required />
+													<input type="password" maxlength="20" name="user_pass" id="registration_pass" placeholder="Password" required />
 												</p>
 												<p>
-													<input type="password" maxlength="20" name="user_pass2" id="user_pass2" placeholder="Confirm Password" required />
+													<input type="password" maxlength="20" name="user_pass2" id="registration_pass2" placeholder="Confirm Password" required />
 												</p>
-												<?php /* ?><script type="text/javascript">
-													$("#user_pass2").on("change blur", function () {
-													    if ( $(this).val() != $("#user_pass").val() ) {
-													        alert( "Your passwords don't match.");
-													    }
+												<script type="text/javascript">
+													$(function(){
+														$("#registration_pass2").on("change blur", function () {
+														    if ( $(this).val() !== $("#registration_pass").val() ) {
+														        alert( "Your passwords don't match.");
+														    }
+														});
 													});
-												</script><?php */ ?>
+												</script>
 											</div>
 											<div>
 												<input type="submit" value="Submit" />

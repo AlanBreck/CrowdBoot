@@ -70,7 +70,7 @@
 							</ul>
 							<?php if( is_user_logged_in() ): ?>
 								<?php global $current_user; ?>
-								<span class="hello">Hey, <?php echo $current_user->user_firstname; ?></span>
+								<span class="hello">Hey, <?php echo $current_user->user_firstname; ?>!</span>
 							<?php endif; ?>
 						</nav>
 

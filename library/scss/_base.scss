@@ -346,6 +346,19 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 
+.alert {
+	border: 3px solid #ff001b;
+	color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+	background: rgba(255, 0, 0, 0.7);
+
+	&.success-alert {
+		border: 3px solid #3fa833;
+		background: rgba(63, 208, 81, 0.7000);
+	}
+}
+
 #content {
 	background: #FFF;
 	padding: 2.2em 0;
@@ -520,6 +533,26 @@ POSTS & CONTENT STYLES
 				}
 			}
 
+			#login,
+			#register {
+				background-color: #fff;
+				border: 1px solid #f9f9f9;
+				border-bottom: 3px solid #eee;
+				border-right: 3px solid #eee;
+				border-radius: 5px;
+				margin-bottom: 20px;
+				padding: 20px;
+
+				input {
+					width: 100%;
+
+					&[type="button"],
+					&[type="submit"] {
+						width: inherit;
+					}
+				}
+			}
+
 		} /* end .entry-content */
 
 		.wp-caption {
@@ -564,6 +597,10 @@ POSTS & CONTENT STYLES
 		.size-large {}
 		.size-medium {}
 		.size-thumbnail {}
+
+		.paypal-input {
+			margin-left: 10px;
+		}
 
 /******************************************************************
 PAGE NAVI STYLES
