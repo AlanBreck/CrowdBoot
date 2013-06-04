@@ -78,9 +78,9 @@
 
 				if ( $("#main .project").length !== 0 ) {
 				    toggleMasonry();
-				}
 
-				$(window).bind( 'resize', toggleMasonry );
+				    $(window).bind( 'resize', toggleMasonry );
+				}
 
 				function toggleMasonry( e ) {
 					if ( $(document).width() > 767 ) {
