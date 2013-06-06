@@ -98,7 +98,7 @@ Template Name: Project Creation Template
 											<input type="text" name="tags_input" placeholder="Tags *" class="project-tags" required />
 										</div>
 										<div class="funding-goals">
-											<input type="number" min="0" name="min_funding_goal" maxlength="6" placeholder="Minimum Funding Goal *" required />
+											<input type="number" min="500" name="min_funding_goal" maxlength="6" placeholder="Minimum Funding Goal *" required />
 											<!-- Hidden until equity investments begin. -->
 											<!-- <input type="number" name="max_funding_goal" maxlength="6" placeholder="Maximum Funding Goal *" required />
 											<label for="minimum_investment_amount">Minimum Investment Amount *</label>

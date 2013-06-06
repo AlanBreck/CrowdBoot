@@ -31,7 +31,7 @@ Template Name: Home Page
 						</article>
 
 						<article class="last fourcol box3">
-							<h2>What customers do CrowdBoot serve?</h2>
+							<h2>What customers does CrowdBoot serve?</h2>
 							<p><strong>Investors / Supporters</strong>
 							<br/>
 							Are you an investor looking for a return or a supporter looking to further a cause? Either way CrowdBoot.com will connect you to today’s innovators.

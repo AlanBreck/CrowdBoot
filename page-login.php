@@ -74,13 +74,13 @@ Template Name: User Creation Template
 				    			    			<p class="login-remember"><label><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label></p>
 				    			    			<p class="login-submit">
 				    			    				<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Log In" />
-				    			    				<input type="hidden" name="redirect_to" value="<?php echo get_permalink(); ?>" />
+				    			    				<input type="hidden" name="redirect_to" value="<?php echo site_url(); ?>/projects/" />
 				    			    			</p>
 
 				    			    		</form>
 
 						    			<?php } else { // If logged in:
-						    			    echo "Awesome! You've already logged in!";
+						    			    echo "You've already logged in! Awesome!";
 						    			}
 						    		?>
 						    	</div>
