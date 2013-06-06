@@ -9,10 +9,6 @@ Template Name: User Creation Template
 			'user_email'    => $_POST['user_email'],
 			'user_login'    => $_POST['user_email'],
 			'user_pass'     => $_POST['user_pass'],
-			'first_name'    => $_POST['first_name'],
-			'last_name'     => $_POST['last_name'],
-			'user_url'      => $_POST['user_url'],
-			'user_nicename' => $_POST['first_name'] . $_POST['last_name'],
 			'rich_editing'  => false,
 			'role'          => 'user'
 		);
