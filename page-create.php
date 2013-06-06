@@ -24,16 +24,7 @@ Template Name: Project Creation Template
 			'tags_input'	 => $_POST['tags_input']
 		);
 
-		$user_updates = array(
-			'first_name'    => $_POST['first_name'],
-			'last_name'     => $_POST['last_name'],
-			'user_url'      => $_POST['user_url'],
-			'user_nicename' => $_POST['first_name'] . $_POST['last_name'],
-		);
-
 		$new_post = wp_insert_post( $project_post, $current_user->ID );
-
-		wp_update_user( $user_updates );
 
 		wp_set_post_terms( $new_post, array( $post_category ), 'category' );
 
@@ -73,10 +64,6 @@ Template Name: Project Creation Template
 								<?php if ( is_user_logged_in() && current_user_can( 'publish_projects' ) ) : ?>
 
 									<form method="post">
-										<div class="user-name">
-											<input type="text" name="first_name" placeholder="First Name *" required />
-											<input type="text" name="last_name" placeholder="Last Name *" required />
-										</div>
 										<div class="project-name">
 											<input type="text" name="post_title" placeholder="Project Name *" required />
 										</div>
