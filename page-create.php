@@ -31,7 +31,7 @@ Template Name: Project Creation Template
 			'user_nicename' => $_POST['first_name'] . $_POST['last_name'],
 		);
 
-		$new_post = wp_insert_post( $project_post );
+		$new_post = wp_insert_post( $project_post, $current_user->ID );
 
 		wp_update_user( $user_updates );
 
