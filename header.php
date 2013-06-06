@@ -70,9 +70,7 @@
 							</ul>
 							<?php if( is_user_logged_in() ): ?>
 								<?php global $current_user; ?>
-								<?php if ( $current_user->user_firstname != '' ) : ?>
-									<span class="hello">Hey, <?php echo $current_user->user_firstname; ?>!</span>
-								<?php endif; ?>
+								<span class="hello">Hey <?php echo ',' . $current_user->user_firstname; ?>!</span>
 							<?php endif; ?>
 						</nav>
 
