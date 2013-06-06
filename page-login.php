@@ -45,18 +45,9 @@ Template Name: User Creation Template
 						    			if ( $_GET['redirect_to'] != '' ) {
 						    				$redirect_url = $_GET['redirect_to'];
 						    			} else {
-						    				$redirect_url = site_url();
+						    				$redirect_url = site_url( "/projects" );
 						    			}
-						    			if ( ! is_user_logged_in() ) { // Display WordPress login form:
-						    			    /*$args = array(
-						    			        'redirect' => $redirect_url,
-						    			        'label_username' => __( 'Email' ),
-						    			        'label_password' => __( 'Password' ),
-						    			        'label_remember' => __( 'Remember Me' ),
-						    			        'label_log_in' => __( 'Log In' ),
-						    			        'remember' => true
-						    			    );
-						    			    wp_login_form( $args );*/ ?>
+						    			if ( ! is_user_logged_in() ) : ?>
 
 						    			    <form name="loginform" id="loginform" action="<?php echo site_url(); ?>/wp-login.php" method="post">
 
@@ -70,14 +61,14 @@ Template Name: User Creation Template
 				    			    			<p class="login-remember"><label><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label></p>
 				    			    			<p class="login-submit">
 				    			    				<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Log In" />
-				    			    				<input type="hidden" name="redirect_to" value="<?php echo site_url(); ?>/projects/" />
+				    			    				<input type="hidden" name="redirect_to" value="<?php echo $redirect_url; ?>" />
 				    			    			</p>
 
 				    			    		</form>
 
-						    			<?php } else { // If logged in:
+						    			<?php else : // If logged in:
 						    			    echo "You've already logged in! Awesome!";
-						    			}
+						    			endif;
 						    		?>
 						    	</div>
 
