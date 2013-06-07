@@ -102,4 +102,4 @@
 
 	</body>
 
-</html> <!-- end page. what a ride! -->
+</html> <!-- end page -->
