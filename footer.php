@@ -72,7 +72,7 @@
 			});
 		</script>
 
-		<!-- Vanilla-Masonry.js -->
+		<!-- Masonry.js -->
 		<script>
 			$(function(){
 
