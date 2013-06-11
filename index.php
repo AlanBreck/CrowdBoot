@@ -12,7 +12,10 @@
 						<?php $project_loop = new WP_Query( array( 'post_type' => 'project' ) ); ?>
 					    <?php if ( $project_loop->have_posts() ) : while ( $project_loop->have_posts() ) : $project_loop->the_post(); ?>
 
-					    <?php $firstOrLast = $i === 1 ? 'first' : ( $i === 3 ? 'last' : '' ); ?>
+					    <?php
+					    	$firstOrLast = $i === 1 ? 'first' : ( $i === 3 ? 'last' : '' );
+					    	$project_meta = get_post_meta( get_the_ID(), 'project_meta', true );
+					    ?>
 
 						<?php $classes = array( 'clearfix', 'fourcol', $firstOrLast ); ?>
 					    <article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?> role="article">
@@ -28,8 +31,9 @@
 							    <?php the_excerpt(); ?>
 							    <?php
 							    	global $post;
-							    	if ( get_post_meta( $post->ID, '_cmb_min_funding_goal', true ) && get_post_meta( $post->ID, '_cmb_min_funding_goal', true ) ) {
-							    		$funding_goal_range = '$' . get_post_meta( $post->ID, '_cmb_min_funding_goal', true ) . ' - $' . get_post_meta( $post->ID, '_cmb_max_funding_goal', true );
+							    	if ( $project_meta['min_funding_goal'] && $project_meta['min_funding_goal'] ) {
+							    		$funding_goal_range = '$' . $project_meta['min_funding_goal'];
+							    		/*$funding_goal_range = '$' . $project_meta['min_funding_goal'] . ' - $' . $project_meta['max_funding_goal'];*/
 							    	} else {
 							    		$funding_goal_range = 'To Be Determined';
 							    	}
@@ -37,13 +41,12 @@
 							    <p>Funding Goal Range: <strong><?php echo $funding_goal_range; ?></strong></p>
 							    <?php
 							    	global $post;
-							    	if ( get_post_meta( $post->ID, '_cmb_minimum_investment_amount', true ) ) {
-							    		$minimum_investment_amount = get_post_meta( $post->ID, '_cmb_minimum_investment_amount', true );
+							    	if ( $project_meta['minimum_investment_amount'] ) {
+							    		$minimum_investment_amount = $project_meta['minimum_investment_amount'];
 							    	} else {
 							    		$minimum_investment_amount = 'To Be Determined';
 							    	}
 							    ?>
-							    <p>Minimum Investment Amount: <strong><?php echo $minimum_investment_amount; ?></strong></p>
 						    </section> <!-- end article section -->
 
 						    <footer class="article-footer">

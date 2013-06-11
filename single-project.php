@@ -8,6 +8,8 @@
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+						<?php $project_meta = get_post_meta( get_the_ID(), 'project_meta', true ); ?>
+
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<?php if ( get_post_status( get_the_ID() ) == 'pending' ) : ?>
@@ -25,25 +27,25 @@
 
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php
-										if ( get_post_meta( get_the_ID(), '_cmb_min_funding_goal', true ) && get_post_meta( get_the_ID(), '_cmb_min_funding_goal', true ) ) {
-											$funding_goal_range = '$' . get_post_meta( get_the_ID(), '_cmb_min_funding_goal', true )/* . ' - $' . get_post_meta( get_the_ID(), '_cmb_max_funding_goal', true )*/;
+										if ( $project_meta['min_funding_goal'] && $project_meta['min_funding_goal'] ) {
+											$funding_goal_range = '$' . $project_meta['min_funding_goal']/* . ' - $' . $project_meta['max_funding_goal']*/;
 										} else {
 											$funding_goal_range = 'To Be Determined';
 										}
 									?>
 									<p>Funding Goal: <strong><?php echo $funding_goal_range; ?></strong></p>
 									<?php
-										if ( get_post_meta( get_the_ID(), '_cmb_minimum_investment_amount', true ) ) {
-											$minimum_investment_amount = get_post_meta( get_the_ID(), '_cmb_minimum_investment_amount', true );
+										if ( $project_meta['minimum_investment_amount'] ) {
+											$minimum_investment_amount = $project_meta['minimum_investment_amount'];
 										} else {
 											$minimum_investment_amount = 'To Be Determined';
 										}
 									?>
 									<?php /* ?><p>Minimum Investment Amount: <strong><?php echo $minimum_investment_amount; ?></strong></p><?php */ ?>
 									<?php the_content(); ?>
-									<?php echo apply_filters( 'the_content', get_post_meta( get_the_ID(), '_cmb_promotional_video', true ) ); ?>
-									<?php if ( get_post_meta( get_the_ID(), '_cmb_promotional_images', true ) ) {
-										$promotional_images = get_post_meta( get_the_ID(), '_cmb_promotional_images', true );
+									<?php echo apply_filters( 'the_content', $project_meta['promotional_video'] ); ?>
+									<?php if ( $project_meta['promotional_images'] ) {
+										$promotional_images = $project_meta['promotional_images'];
 										echo '<img src="' . $promotional_images . '" />';
 									} ?>
 								</section> <!-- end article section -->

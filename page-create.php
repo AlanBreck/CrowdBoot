@@ -28,15 +28,7 @@ Template Name: Project Creation Template
 
 		wp_set_post_terms( $new_post, array( $post_category ), 'category' );
 
-		add_post_meta( $new_post, '_cmb_min_funding_goal', preg_replace('/[^a-zA-Z0-9_ %\[\]\.\(\)%&-]/s', '', $_POST['min_funding_goal'] ) );
-		add_post_meta( $new_post, '_cmb_max_funding_goal', preg_replace('/[^a-zA-Z0-9_ %\[\]\.\(\)%&-]/s', '', $_POST['max_funding_goal'] ) );
-		add_post_meta( $new_post, '_cmb_minimum_investment_amount', $_POST['minimum_investment_amount'] );
-		add_post_meta( $new_post, '_cmb_irs_tax_deductible', $_POST['irs_tax_deductible'] );
-		add_post_meta( $new_post, '_cmb_irs_ein', $_POST['irs_ein'] );
-		add_post_meta( $new_post, '_cmb_irs_name', $_POST['irs_name'] );
-		add_post_meta( $new_post, '_cmb_irs_city', $_POST['irs_city'] );
-		add_post_meta( $new_post, '_cmb_irs_state', $_POST['irs_state'] );
-		add_post_meta( $new_post, '_cmb_irs_country', $_POST['irs_country'] );
+		add_post_meta( $new_post, 'project_meta', $_POST['project_meta'] );
 
 		header( "location: " . ( TRUE == $new_post ? get_permalink( $new_post ) : 'you-are-dumb' ) );
 	}
@@ -98,11 +90,11 @@ Template Name: Project Creation Template
 											<input type="text" name="tags_input" placeholder="Tags *" class="project-tags" required />
 										</div>
 										<div class="funding-goals">
-											<input type="number" min="500" name="min_funding_goal" maxlength="6" placeholder="Minimum Funding Goal *" required />
+											<input type="number" min="500" name="project_meta[min_funding_goal]" maxlength="6" placeholder="Minimum Funding Goal *" required />
 											<!-- Hidden until equity investments begin. -->
-											<!-- <input type="number" name="max_funding_goal" maxlength="6" placeholder="Maximum Funding Goal *" required />
+											<!-- <input type="number" name="project_meta[max_funding_goal]" maxlength="6" placeholder="Maximum Funding Goal *" required />
 											<label for="minimum_investment_amount">Minimum Investment Amount *</label>
-											<select name="minimum_investment_amount" id="minimum_investment_amount" required>
+											<select name="project_meta[minimum_investment_amount]" id="minimum_investment_amount" required>
 												<option>--</option>
 												<option value="$1 - $5">$10</option>
 												<option value="$5 - $20">$20</option>
@@ -112,13 +104,13 @@ Template Name: Project Creation Template
 										</div>
 										<div class="tax-status">
 											<strong>Are donations to your organization, and this project, tax deductible?</strong>
-											<input type="radio" name="irs_tax_deductible" value="true" id="irs_tax_deductible=yes" /> <label for="irs_tax_deductible=yes">Yes</label>
-											<input type="radio" name="irs_tax_deductible" value="false" id="irs_tax_deductible=no" /> <label for="irs_tax_deductible=no">No</label>
+											<input type="radio" name="project_meta[irs_tax_deductible]" value="true" id="irs_tax_deductible=yes" /> <label for="irs_tax_deductible=yes">Yes</label>
+											<input type="radio" name="project_meta[irs_tax_deductible]" value="false" id="irs_tax_deductible=no" /> <label for="irs_tax_deductible=no">No</label>
 											<div class="tax-status-details">
-												<input type="text" name="irs_ein" placeholder="EIN" />
-												<input type="text" name="irs_name" placeholder="Name" />
-												<input type="text" name="irs_city" placeholder="City" />
-												<select name="state" class="state">
+												<input type="text" name="project_meta[irs_ein]" placeholder="EIN" />
+												<input type="text" name="project_meta[irs_name]" placeholder="Name" />
+												<input type="text" name="project_meta[irs_city]" placeholder="City" />
+												<select name="project_meta[state]" class="state">
 													<option value="" selected="selected">State</option>
 													<option value="AL">Alabama</option>
 													<option value="AK">Alaska</option>
@@ -172,7 +164,7 @@ Template Name: Project Creation Template
 													<option value="WI">Wisconsin</option>
 													<option value="WY">Wyoming</option>
 												</select>
-												<input type="text" name="irs_country" placeholder="Country" class="country" />
+												<input type="text" name="project_meta[irs_country]" placeholder="Country" class="country" />
 											</div>
 										</div>
 										<div>
