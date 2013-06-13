@@ -18,7 +18,7 @@ Template Name: Project Creation Template
 			'post_content'   => $_POST['post_content'],
 			'post_excerpt'   => $_POST['post_excerpt'],
 			'post_name'      => $_POST['post_title'] . '-' . rand( 100, 999 ),
-			'post_title'     => wp_strip_all_tags( $_POST['post_title'] ),
+			'post_title'     => $_POST['post_title'],
 			'post_type'      => 'project',
 			'post_status'	 => 'pending',
 			'tags_input'	 => $_POST['tags_input']
@@ -30,7 +30,7 @@ Template Name: Project Creation Template
 
 		add_post_meta( $new_post, 'project_meta', $_POST['project_meta'] );
 
-		header( "location: " . ( TRUE == $new_post ? get_permalink( $new_post ) : 'you-are-dumb' ) );
+		header( "location: " . ( TRUE == $new_post ? get_permalink( $new_post ) . 'preview' : 'you-are-dumb' ) );
 	}
 ?>
 <?php get_header(); ?>
