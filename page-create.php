@@ -60,7 +60,7 @@ Template Name: Project Creation Template
 											<input type="text" name="post_title" placeholder="Project Name *" required />
 										</div>
 										<div>
-											<textarea type="text" name="post_excerpt" placeholder="Short Description *" rows="4" required></textarea>
+											<textarea type="text" name="post_excerpt" placeholder="Elevator Pitch *" rows="4" required></textarea>
 										</div>
 										<div>
 											<textarea type="text" name="post_content" placeholder="Full Description" rows="7"></textarea>

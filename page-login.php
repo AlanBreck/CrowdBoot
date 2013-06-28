@@ -5,10 +5,16 @@ Template Name: User Creation Template
 ?>
 <?php
 	if ( $_POST ) {
+		$user_nicename = $_POST['user_organization'] ? $_POST['user_organization'] : $_POST['user_first_name'] . '-' . $_POST['user_last_name'];
+		$display_name = $_POST['user_organization'] ? $_POST['user_organization'] : $_POST['user_first_name'] . ' ' . $_POST['user_last_name'];
 		$new_user = array(
 			'user_email'    => $_POST['user_email'],
 			'user_login'    => $_POST['user_email'],
 			'user_pass'     => $_POST['user_pass'],
+			'first_name'	=> $_POST['user_first_name'],
+			'last_name'		=> $_POST['user_last_name'],
+			'user_nicename'	=> strtolower( $user_nicename ),
+			'display_name'	=> $display_name,
 			'rich_editing'  => false,
 			'role'          => 'user'
 		);
@@ -80,15 +86,22 @@ Template Name: User Creation Template
 										<form method="post">
 											<div>
 												<input type="hidden" name="redirect_to" id="redirect_to" value="<?php echo $_GET['redirect_to']; ?>" />
-												<p>
+												<div>
+													<input class="first-name" type="text" maxlength="100" name="user_first_name" placeholder="First Name" required />
+													<input class="last-name" type="text" maxlength="100" name="user_last_name" placeholder="Last Name" required />
+												</div>
+												<div>
+													<input type="text" maxlength="100" name="user_organization" placeholder="Organization (optional)" />
+												</div>
+												<div>
 													<input type="email" maxlength="100" name="user_email" placeholder="Email" required />
-												</p>
-												<p>
+												</div>
+												<div>
 													<input type="password" maxlength="20" name="user_pass" id="registration_pass" placeholder="Password" required />
-												</p>
-												<p>
+												</div>
+												<div>
 													<input type="password" maxlength="20" name="user_pass2" id="registration_pass2" placeholder="Confirm Password" required />
-												</p>
+												</div>
 												<script type="text/javascript">
 													$(function(){
 														$("#registration_pass2").on("change blur", function () {
