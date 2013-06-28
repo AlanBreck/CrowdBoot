@@ -1852,9 +1852,9 @@ style a page via class
 .category #inner-content #main article,
 .tag #inner-content #main article {
   background-color: #fff;
-  border: 1px solid #f9f9f9;
-  border-bottom: 3px solid #eeeeee;
-  border-right: 3px solid #eeeeee;
+  border: 1px solid #ededed;
+  border-bottom: 3px solid #dddddd;
+  border-right: 3px solid #dddddd;
   border-radius: 5px;
   margin-bottom: 20px;
   padding: 20px;
