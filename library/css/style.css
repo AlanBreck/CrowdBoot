@@ -3033,6 +3033,11 @@ you can add resource intensive styles.
     width: 200px;
     border: 1px solid #cccccc;
     border-top: 0;
+    box-shadow: inset 0 10px 0 white;
+    -webkit-box-shadow: inset 0 10px 0 white;
+    -moz-box-shadow: inset 0 10px 0 white;
+    -ms-box-shadow: inset 0 10px 0 white;
+    -o-box-shadow: inset 0 10px 0 white;
     margin-top: 0;
     position: absolute;
     display: none;
@@ -3040,7 +3045,7 @@ you can add resource intensive styles.
     background: rgba(255, 255, 255, 0.9);
     /* highlight sub-menu current page */
   }
-  /* line 178, ../scss/_768up.scss */
+  /* line 183, ../scss/_768up.scss */
   ul.sub-menu li,
   ul.children li {
     /*
@@ -3049,7 +3054,7 @@ you can add resource intensive styles.
     for usability. k, bai.
     */
   }
-  /* line 180, ../scss/_768up.scss */
+  /* line 185, ../scss/_768up.scss */
   ul.sub-menu li a,
   ul.children li a {
     padding-left: 10px;
@@ -3058,7 +3063,7 @@ you can add resource intensive styles.
     width: 198px;
     border-bottom: 1px solid #cccccc;
   }
-  /* line 197, ../scss/_768up.scss */
+  /* line 202, ../scss/_768up.scss */
   ul.sub-menu li:last-child a,
   ul.children li:last-child a {
     border-bottom: 0;
@@ -3067,28 +3072,28 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 222, ../scss/_768up.scss */
+  /* line 227, ../scss/_768up.scss */
   .sidebar {
     margin-top: 2.2em;
   }
 
-  /* line 226, ../scss/_768up.scss */
+  /* line 231, ../scss/_768up.scss */
   .widgettitle {
     border-bottom: 2px solid #444444;
     margin-bottom: 0.75em;
   }
 
-  /* line 231, ../scss/_768up.scss */
+  /* line 236, ../scss/_768up.scss */
   .widget {
     padding: 0 10px;
     margin: 2.2em 0;
   }
-  /* line 236, ../scss/_768up.scss */
+  /* line 241, ../scss/_768up.scss */
   .widget ul li {
     margin-bottom: 0.2em;
     /* deep nesting */
   }
-  /* line 244, ../scss/_768up.scss */
+  /* line 249, ../scss/_768up.scss */
   .widget ul li ul {
     margin-top: 0.2em;
     margin-bottom: 0;
@@ -3114,7 +3119,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 357, ../scss/_768up.scss */
+  /* line 362, ../scss/_768up.scss */
   .footer-links ul li {
     /*
     be careful with the depth of your menus.
