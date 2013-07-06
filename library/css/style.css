@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lustria|Brawler|Lato:100,300,400,700,900|Marcellus|Fjord+One|Strait|Archivo+Narrow|Nunito|Oswald|Signika:300,400,600,700|Francois+One|Asul);
+@import url(http://fonts.googleapis.com/css?family=Lustria|Brawler|Lato:100,300,400,700,900|Marcellus|Fjord+One|Strait|Archivo+Narrow|Nunito|Oswald:400,700|Signika:300,400,600,700|Francois+One|Asul);
 /******************************************************************
 Site Name:
 Author:
@@ -1640,7 +1640,7 @@ GENERAL STYLES
 /* line 18, ../scss/_base.scss */
 body {
   font-family: "Lato", Helvetica, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 100%;
   line-height: 1.5;
   color: #565656;
@@ -1877,7 +1877,7 @@ style a page via class
 .author #inner-content #main article .h2 a,
 .category #inner-content #main article .h2 a,
 .tag #inner-content #main article .h2 a {
-  color: #444;
+  color: #555;
 }
 /* line 158, ../scss/_base.scss */
 .blog #inner-content #main article .h2 a:hover,
@@ -1927,9 +1927,9 @@ H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 /* line 207, ../scss/_base.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  font-family: "Strait", Helvetica, sans-serif;
+  font-family: "Oswald", Helvetica, sans-serif;
   text-rendering: optimizelegibility;
-  font-weight: 500;
+  font-weight: 700;
   /*
   if you're going to use webfonts, be sure to check your weights
   http://css-tricks.com/watch-your-font-weight/
@@ -2017,7 +2017,7 @@ and more scalable.
   padding: 10px 10px;
   border-bottom: 1px solid #cccccc;
   color: #333;
-  font-weight: 300;
+  font-weight: 400;
   /*
   remember this is for mobile ONLY, so there's no need
   to even declare hover styles here, you can do it in
@@ -2079,7 +2079,7 @@ POSTS & CONTENT STYLES
 /* line 399, ../scss/_base.scss */
 .byline {
   color: #999;
-  font-family: "Strait", Helvetica, sans-serif;
+  font-family: "Oswald", Helvetica, sans-serif;
 }
 
 /* entry content */

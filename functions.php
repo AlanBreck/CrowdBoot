@@ -247,4 +247,61 @@ function convert_smart_quotes($string)
     return str_replace($search, $replace, $string);
 }
 
+/************* Create States Array *****************/
+function get_states_array() {
+    return array(
+        array( 'abbr' => 'AL', 'full_name' => 'Alabama' ),
+        array( 'abbr' => 'AK', 'full_name' => 'Alaska' ),
+        array( 'abbr' => 'AZ', 'full_name' => 'Arizona' ),
+        array( 'abbr' => 'AR', 'full_name' => 'Arkansas' ),
+        array( 'abbr' => 'CA', 'full_name' => 'California' ),
+        array( 'abbr' => 'CO', 'full_name' => 'Colorado' ),
+        array( 'abbr' => 'CT', 'full_name' => 'Connecticut' ),
+        array( 'abbr' => 'DE', 'full_name' => 'Delaware' ),
+        array( 'abbr' => 'DC', 'full_name' => 'District Of Columbia' ),
+        array( 'abbr' => 'FL', 'full_name' => 'Florida' ),
+        array( 'abbr' => 'GA', 'full_name' => 'Georgia' ),
+        array( 'abbr' => 'HI', 'full_name' => 'Hawaii' ),
+        array( 'abbr' => 'ID', 'full_name' => 'Idaho' ),
+        array( 'abbr' => 'IL', 'full_name' => 'Illinois' ),
+        array( 'abbr' => 'IN', 'full_name' => 'Indiana' ),
+        array( 'abbr' => 'IA', 'full_name' => 'Iowa' ),
+        array( 'abbr' => 'KS', 'full_name' => 'Kansas' ),
+        array( 'abbr' => 'KY', 'full_name' => 'Kentucky' ),
+        array( 'abbr' => 'LA', 'full_name' => 'Louisiana' ),
+        array( 'abbr' => 'ME', 'full_name' => 'Maine' ),
+        array( 'abbr' => 'MD', 'full_name' => 'Maryland' ),
+        array( 'abbr' => 'MA', 'full_name' => 'Massachusetts' ),
+        array( 'abbr' => 'MI', 'full_name' => 'Michigan' ),
+        array( 'abbr' => 'MN', 'full_name' => 'Minnesota' ),
+        array( 'abbr' => 'MS', 'full_name' => 'Mississippi' ),
+        array( 'abbr' => 'MO', 'full_name' => 'Missouri' ),
+        array( 'abbr' => 'MT', 'full_name' => 'Montana' ),
+        array( 'abbr' => 'NE', 'full_name' => 'Nebraska' ),
+        array( 'abbr' => 'NV', 'full_name' => 'Nevada' ),
+        array( 'abbr' => 'NH', 'full_name' => 'New Hampshire' ),
+        array( 'abbr' => 'NJ', 'full_name' => 'New Jersey' ),
+        array( 'abbr' => 'NM', 'full_name' => 'New Mexico' ),
+        array( 'abbr' => 'NY', 'full_name' => 'New York' ),
+        array( 'abbr' => 'NC', 'full_name' => 'North Carolina' ),
+        array( 'abbr' => 'ND', 'full_name' => 'North Dakota' ),
+        array( 'abbr' => 'OH', 'full_name' => 'Ohio' ),
+        array( 'abbr' => 'OK', 'full_name' => 'Oklahoma' ),
+        array( 'abbr' => 'OR', 'full_name' => 'Oregon' ),
+        array( 'abbr' => 'PA', 'full_name' => 'Pennsylvania' ),
+        array( 'abbr' => 'RI', 'full_name' => 'Rhode Island' ),
+        array( 'abbr' => 'SC', 'full_name' => 'South Carolina' ),
+        array( 'abbr' => 'SD', 'full_name' => 'South Dakota' ),
+        array( 'abbr' => 'TN', 'full_name' => 'Tennessee' ),
+        array( 'abbr' => 'TX', 'full_name' => 'Texas' ),
+        array( 'abbr' => 'UT', 'full_name' => 'Utah' ),
+        array( 'abbr' => 'VT', 'full_name' => 'Vermont' ),
+        array( 'abbr' => 'VA', 'full_name' => 'Virginia' ),
+        array( 'abbr' => 'WA', 'full_name' => 'Washington' ),
+        array( 'abbr' => 'WV', 'full_name' => 'West Virginia' ),
+        array( 'abbr' => 'WI', 'full_name' => 'Wisconsin' ),
+        array( 'abbr' => 'WY', 'full_name' => 'Wyoming' )
+    );
+}
+
 ?>

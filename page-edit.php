@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Project Creation Template
+Template Name: Project Editor Template
 */
 ?>
 <?php
@@ -10,26 +10,21 @@ Template Name: Project Creation Template
 	}
 
 	if ( $_POST ) {
-		$project_post = array(
-			'comment_status' => 'closed',
-			'ping_status'    => 'closed',
-			'post_author'    => $current_user->ID,
-			'post_content'   => $_POST['post_content'],
-			'post_excerpt'   => $_POST['post_excerpt'],
-			'post_name'      => $_POST['post_title'],
-			'post_title'     => $_POST['post_title'],
-			'post_type'      => 'project',
-			'post_status'	 => 'pending',
-			'tags_input'	 => $_POST['tags_input']
-		);
+		$project_post_edits = array();
+		$project_post_edits['ID']           = $_GET['ID'];
+		$project_post_edits['post_content'] = $_POST['post_content'];
+		$project_post_edits['post_excerpt'] = $_POST['post_excerpt'];
+		$project_post_edits['post_title']   = $_POST['post_title'];
+		$project_post_edits['post_name']    = $_POST['post_title'];
+		$project_post_edits['tags_input']   = $_POST['tags_input'];
 
-		$new_project = wp_insert_post( $project_post, $current_user->ID );
+		$updated_project = wp_update_post( $project_post_edits );
 
-		wp_set_post_terms( $new_project, $_POST['post_category'], 'category' );
+		wp_set_post_terms( $updated_project, $_POST['post_category'], 'category' );
 
-		add_post_meta( $new_project, 'project_meta', $_POST['project_meta'] );
+		update_post_meta( $updated_project, 'project_meta', $_POST['project_meta'] );
 
-		header( "location: " . ( TRUE == $new_project ? get_permalink( $new_project ) . 'preview' : 'you-are-dumb' ) );
+		header( "location: " . ( TRUE == $updated_project ? get_permalink( $updated_project ) : 'you-are-dumb' ) );
 	}
 ?>
 <?php get_header(); ?>
@@ -44,40 +39,44 @@ Template Name: Project Creation Template
 
 					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
+					    	<?php $original_project = get_post( $_GET['ID'], ARRAY_A ); ?>
+					    	<?php $original_project_meta = get_post_meta( $original_project['ID'], 'project_meta', true ); ?>
+
 						    <header class="article-header">
 
-							    <h1 class="page-title"><?php the_title(); ?></h1>
+							    <h1 class="page-title"><?php the_title(); echo ' "' . $original_project['post_title'] . '"'; ?></h1>
 
 						    </header> <!-- end article header -->
 
 						    <section class="entry-content">
 
-								<?php if ( is_user_logged_in() && current_user_can( 'publish_projects' ) ) : ?>
+								<?php if ( is_user_logged_in() && current_user_can( 'edit_projects' ) ) : ?>
 
 									<form method="post">
 										<div class="project-name">
-											<input type="text" name="post_title" placeholder="Project Name *" required />
+											<input type="text" name="post_title" value="<?php echo $original_project['post_title']; ?>" placeholder="Project Name *" required />
 										</div>
 										<div>
-											<textarea type="text" name="post_excerpt" placeholder="Elevator Pitch *" rows="4" required></textarea>
+											<textarea type="text" name="post_excerpt" rows="4" placeholder="Elevator Pitch *" required><?php echo $original_project['post_excerpt']; ?></textarea>
 										</div>
 										<div>
-											<textarea type="text" name="post_content" placeholder="Full Description" rows="7"></textarea>
+											<textarea type="text" name="post_content" rows="7" placeholder="Full Description"><?php echo $original_project['post_content']; ?></textarea>
 										</div>
 										<div>
 											<select name="post_category" id="post_category" class="project-category" required>
 												<option disabled>Project Category *</option>
 												<?php
 													$categories = get_categories( array( 'orderby' => 'slug', 'hide_empty' => 0 ));
-													foreach ( $categories as $category ) { ?>
-														<option value="<?php echo $category->cat_ID; ?>"><?php echo $category->name; ?></option>
+													foreach ( $categories as $category ) {
+														$selected = in_category( $category->slug, $original_project['ID'] ) ? 'selected' : '';?>
+														<option value="<?php echo $category->cat_ID; ?>" <?php echo $selected; ?>><?php echo $category->name; ?></option>
 													<?php }
 												?>
 											</select>
-											<input type="text" name="tags_input" placeholder="Tags *" class="project-tags" required />
+											<input type="text" name="tags_input" value="<?php echo implode( ', ', $original_project['tags_input'] ); ?>" class="project-tags" placeholder="Tags *" required />
 										</div>
 										<div class="funding-goals">
-											<input type="number" min="500" name="project_meta[min_funding_goal]" maxlength="6" placeholder="Minimum Funding Goal *" required />
+											<input type="number" min="500" name="project_meta[min_funding_goal]" maxlength="6" value="<?php echo $original_project_meta['min_funding_goal']; ?>" placeholder="Minimum Funding Goal *" required />
 											<!-- Hidden until equity investments begin. -->
 											<!-- <input type="number" name="project_meta[max_funding_goal]" maxlength="6" placeholder="Maximum Funding Goal *" required />
 											<label for="minimum_investment_amount">Minimum Investment Amount *</label>
@@ -91,8 +90,13 @@ Template Name: Project Creation Template
 										</div>
 										<div class="tax-status">
 											<strong>Are donations to your organization, and this project, tax deductible?</strong>
-											<input type="radio" name="project_meta[irs_tax_deductible]" value="true" id="irs_tax_deductible=yes" /> <label for="irs_tax_deductible=yes">Yes</label>
-											<input type="radio" name="project_meta[irs_tax_deductible]" value="false" id="irs_tax_deductible=no" checked /> <label for="irs_tax_deductible=no">No</label>
+											<?php if ( $original_project_meta[irs_tax_deductible] === 'true' ) {
+												$true = 'checked';
+											} else {
+												$false = 'checked';
+											} ?>
+											<input type="radio" name="project_meta[irs_tax_deductible]" value="true" id="irs_tax_deductible=yes" <?php echo $true ?> /> <label for="irs_tax_deductible=yes">Yes</label>
+											<input type="radio" name="project_meta[irs_tax_deductible]" value="false" id="irs_tax_deductible=no" <?php echo $false ?> /> <label for="irs_tax_deductible=no">No</label>
 
 											<script type="text/javascript">
 												$(document).ready(function() {
@@ -108,19 +112,20 @@ Template Name: Project Creation Template
 											</script>
 
 											<div class="tax-status-details">
-												<input type="text" name="project_meta[irs_ein]" placeholder="EIN" />
-												<input type="text" name="project_meta[irs_name]" placeholder="Name" />
-												<input type="text" name="project_meta[irs_city]" placeholder="City" />
+												<input type="text" name="project_meta[irs_ein]" value="<?php echo $original_project_meta[irs_ein] ?>" placeholder="EIN" />
+												<input type="text" name="project_meta[irs_name]" value="<?php echo $original_project_meta[irs_name] ?>" placeholder="Name" />
+												<input type="text" name="project_meta[irs_city]" value="<?php echo $original_project_meta[irs_city] ?>" placeholder="City" />
 												<select name="project_meta[irs_state]" class="state">
 													<option value="" disabled>State</option>
 													<?php
 														$states = get_states_array();
 														foreach ( $states as $state ) { ?>
-															<option value="<?php echo $state['abbr']; ?>"><?php echo $state['full_name']; ?></option>
+															<?php $selected = $original_project_meta['state'] === $state['abbr'] ? 'selected' : ''; ?>
+															<option value="<?php echo $state['abbr']; ?>" <?php echo $selected; ?>><?php echo $state['full_name']; ?></option>
 														<?php }
 													?>
 												</select>
-												<input type="text" name="project_meta[irs_country]" placeholder="Country" class="country" />
+												<input type="text" name="project_meta[irs_country]" value="<?php echo $original_project_meta[irs_country] ?>" placeholder="Country" class="country" />
 											</div>
 										</div>
 										<div>
