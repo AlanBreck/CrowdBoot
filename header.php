@@ -64,7 +64,11 @@
 								<li class="user-profile">
 									<a href="#" class="pictogram">&#128100;</a>
 									<ul class="sub-menu">
-										<li><?php wp_loginout( get_permalink(), true ); ?></li>
+										<?php 
+											$loginout  = is_user_logged_in() ? wp_logout_url( get_permalink() ) : site_url( '/log-in/?redirect_to=' ) . get_permalink(); 
+											$logintext = is_user_logged_in() ? 'Log Out' : 'Log In';
+										?>
+										<li><a href="<?php echo $loginout; ?>"><?php echo $logintext; ?></a></li>
 									</ul>
 								</li>
 							</ul>
