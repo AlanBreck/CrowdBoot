@@ -38,7 +38,7 @@
 							    		$funding_goal_range = 'To Be Determined';
 							    	}
 							    ?>
-							    <p>Funding Goal Range: <strong><?php echo $funding_goal_range; ?></strong></p>
+							    <p>Funding Goal: <strong><?php echo $funding_goal_range; ?></strong></p>
 							    <?php
 							    	global $post;
 							    	if ( $project_meta['minimum_investment_amount'] ) {

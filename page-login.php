@@ -13,7 +13,7 @@ Template Name: User Creation Template
 			'user_pass'     => $_POST['user_pass'],
 			'first_name'	=> $_POST['user_first_name'],
 			'last_name'		=> $_POST['user_last_name'],
-			'user_nicename'	=> strtolower( $user_nicename ),
+			'user_nicename'	=> sanitize_title_with_dashes( $user_nicename ),
 			'display_name'	=> $display_name,
 			'rich_editing'  => false,
 			'role'          => 'user'
