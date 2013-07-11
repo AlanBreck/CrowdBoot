@@ -76,7 +76,7 @@ Template Name: Project Editor Template
 											<input type="text" name="tags_input" value="<?php echo implode( ', ', $original_project['tags_input'] ); ?>" class="project-tags" placeholder="Tags *" required />
 										</div>
 										<div class="funding-goals">
-											<input type="number" min="500" name="project_meta[min_funding_goal]" maxlength="6" value="<?php echo $original_project_meta['min_funding_goal']; ?>" placeholder="Minimum Funding Goal *" required />
+											<input type="number" step="any" min="500" name="project_meta[min_funding_goal]" maxlength="6" value="<?php echo $original_project_meta['min_funding_goal']; ?>" placeholder="Minimum Funding Goal *" required />
 											<!-- Hidden until equity investments begin. -->
 											<!-- <input type="number" name="project_meta[max_funding_goal]" maxlength="6" placeholder="Maximum Funding Goal *" required />
 											<label for="minimum_investment_amount">Minimum Investment Amount *</label>
