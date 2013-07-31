@@ -71,8 +71,24 @@ nav {
 		li {
 			position: relative;
 			padding: 15px;
-			margin-top: 5px;
+			margin-top: 9px;
 			background: #eee;
+
+			&.user-profile {
+				padding: 0;
+				line-height: 0;
+
+				> a {
+					display: inline-block;
+					padding: 15px;
+					line-height: 30px;
+
+					&.image-link {
+						padding: 0;
+						line-height: 0;
+					}
+				}
+			}
 
 			.pictogram {
 				font-size: 40pt;
@@ -103,7 +119,7 @@ nav {
 
 			&:hover ul {
 				display: block;
-				top: 65px;
+				top: 60px;
 			}
 		}
 	}
@@ -218,6 +234,11 @@ ul.children {
 	li.current-page-ancestor {
 		a {}
 	}
+}
+
+.page-template-page-dashboard-php .my-projects-container {
+	width: 50%;
+	float: left;
 }
 
 /*********************

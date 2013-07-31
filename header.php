@@ -62,10 +62,14 @@
 							?>
 							<ul class="user-quicklinks">
 								<li class="user-profile">
-									<a href="#" class="pictogram">&#128100;</a>
+									<?php if ( is_user_logged_in() ): global $current_user; ?>
+										<a href="<?php echo $user_url; ?>" class="fn image-link"><?php echo get_avatar( $current_user->ID, 60 ); ?></a>
+									<?php else : ?>
+										<a href="<?php echo $user_url; ?>" class="fn url pictogram">&#128100;</a>
+									<?php endif; ?>
 									<ul class="sub-menu">
-										<?php 
-											$loginout  = is_user_logged_in() ? wp_logout_url( get_permalink() ) : site_url( '/log-in/?redirect_to=' ) . get_permalink(); 
+										<?php
+											$loginout  = is_user_logged_in() ? wp_logout_url( get_permalink() ) : site_url( '/log-in/?redirect_to=' ) . get_permalink();
 											$logintext = is_user_logged_in() ? 'Log Out' : 'Log In';
 										?>
 										<li><a href="<?php echo $loginout; ?>"><?php echo $logintext; ?></a></li>

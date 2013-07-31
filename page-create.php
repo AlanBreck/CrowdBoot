@@ -29,7 +29,7 @@ Template Name: Project Creation Template
 
 		add_post_meta( $new_project, 'project_meta', $_POST['project_meta'] );
 
-		header( "location: " . ( TRUE == $new_project ? get_permalink( $new_project ) . 'preview' : 'you-are-dumb' ) );
+		header( "location: " . ( TRUE == $new_project ? get_permalink( $new_project ) . '?preview=true' : 'you-are-dumb' ) );
 	}
 ?>
 <?php get_header(); ?>

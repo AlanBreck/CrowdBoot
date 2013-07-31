@@ -16,6 +16,7 @@ Template Name: Project Editor Template
 		$project_post_edits['post_excerpt'] = $_POST['post_excerpt'];
 		$project_post_edits['post_title']   = $_POST['post_title'];
 		$project_post_edits['post_name']    = $_POST['post_title'];
+		$project_post_edits['post_status']	= 'pending';
 		$project_post_edits['tags_input']   = $_POST['tags_input'];
 
 		$updated_project = wp_update_post( $project_post_edits );
@@ -24,7 +25,7 @@ Template Name: Project Editor Template
 
 		update_post_meta( $updated_project, 'project_meta', $_POST['project_meta'] );
 
-		header( "location: " . ( TRUE == $updated_project ? get_permalink( $updated_project ) : 'you-are-dumb' ) );
+		header( "location: " . ( TRUE == $updated_project ? get_permalink( $updated_project ) . '?preview=true' : 'you-are-dumb' ) );
 	}
 ?>
 <?php get_header(); ?>
@@ -35,7 +36,7 @@ Template Name: Project Editor Template
 
 				    <div id="main" class="eightcol first clearfix" role="main">
 
-					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					    <?php if ( have_posts()) : while ( have_posts()) : the_post(); ?>
 
 					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
@@ -50,7 +51,7 @@ Template Name: Project Editor Template
 
 						    <section class="entry-content">
 
-								<?php if ( is_user_logged_in() && current_user_can( 'edit_projects' ) ) : ?>
+								<?php if ( is_user_logged_in() && current_user_can( 'edit_project', $original_project['ID'] ) ) : ?>
 
 									<form method="post">
 										<div class="project-name">
@@ -135,7 +136,8 @@ Template Name: Project Editor Template
 
 								<?php else : ?>
 
-									<?php get_template_part( 'login' ); ?>
+									<h2>Whoah!</h2>
+									<p>Hold on there, partner. You have to have created this project to edit it.</p>
 
 								<?php endif; ?>
 
