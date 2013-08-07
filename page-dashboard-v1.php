@@ -1,6 +1,3 @@
-<?php /*
-Template Name: My Dashboard
-*/ ?>
 <?php get_header(); ?>
 
 			<div id="content">
@@ -30,21 +27,31 @@ Template Name: My Dashboard
 							    	<div id="hcard-<?php echo $current_user->user_firstname . '-' . $current_user->user_lastname; ?>" class="vcard clearfix">
 							    		<img src="<?php get_gravatar_url( $user_email, 120 ); ?>" alt="<?php echo $full_name; ?>" class="photo" width="120" height="120" />
 							    		<div class="account-details">
-							    			<?php echo $full_name; ?>
+							    			<a href="<?php echo $user_url; ?>" class="fn url"><?php echo $full_name; ?></a>
 							    			<span class="nickname"><?php echo $user_login; ?></span>
+							    			<span class="email"><?php echo $user_email; ?></span>
+							    			<span class="tel"><?php the_author_meta( 'phonenumber', $current_user->ID ) ?></span>
+							    			<span class="title"><?php the_author_meta( 'occupation', $current_user->ID ) ?></span>
+							    			<p class="bold">Bio</p>
+							    			<p class="bio"><?php echo the_author_meta( 'description', $current_user->ID ) ?></p>
+							    			<p class="bold">Interests</p>
+							    			<p class="interests">
+						    				<?php
+						    					$interests = get_the_author_meta( 'interests', $current_user->ID );
+						    					echo $interests;
+						    				?>
+							    			</p>
 							    		</div>
+							    		<a href="<?php echo admin_url( 'profile.php' ); ?>">Edit Profile</a>
 							    	</div>
 
-							    	<div class="my-projects-container">
-							    		<h2>My Projects</h2>
-										<?php $my_projects_loop = new WP_Query( array( 'post_type' => 'project', 'post_status' => 'any', 'author' => $current_user->ID ) ); ?>
-							    		<?php if( $my_projects_loop->have_posts() ) : while( $my_projects_loop->have_posts() ) : $my_projects_loop->the_post() ?>
+							    	<div class="interests-loop">
+							    		<h2>Entrepreneurial Endeavors that May Interest You</h2>
+							    		<?php $interests_array = explode( ', ', $interests ); ?>
+										<?php $interests_loop = new WP_Query( array( 'post_type' => 'project', 'tag' => $interests ) ); ?>
+							    		<?php if( $interests_loop->have_posts() ) : while( $interests_loop->have_posts() ) : $interests_loop->the_post() ?>
 
-							    			<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-							    				<?php if ( get_post_status( get_the_ID() ) == 'pending' ) {
-								    				echo '<strong>&mdash; Pending Review</strong>';
-								    			} ?>
-							    			</h3>
+							    			<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 
 							    		<?php endwhile; else : ?>
 

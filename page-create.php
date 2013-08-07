@@ -29,7 +29,7 @@ Template Name: Project Creation Template
 
 		add_post_meta( $new_project, 'project_meta', $_POST['project_meta'] );
 
-		header( "location: " . ( TRUE == $new_project ? get_permalink( $new_project ) . 'preview' : 'you-are-dumb' ) );
+		header( "location: " . ( TRUE == $new_project ? get_permalink( $new_project ) . '?preview=true' : 'you-are-dumb' ) );
 	}
 ?>
 <?php get_header(); ?>
@@ -63,6 +63,9 @@ Template Name: Project Creation Template
 										</div>
 										<div>
 											<textarea type="text" name="post_content" placeholder="Full Description" rows="7"></textarea>
+										</div>
+										<div class="project-name">
+											<input type="text" name="project_meta[video_url]" placeholder="YouTube Video URL" />
 										</div>
 										<div>
 											<select name="post_category" id="post_category" class="project-category" required>
