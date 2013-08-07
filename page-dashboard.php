@@ -48,7 +48,7 @@ Template Name: My Dashboard
 
 							    		<?php endwhile; else : ?>
 
-							    			Sorry, there's just <strong>nothing</strong> here that'll interest you.
+							    			Sorry, you haven't created <strong>anything</strong> yet.
 
 							    		<?php endif; ?>
 							    		<?php wp_reset_postdata(); ?>
