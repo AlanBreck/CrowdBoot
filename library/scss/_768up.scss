@@ -70,7 +70,6 @@ nav {
 
 		li {
 			position: relative;
-			padding: 15px;
 			margin-top: 9px;
 			background: #eee;
 
@@ -104,6 +103,7 @@ nav {
 
 				li {
 					background: rgba( 255, 255, 255, 0.8 );
+					border-bottom: 1px solid #ccc;
 					margin: 0;
 
 					a {
@@ -199,11 +199,11 @@ ul.children {
 	li {
 
 		a {
-			padding-left: 10px;
 			border-right: 0;
 			display: block;
-			width: 198px;
-			border-bottom: 1px solid #ccc;
+			width: 100%;
+			padding: 15px;
+
 
 			&:hover,
 			&:focus {}

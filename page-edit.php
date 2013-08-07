@@ -63,6 +63,9 @@ Template Name: Project Editor Template
 										<div>
 											<textarea type="text" name="post_content" rows="7" placeholder="Full Description"><?php echo $original_project['post_content']; ?></textarea>
 										</div>
+										<div class="project-name">
+											<input type="text" name="project_meta[video_url]" placeholder="YouTube Video URL" />
+										</div>
 										<div>
 											<select name="post_category" id="post_category" class="project-category" required>
 												<option disabled>Project Category *</option>

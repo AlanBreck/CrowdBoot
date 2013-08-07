@@ -2905,42 +2905,42 @@ you can add resource intensive styles.
   /* line 71, ../scss/_768up.scss */
   nav .user-quicklinks li {
     position: relative;
-    padding: 15px;
     margin-top: 9px;
     background: #eee;
   }
-  /* line 77, ../scss/_768up.scss */
+  /* line 76, ../scss/_768up.scss */
   nav .user-quicklinks li.user-profile {
     padding: 0;
     line-height: 0;
   }
-  /* line 81, ../scss/_768up.scss */
+  /* line 80, ../scss/_768up.scss */
   nav .user-quicklinks li.user-profile > a {
     display: inline-block;
     padding: 15px;
     line-height: 30px;
   }
-  /* line 86, ../scss/_768up.scss */
+  /* line 85, ../scss/_768up.scss */
   nav .user-quicklinks li.user-profile > a.image-link {
     padding: 0;
     line-height: 0;
   }
-  /* line 93, ../scss/_768up.scss */
+  /* line 92, ../scss/_768up.scss */
   nav .user-quicklinks li .pictogram {
     font-size: 40pt;
     text-decoration: none;
     color: #444;
   }
-  /* line 99, ../scss/_768up.scss */
+  /* line 98, ../scss/_768up.scss */
   nav .user-quicklinks li ul {
     display: none;
     margin: 0;
     width: 120px;
     left: -60px;
   }
-  /* line 105, ../scss/_768up.scss */
+  /* line 104, ../scss/_768up.scss */
   nav .user-quicklinks li ul li {
     background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid #cccccc;
     margin: 0;
   }
   /* line 109, ../scss/_768up.scss */
@@ -3073,11 +3073,10 @@ you can add resource intensive styles.
   /* line 201, ../scss/_768up.scss */
   ul.sub-menu li a,
   ul.children li a {
-    padding-left: 10px;
     border-right: 0;
     display: block;
-    width: 198px;
-    border-bottom: 1px solid #cccccc;
+    width: 100%;
+    padding: 15px;
   }
   /* line 218, ../scss/_768up.scss */
   ul.sub-menu li:last-child a,

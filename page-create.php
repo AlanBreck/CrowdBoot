@@ -64,6 +64,9 @@ Template Name: Project Creation Template
 										<div>
 											<textarea type="text" name="post_content" placeholder="Full Description" rows="7"></textarea>
 										</div>
+										<div class="project-name">
+											<input type="text" name="project_meta[video_url]" placeholder="YouTube Video URL" />
+										</div>
 										<div>
 											<select name="post_category" id="post_category" class="project-category" required>
 												<option disabled>Project Category *</option>

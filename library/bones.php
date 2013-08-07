@@ -439,11 +439,20 @@ function bones_get_the_author_posts_link() {
 		return false;
 	$link = sprintf(
 		'<a href="%1$s" title="%2$s" rel="author">%3$s</a>',
-		get_author_posts_url( $authordata->ID, $authordata->display_name ),
+		get_author_posts_url( $authordata->ID, $authordata->nicename ),
 		esc_attr( sprintf( __( 'Posts by %s' ), get_the_author() ) ), // No further l10n needed, core will take care of this one
 		get_the_author()
 	);
 	return $link;
+}
+
+function cb_embed_youtube( $url ) {
+	$url = 'http://www.youtube.com/watch?v=7Dxo0Yjno3I';
+	$query_string = array();
+
+	parse_str( parse_url( $url, PHP_URL_QUERY ), $query_string );
+
+	echo '<iframe width="852" height="479" src="//www.youtube.com/embed/' . $query_string["v"] . '" frameborder="0" allowfullscreen></iframe>';
 }
 
 ?>

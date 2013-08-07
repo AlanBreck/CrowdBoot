@@ -42,6 +42,11 @@
 										}
 									?>
 									<?php /* ?><p>Minimum Investment Amount: <strong><?php echo $minimum_investment_amount; ?></strong></p><?php */ ?>
+									<?php
+										if ( $project_meta['video_url'] ) {
+											cb_embed_youtube( $project_meta['video_url'] );
+										}
+									?>
 									<?php the_content(); ?>
 									<?php echo apply_filters( 'the_content', $project_meta['promotional_video'] ); ?>
 									<?php if ( $project_meta['promotional_images'] ) {
